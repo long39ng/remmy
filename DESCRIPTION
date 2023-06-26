@@ -1,0 +1,16 @@
+Package: remmy
+Title: API Client for Lemmy
+Version: 0.0.0.9000
+Authors@R: 
+    person("Long", "Nguyen", , "long.nguyen@uni-bielefeld.de", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-8878-7386"))
+Description: An HTTP API client for Lemmy
+    (<https://github.com/LemmyNet/lemmy>) in R. Code and documentation are
+    generated from the official JavaScript client source
+    (<https://github.com/LemmyNet/lemmy-js-client>).
+License: MIT + file LICENSE
+Imports: 
+    httr2
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3

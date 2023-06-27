@@ -69,7 +69,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 <p>An HTTP API client for <a href="https://github.com/LemmyNet/lemmy" class="external-link">Lemmy</a> in R.</p>
-<p>Code and documentation are <a href="https://github.com/long39ng/remmy/blob/main/dev/build.sh" class="external-link">generated</a> from the <a href="https://github.com/LemmyNet/lemmy-js-client" class="external-link">official JavaScript client</a> source.</p>
+<p>Code and <a href="https://long39ng.github.io/remmy/reference/index.html">documentation</a> are <a href="https://github.com/long39ng/remmy/tree/main/dev" class="external-link">generated</a> from the <a href="https://github.com/LemmyNet/lemmy-js-client" class="external-link">official JavaScript client</a> source.</p>
 <p>Lemmy version: <a href="https://github.com/LemmyNet/lemmy/releases/tag/0.18.0" class="external-link">0.18.0</a></p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -92,6 +92,19 @@
 <span></span>
 <span><span class="fu"><a href="reference/lemmy_get_comment.html">lemmy_get_comment</a></span><span class="op">(</span><span class="fl">546564</span><span class="op">)</span><span class="op">$</span><span class="va">comment_view</span><span class="op">$</span><span class="va">comment</span><span class="op">$</span><span class="va">content</span></span>
 <span><span class="co">#&gt; [1] "I am not by nature a sentimental person regarding software but I will truly miss RiF."</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="acknowledgements">Acknowledgements<a class="anchor" aria-label="anchor" href="#acknowledgements"></a>
+</h2>
+<p><a href="https://github.com/long39ng/remmy/tree/main/dev" class="external-link">Source code generation</a> was made possible by:</p>
+<ul>
+<li>
+<a href="https://github.com/dsherret/ts-morph" class="external-link">ts-morph</a> for navigating the TypeScript AST of the <a href="https://github.com/LemmyNet/lemmy-js-client" class="external-link">official JavaScript client</a> source and extracting the HTTP request methods into JSON.</li>
+<li>
+<a href="https://github.com/jeroen/jsonlite" class="external-link">jsonlite</a> for parsing objects from JSON to R.</li>
+<li>
+<a href="https://github.com/r-lib/rlang" class="external-link">rlang</a> (and the <a href="https://adv-r.hadley.nz/expressions.html" class="external-link">metaprogramming capabilities of R</a>) for programmatically generating function definitions and parameter and return type documentation.</li>
+</ul>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">

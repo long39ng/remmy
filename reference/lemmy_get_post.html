@@ -194,120 +194,122 @@
 <span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>│   ├─users_active_half_year<span class="sc">:</span> A numeric value</span>
 <span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>│   └─hot_rank<span class="sc">:</span> A numeric value</span>
 <span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>├─moderators<span class="sc">:</span> <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>│ ├─community<span class="sc">:</span> <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>│ │ ├─id<span class="sc">:</span> A numeric value</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>│ │ ├─name<span class="sc">:</span> A character value</span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>│ │ ├─title<span class="sc">:</span> A character value</span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>│ │ ├─description<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>│ │ ├─removed<span class="sc">:</span> A logical value</span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>│ │ ├─published<span class="sc">:</span> A character value</span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>│ │ ├─updated<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>│ │ ├─deleted<span class="sc">:</span> A logical value</span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>│ │ ├─nsfw<span class="sc">:</span> A logical value</span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>│ │ ├─actor_id<span class="sc">:</span> A character value</span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>│ │ ├─local<span class="sc">:</span> A logical value</span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>│ │ ├─icon<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>│ │ ├─banner<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>│ │ ├─hidden<span class="sc">:</span> A logical value</span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>│ │ ├─posting_restricted_to_mods<span class="sc">:</span> A logical value</span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>│ │ └─instance_id<span class="sc">:</span> A numeric value</span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>│ └─moderator<span class="sc">:</span> <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>│   ├─id<span class="sc">:</span> A numeric value</span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>│   ├─name<span class="sc">:</span> A character value</span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>│   ├─display_name<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>│   ├─avatar<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>│   ├─banned<span class="sc">:</span> A logical value</span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>│   ├─published<span class="sc">:</span> A character value</span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>│   ├─updated<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>│   ├─actor_id<span class="sc">:</span> A character value</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>│   ├─bio<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>│   ├─local<span class="sc">:</span> A logical value</span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>│   ├─banner<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>│   ├─deleted<span class="sc">:</span> A logical value</span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>│   ├─matrix_user_id<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>│   ├─admin<span class="sc">:</span> A logical value</span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>│   ├─bot_account<span class="sc">:</span> A logical value</span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>│   ├─ban_expires<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>│   └─instance_id<span class="sc">:</span> A numeric value</span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>└─cross_posts<span class="sc">:</span> <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>  ├─post<span class="sc">:</span> <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>  │ ├─id<span class="sc">:</span> A numeric value</span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>  │ ├─name<span class="sc">:</span> A character value</span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>  │ ├─url<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>  │ ├─body<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>  │ ├─creator_id<span class="sc">:</span> A numeric value</span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>  │ ├─community_id<span class="sc">:</span> A numeric value</span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>  │ ├─removed<span class="sc">:</span> A logical value</span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>  │ ├─locked<span class="sc">:</span> A logical value</span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>  │ ├─published<span class="sc">:</span> A character value</span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>  │ ├─updated<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>  │ ├─deleted<span class="sc">:</span> A logical value</span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>  │ ├─nsfw<span class="sc">:</span> A logical value</span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>  │ ├─embed_title<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>  │ ├─embed_description<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>  │ ├─thumbnail_url<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>  │ ├─ap_id<span class="sc">:</span> A character value</span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>  │ ├─local<span class="sc">:</span> A logical value</span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>  │ ├─embed_video_url<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>  │ ├─language_id<span class="sc">:</span> A numeric value</span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>  │ ├─featured_community<span class="sc">:</span> A logical value</span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>  │ └─featured_local<span class="sc">:</span> A logical value</span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>  ├─creator<span class="sc">:</span> <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>  │ ├─id<span class="sc">:</span> A numeric value</span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>  │ ├─name<span class="sc">:</span> A character value</span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>  │ ├─display_name<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>  │ ├─avatar<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>  │ ├─banned<span class="sc">:</span> A logical value</span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>  │ ├─published<span class="sc">:</span> A character value</span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>  │ ├─updated<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>  │ ├─actor_id<span class="sc">:</span> A character value</span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>  │ ├─bio<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>  │ ├─local<span class="sc">:</span> A logical value</span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>  │ ├─banner<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>  │ ├─deleted<span class="sc">:</span> A logical value</span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>  │ ├─matrix_user_id<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>  │ ├─admin<span class="sc">:</span> A logical value</span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>  │ ├─bot_account<span class="sc">:</span> A logical value</span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>  │ ├─ban_expires<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>  │ └─instance_id<span class="sc">:</span> A numeric value</span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>  ├─community<span class="sc">:</span> <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>  │ ├─id<span class="sc">:</span> A numeric value</span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>  │ ├─name<span class="sc">:</span> A character value</span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>  │ ├─title<span class="sc">:</span> A character value</span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>  │ ├─description<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>  │ ├─removed<span class="sc">:</span> A logical value</span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>  │ ├─published<span class="sc">:</span> A character value</span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>  │ ├─updated<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>  │ ├─deleted<span class="sc">:</span> A logical value</span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>  │ ├─nsfw<span class="sc">:</span> A logical value</span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>  │ ├─actor_id<span class="sc">:</span> A character value</span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>  │ ├─local<span class="sc">:</span> A logical value</span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>  │ ├─icon<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>  │ ├─banner<span class="sc">:</span> (Optional) A character value</span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>  │ ├─hidden<span class="sc">:</span> A logical value</span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>  │ ├─posting_restricted_to_mods<span class="sc">:</span> A logical value</span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>  │ └─instance_id<span class="sc">:</span> A numeric value</span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>  ├─creator_banned_from_community<span class="sc">:</span> A logical value</span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>  ├─counts<span class="sc">:</span> <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>  │ ├─id<span class="sc">:</span> A numeric value</span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>  │ ├─post_id<span class="sc">:</span> A numeric value</span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>  │ ├─comments<span class="sc">:</span> A numeric value</span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>  │ ├─score<span class="sc">:</span> A numeric value</span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>  │ ├─upvotes<span class="sc">:</span> A numeric value</span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>  │ ├─downvotes<span class="sc">:</span> A numeric value</span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>  │ ├─published<span class="sc">:</span> A character value</span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>  │ ├─newest_comment_time_necro<span class="sc">:</span> A character value</span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>  │ ├─newest_comment_time<span class="sc">:</span> A character value</span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>  │ ├─featured_community<span class="sc">:</span> A logical value</span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>  │ ├─featured_local<span class="sc">:</span> A logical value</span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>  │ ├─hot_rank<span class="sc">:</span> A numeric value</span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>  │ └─hot_rank_active<span class="sc">:</span> A numeric value</span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>  ├─subscribed<span class="sc">:</span> One of <span class="st">"Subscribed"</span>, <span class="st">"NotSubscri...</span></span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="st">  ├─saved: A logical value</span></span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="st">  ├─read: A logical value</span></span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="st">  ├─creator_blocked: A logical value</span></span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="st">  ├─my_vote: (Optional) A numeric value</span></span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="st">  └─unread_comments: A numeric value</span></span></code></pre><p></p></div>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>│ └─[Each element]<span class="sc">:</span> <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>│   ├─community<span class="sc">:</span> <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>│   │ ├─id<span class="sc">:</span> A numeric value</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>│   │ ├─name<span class="sc">:</span> A character value</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>│   │ ├─title<span class="sc">:</span> A character value</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>│   │ ├─description<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>│   │ ├─removed<span class="sc">:</span> A logical value</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>│   │ ├─published<span class="sc">:</span> A character value</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>│   │ ├─updated<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>│   │ ├─deleted<span class="sc">:</span> A logical value</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>│   │ ├─nsfw<span class="sc">:</span> A logical value</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>│   │ ├─actor_id<span class="sc">:</span> A character value</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>│   │ ├─local<span class="sc">:</span> A logical value</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>│   │ ├─icon<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>│   │ ├─banner<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>│   │ ├─hidden<span class="sc">:</span> A logical value</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>│   │ ├─posting_restricted_to_mods<span class="sc">:</span> A logical value</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>│   │ └─instance_id<span class="sc">:</span> A numeric value</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>│   └─moderator<span class="sc">:</span> <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>│     ├─id<span class="sc">:</span> A numeric value</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>│     ├─name<span class="sc">:</span> A character value</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>│     ├─display_name<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>│     ├─avatar<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>│     ├─banned<span class="sc">:</span> A logical value</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>│     ├─published<span class="sc">:</span> A character value</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>│     ├─updated<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>│     ├─actor_id<span class="sc">:</span> A character value</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>│     ├─bio<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>│     ├─local<span class="sc">:</span> A logical value</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>│     ├─banner<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>│     ├─deleted<span class="sc">:</span> A logical value</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>│     ├─matrix_user_id<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>│     ├─admin<span class="sc">:</span> A logical value</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>│     ├─bot_account<span class="sc">:</span> A logical value</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>│     ├─ban_expires<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>│     └─instance_id<span class="sc">:</span> A numeric value</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>└─cross_posts<span class="sc">:</span> <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>  └─[Each element]<span class="sc">:</span> <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>    ├─post<span class="sc">:</span> <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>    │ ├─id<span class="sc">:</span> A numeric value</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>    │ ├─name<span class="sc">:</span> A character value</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>    │ ├─url<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>    │ ├─body<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>    │ ├─creator_id<span class="sc">:</span> A numeric value</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>    │ ├─community_id<span class="sc">:</span> A numeric value</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>    │ ├─removed<span class="sc">:</span> A logical value</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>    │ ├─locked<span class="sc">:</span> A logical value</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>    │ ├─published<span class="sc">:</span> A character value</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>    │ ├─updated<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>    │ ├─deleted<span class="sc">:</span> A logical value</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>    │ ├─nsfw<span class="sc">:</span> A logical value</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>    │ ├─embed_title<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>    │ ├─embed_description<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>    │ ├─thumbnail_url<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>    │ ├─ap_id<span class="sc">:</span> A character value</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>    │ ├─local<span class="sc">:</span> A logical value</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>    │ ├─embed_video_url<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>    │ ├─language_id<span class="sc">:</span> A numeric value</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>    │ ├─featured_community<span class="sc">:</span> A logical value</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>    │ └─featured_local<span class="sc">:</span> A logical value</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>    ├─creator<span class="sc">:</span> <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>    │ ├─id<span class="sc">:</span> A numeric value</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>    │ ├─name<span class="sc">:</span> A character value</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>    │ ├─display_name<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>    │ ├─avatar<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>    │ ├─banned<span class="sc">:</span> A logical value</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>    │ ├─published<span class="sc">:</span> A character value</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>    │ ├─updated<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>    │ ├─actor_id<span class="sc">:</span> A character value</span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>    │ ├─bio<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>    │ ├─local<span class="sc">:</span> A logical value</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>    │ ├─banner<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>    │ ├─deleted<span class="sc">:</span> A logical value</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>    │ ├─matrix_user_id<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>    │ ├─admin<span class="sc">:</span> A logical value</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>    │ ├─bot_account<span class="sc">:</span> A logical value</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>    │ ├─ban_expires<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>    │ └─instance_id<span class="sc">:</span> A numeric value</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>    ├─community<span class="sc">:</span> <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>    │ ├─id<span class="sc">:</span> A numeric value</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>    │ ├─name<span class="sc">:</span> A character value</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>    │ ├─title<span class="sc">:</span> A character value</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>    │ ├─description<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>    │ ├─removed<span class="sc">:</span> A logical value</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>    │ ├─published<span class="sc">:</span> A character value</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>    │ ├─updated<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>    │ ├─deleted<span class="sc">:</span> A logical value</span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>    │ ├─nsfw<span class="sc">:</span> A logical value</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>    │ ├─actor_id<span class="sc">:</span> A character value</span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>    │ ├─local<span class="sc">:</span> A logical value</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>    │ ├─icon<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>    │ ├─banner<span class="sc">:</span> (Optional) A character value</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>    │ ├─hidden<span class="sc">:</span> A logical value</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>    │ ├─posting_restricted_to_mods<span class="sc">:</span> A logical value</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>    │ └─instance_id<span class="sc">:</span> A numeric value</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>    ├─creator_banned_from_community<span class="sc">:</span> A logical value</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>    ├─counts<span class="sc">:</span> <span class="er">&lt;</span>list<span class="sc">&gt;</span></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>    │ ├─id<span class="sc">:</span> A numeric value</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>    │ ├─post_id<span class="sc">:</span> A numeric value</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>    │ ├─comments<span class="sc">:</span> A numeric value</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>    │ ├─score<span class="sc">:</span> A numeric value</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>    │ ├─upvotes<span class="sc">:</span> A numeric value</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>    │ ├─downvotes<span class="sc">:</span> A numeric value</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>    │ ├─published<span class="sc">:</span> A character value</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>    │ ├─newest_comment_time_necro<span class="sc">:</span> A character value</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>    │ ├─newest_comment_time<span class="sc">:</span> A character value</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>    │ ├─featured_community<span class="sc">:</span> A logical value</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>    │ ├─featured_local<span class="sc">:</span> A logical value</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>    │ ├─hot_rank<span class="sc">:</span> A numeric value</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>    │ └─hot_rank_active<span class="sc">:</span> A numeric value</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>    ├─subscribed<span class="sc">:</span> One of <span class="st">"Subscribed"</span>, <span class="st">"NotSubscri...</span></span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="st">    ├─saved: A logical value</span></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="st">    ├─read: A logical value</span></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="st">    ├─creator_blocked: A logical value</span></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="st">    ├─my_vote: (Optional) A numeric value</span></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="st">    └─unread_comments: A numeric value</span></span></code></pre><p></p></div>
 
 
     </div>

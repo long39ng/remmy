@@ -18,5 +18,5 @@ cp parse.ts lemmy-js-client &&
   npx ts-node parse.ts &&
   cd ..
 
-# TODO: generate R code from JSON
-# parse resp type recursively
+rm ../R/http-methods.R &&
+  Rscript ./generate.R

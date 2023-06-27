@@ -4,7 +4,7 @@
 #'
 #' @examples
 #' wrapper(endpoint = "comment", id = 546564)
-wrapper <- function(base_url = "https://lemmy.world",
+wrapper <- function(base_url = getOption("lemmy_instance", "https://lemmy.world"),
                     req_type = c("GET", "POST", "PUT"),
                     endpoint,
                     ...) {
@@ -23,7 +23,7 @@ wrapper <- function(base_url = "https://lemmy.world",
   req %>%
     httr2::req_retry(max_tries = 3) %>%
     httr2::req_perform() %>%
-    httr2::req_body_json()
+    httr2::resp_body_json()
 }
 
 build_full_url <- function(base_url, endpoint) {

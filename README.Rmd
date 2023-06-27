@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 
 An HTTP API client for [Lemmy](https://github.com/LemmyNet/lemmy) in R.
 
-Code and [documentation](https://long39ng.github.io/remmy/reference/index.html) are [generated](https://github.com/long39ng/remmy/blob/main/dev/build.sh) from the [official JavaScript client](https://github.com/LemmyNet/lemmy-js-client) source.
+Code and [documentation](https://long39ng.github.io/remmy/reference/index.html) are [generated](https://github.com/long39ng/remmy/tree/main/dev) from the [official JavaScript client](https://github.com/LemmyNet/lemmy-js-client) source.
 
 Lemmy version: [0.18.0](https://github.com/LemmyNet/lemmy/releases/tag/0.18.0)
 
@@ -48,3 +48,11 @@ library(remmy)
 lemmy_get_comment(546564)$comment_view$comment$content
 #> [1] "I am not by nature a sentimental person regarding software but I will truly miss RiF."
 ```
+
+## Acknowledgements
+
+[Source code generation](https://github.com/long39ng/remmy/tree/main/dev) was made possible by:
+
+- [ts-morph](https://github.com/dsherret/ts-morph) for navigating the TypeScript AST of the [official JavaScript client](https://github.com/LemmyNet/lemmy-js-client) source and extracting the HTTP request methods into JSON.
+- [jsonlite](https://github.com/jeroen/jsonlite) for parsing objects from JSON to R.
+- [rlang](https://github.com/r-lib/rlang) (and the [metaprogramming capabilities of R](https://adv-r.hadley.nz/expressions.html)) for programmatically generating function definitions and parameter and return type documentation.

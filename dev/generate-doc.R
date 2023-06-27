@@ -40,7 +40,9 @@ doc_property <- function(prop, recursive = FALSE) {
   if (!recursive) stopifnot(!prop$is_interface)
 
   if (prop$is_interface) {
-    return(map(prop$type, doc_property, recursive = TRUE))
+    prop_docs <- map(prop$type, doc_property, recursive = TRUE)
+    if (prop$is_array) prop_docs <- list(`[Each element]` = prop_docs)
+    return(prop_docs)
   }
   if (prop$is_literal_union) {
     desc <- paste("One of", knitr::combine_words(prop$type, and = " or "))

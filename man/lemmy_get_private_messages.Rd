@@ -28,53 +28,54 @@ A \code{list} of length 1:
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
 └─private_messages: <list>
-  ├─private_message: <list>
-  │ ├─id: A numeric value
-  │ ├─creator_id: A numeric value
-  │ ├─recipient_id: A numeric value
-  │ ├─content: A character value
-  │ ├─deleted: A logical value
-  │ ├─read: A logical value
-  │ ├─published: A character value
-  │ ├─updated: (Optional) A character value
-  │ ├─ap_id: A character value
-  │ └─local: A logical value
-  ├─creator: <list>
-  │ ├─id: A numeric value
-  │ ├─name: A character value
-  │ ├─display_name: (Optional) A character value
-  │ ├─avatar: (Optional) A character value
-  │ ├─banned: A logical value
-  │ ├─published: A character value
-  │ ├─updated: (Optional) A character value
-  │ ├─actor_id: A character value
-  │ ├─bio: (Optional) A character value
-  │ ├─local: A logical value
-  │ ├─banner: (Optional) A character value
-  │ ├─deleted: A logical value
-  │ ├─matrix_user_id: (Optional) A character value
-  │ ├─admin: A logical value
-  │ ├─bot_account: A logical value
-  │ ├─ban_expires: (Optional) A character value
-  │ └─instance_id: A numeric value
-  └─recipient: <list>
-    ├─id: A numeric value
-    ├─name: A character value
-    ├─display_name: (Optional) A character value
-    ├─avatar: (Optional) A character value
-    ├─banned: A logical value
-    ├─published: A character value
-    ├─updated: (Optional) A character value
-    ├─actor_id: A character value
-    ├─bio: (Optional) A character value
-    ├─local: A logical value
-    ├─banner: (Optional) A character value
-    ├─deleted: A logical value
-    ├─matrix_user_id: (Optional) A character value
-    ├─admin: A logical value
-    ├─bot_account: A logical value
-    ├─ban_expires: (Optional) A character value
-    └─instance_id: A numeric value
+  └─[Each element]: <list>
+    ├─private_message: <list>
+    │ ├─id: A numeric value
+    │ ├─creator_id: A numeric value
+    │ ├─recipient_id: A numeric value
+    │ ├─content: A character value
+    │ ├─deleted: A logical value
+    │ ├─read: A logical value
+    │ ├─published: A character value
+    │ ├─updated: (Optional) A character value
+    │ ├─ap_id: A character value
+    │ └─local: A logical value
+    ├─creator: <list>
+    │ ├─id: A numeric value
+    │ ├─name: A character value
+    │ ├─display_name: (Optional) A character value
+    │ ├─avatar: (Optional) A character value
+    │ ├─banned: A logical value
+    │ ├─published: A character value
+    │ ├─updated: (Optional) A character value
+    │ ├─actor_id: A character value
+    │ ├─bio: (Optional) A character value
+    │ ├─local: A logical value
+    │ ├─banner: (Optional) A character value
+    │ ├─deleted: A logical value
+    │ ├─matrix_user_id: (Optional) A character value
+    │ ├─admin: A logical value
+    │ ├─bot_account: A logical value
+    │ ├─ban_expires: (Optional) A character value
+    │ └─instance_id: A numeric value
+    └─recipient: <list>
+      ├─id: A numeric value
+      ├─name: A character value
+      ├─display_name: (Optional) A character value
+      ├─avatar: (Optional) A character value
+      ├─banned: A logical value
+      ├─published: A character value
+      ├─updated: (Optional) A character value
+      ├─actor_id: A character value
+      ├─bio: (Optional) A character value
+      ├─local: A logical value
+      ├─banner: (Optional) A character value
+      ├─deleted: A logical value
+      ├─matrix_user_id: (Optional) A character value
+      ├─admin: A logical value
+      ├─bot_account: A logical value
+      ├─ban_expires: (Optional) A character value
+      └─instance_id: A numeric value
 }\if{html}{\out{</div>}}
 }
 \description{

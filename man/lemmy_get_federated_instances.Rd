@@ -20,26 +20,29 @@ A \code{list} of length 1:
 \if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
 └─federated_instances: <list>
   ├─linked: <list>
-  │ ├─id: A numeric value
-  │ ├─domain: A character value
-  │ ├─published: A character value
-  │ ├─updated: (Optional) A character value
-  │ ├─software: (Optional) A character value
-  │ └─version: (Optional) A character value
+  │ └─[Each element]: <list>
+  │   ├─id: A numeric value
+  │   ├─domain: A character value
+  │   ├─published: A character value
+  │   ├─updated: (Optional) A character value
+  │   ├─software: (Optional) A character value
+  │   └─version: (Optional) A character value
   ├─allowed: <list>
-  │ ├─id: A numeric value
-  │ ├─domain: A character value
-  │ ├─published: A character value
-  │ ├─updated: (Optional) A character value
-  │ ├─software: (Optional) A character value
-  │ └─version: (Optional) A character value
+  │ └─[Each element]: <list>
+  │   ├─id: A numeric value
+  │   ├─domain: A character value
+  │   ├─published: A character value
+  │   ├─updated: (Optional) A character value
+  │   ├─software: (Optional) A character value
+  │   └─version: (Optional) A character value
   └─blocked: <list>
-    ├─id: A numeric value
-    ├─domain: A character value
-    ├─published: A character value
-    ├─updated: (Optional) A character value
-    ├─software: (Optional) A character value
-    └─version: (Optional) A character value
+    └─[Each element]: <list>
+      ├─id: A numeric value
+      ├─domain: A character value
+      ├─published: A character value
+      ├─updated: (Optional) A character value
+      ├─software: (Optional) A character value
+      └─version: (Optional) A character value
 }\if{html}{\out{</div>}}
 }
 \description{

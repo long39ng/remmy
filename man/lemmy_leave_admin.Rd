@@ -88,31 +88,32 @@ A \code{list} of length 8:
 │   ├─users_active_month: A numeric value
 │   └─users_active_half_year: A numeric value
 ├─admins: <list>
-│ ├─person: <list>
-│ │ ├─id: A numeric value
-│ │ ├─name: A character value
-│ │ ├─display_name: (Optional) A character value
-│ │ ├─avatar: (Optional) A character value
-│ │ ├─banned: A logical value
-│ │ ├─published: A character value
-│ │ ├─updated: (Optional) A character value
-│ │ ├─actor_id: A character value
-│ │ ├─bio: (Optional) A character value
-│ │ ├─local: A logical value
-│ │ ├─banner: (Optional) A character value
-│ │ ├─deleted: A logical value
-│ │ ├─matrix_user_id: (Optional) A character value
-│ │ ├─admin: A logical value
-│ │ ├─bot_account: A logical value
-│ │ ├─ban_expires: (Optional) A character value
-│ │ └─instance_id: A numeric value
-│ └─counts: <list>
-│   ├─id: A numeric value
-│   ├─person_id: A numeric value
-│   ├─post_count: A numeric value
-│   ├─post_score: A numeric value
-│   ├─comment_count: A numeric value
-│   └─comment_score: A numeric value
+│ └─[Each element]: <list>
+│   ├─person: <list>
+│   │ ├─id: A numeric value
+│   │ ├─name: A character value
+│   │ ├─display_name: (Optional) A character value
+│   │ ├─avatar: (Optional) A character value
+│   │ ├─banned: A logical value
+│   │ ├─published: A character value
+│   │ ├─updated: (Optional) A character value
+│   │ ├─actor_id: A character value
+│   │ ├─bio: (Optional) A character value
+│   │ ├─local: A logical value
+│   │ ├─banner: (Optional) A character value
+│   │ ├─deleted: A logical value
+│   │ ├─matrix_user_id: (Optional) A character value
+│   │ ├─admin: A logical value
+│   │ ├─bot_account: A logical value
+│   │ ├─ban_expires: (Optional) A character value
+│   │ └─instance_id: A numeric value
+│   └─counts: <list>
+│     ├─id: A numeric value
+│     ├─person_id: A numeric value
+│     ├─post_count: A numeric value
+│     ├─post_score: A numeric value
+│     ├─comment_count: A numeric value
+│     └─comment_score: A numeric value
 ├─version: A character value
 ├─my_user: <list>
 │ ├─local_user_view: <list>
@@ -161,176 +162,184 @@ A \code{list} of length 8:
 │ │   ├─comment_count: A numeric value
 │ │   └─comment_score: A numeric value
 │ ├─follows: <list>
-│ │ ├─community: <list>
-│ │ │ ├─id: A numeric value
-│ │ │ ├─name: A character value
-│ │ │ ├─title: A character value
-│ │ │ ├─description: (Optional) A character value
-│ │ │ ├─removed: A logical value
-│ │ │ ├─published: A character value
-│ │ │ ├─updated: (Optional) A character value
-│ │ │ ├─deleted: A logical value
-│ │ │ ├─nsfw: A logical value
-│ │ │ ├─actor_id: A character value
-│ │ │ ├─local: A logical value
-│ │ │ ├─icon: (Optional) A character value
-│ │ │ ├─banner: (Optional) A character value
-│ │ │ ├─hidden: A logical value
-│ │ │ ├─posting_restricted_to_mods: A logical value
-│ │ │ └─instance_id: A numeric value
-│ │ └─follower: <list>
-│ │   ├─id: A numeric value
-│ │   ├─name: A character value
-│ │   ├─display_name: (Optional) A character value
-│ │   ├─avatar: (Optional) A character value
-│ │   ├─banned: A logical value
-│ │   ├─published: A character value
-│ │   ├─updated: (Optional) A character value
-│ │   ├─actor_id: A character value
-│ │   ├─bio: (Optional) A character value
-│ │   ├─local: A logical value
-│ │   ├─banner: (Optional) A character value
-│ │   ├─deleted: A logical value
-│ │   ├─matrix_user_id: (Optional) A character value
-│ │   ├─admin: A logical value
-│ │   ├─bot_account: A logical value
-│ │   ├─ban_expires: (Optional) A character value
-│ │   └─instance_id: A numeric value
+│ │ └─[Each element]: <list>
+│ │   ├─community: <list>
+│ │   │ ├─id: A numeric value
+│ │   │ ├─name: A character value
+│ │   │ ├─title: A character value
+│ │   │ ├─description: (Optional) A character value
+│ │   │ ├─removed: A logical value
+│ │   │ ├─published: A character value
+│ │   │ ├─updated: (Optional) A character value
+│ │   │ ├─deleted: A logical value
+│ │   │ ├─nsfw: A logical value
+│ │   │ ├─actor_id: A character value
+│ │   │ ├─local: A logical value
+│ │   │ ├─icon: (Optional) A character value
+│ │   │ ├─banner: (Optional) A character value
+│ │   │ ├─hidden: A logical value
+│ │   │ ├─posting_restricted_to_mods: A logical value
+│ │   │ └─instance_id: A numeric value
+│ │   └─follower: <list>
+│ │     ├─id: A numeric value
+│ │     ├─name: A character value
+│ │     ├─display_name: (Optional) A character value
+│ │     ├─avatar: (Optional) A character value
+│ │     ├─banned: A logical value
+│ │     ├─published: A character value
+│ │     ├─updated: (Optional) A character value
+│ │     ├─actor_id: A character value
+│ │     ├─bio: (Optional) A character value
+│ │     ├─local: A logical value
+│ │     ├─banner: (Optional) A character value
+│ │     ├─deleted: A logical value
+│ │     ├─matrix_user_id: (Optional) A character value
+│ │     ├─admin: A logical value
+│ │     ├─bot_account: A logical value
+│ │     ├─ban_expires: (Optional) A character value
+│ │     └─instance_id: A numeric value
 │ ├─moderates: <list>
-│ │ ├─community: <list>
-│ │ │ ├─id: A numeric value
-│ │ │ ├─name: A character value
-│ │ │ ├─title: A character value
-│ │ │ ├─description: (Optional) A character value
-│ │ │ ├─removed: A logical value
-│ │ │ ├─published: A character value
-│ │ │ ├─updated: (Optional) A character value
-│ │ │ ├─deleted: A logical value
-│ │ │ ├─nsfw: A logical value
-│ │ │ ├─actor_id: A character value
-│ │ │ ├─local: A logical value
-│ │ │ ├─icon: (Optional) A character value
-│ │ │ ├─banner: (Optional) A character value
-│ │ │ ├─hidden: A logical value
-│ │ │ ├─posting_restricted_to_mods: A logical value
-│ │ │ └─instance_id: A numeric value
-│ │ └─moderator: <list>
-│ │   ├─id: A numeric value
-│ │   ├─name: A character value
-│ │   ├─display_name: (Optional) A character value
-│ │   ├─avatar: (Optional) A character value
-│ │   ├─banned: A logical value
-│ │   ├─published: A character value
-│ │   ├─updated: (Optional) A character value
-│ │   ├─actor_id: A character value
-│ │   ├─bio: (Optional) A character value
-│ │   ├─local: A logical value
-│ │   ├─banner: (Optional) A character value
-│ │   ├─deleted: A logical value
-│ │   ├─matrix_user_id: (Optional) A character value
-│ │   ├─admin: A logical value
-│ │   ├─bot_account: A logical value
-│ │   ├─ban_expires: (Optional) A character value
-│ │   └─instance_id: A numeric value
+│ │ └─[Each element]: <list>
+│ │   ├─community: <list>
+│ │   │ ├─id: A numeric value
+│ │   │ ├─name: A character value
+│ │   │ ├─title: A character value
+│ │   │ ├─description: (Optional) A character value
+│ │   │ ├─removed: A logical value
+│ │   │ ├─published: A character value
+│ │   │ ├─updated: (Optional) A character value
+│ │   │ ├─deleted: A logical value
+│ │   │ ├─nsfw: A logical value
+│ │   │ ├─actor_id: A character value
+│ │   │ ├─local: A logical value
+│ │   │ ├─icon: (Optional) A character value
+│ │   │ ├─banner: (Optional) A character value
+│ │   │ ├─hidden: A logical value
+│ │   │ ├─posting_restricted_to_mods: A logical value
+│ │   │ └─instance_id: A numeric value
+│ │   └─moderator: <list>
+│ │     ├─id: A numeric value
+│ │     ├─name: A character value
+│ │     ├─display_name: (Optional) A character value
+│ │     ├─avatar: (Optional) A character value
+│ │     ├─banned: A logical value
+│ │     ├─published: A character value
+│ │     ├─updated: (Optional) A character value
+│ │     ├─actor_id: A character value
+│ │     ├─bio: (Optional) A character value
+│ │     ├─local: A logical value
+│ │     ├─banner: (Optional) A character value
+│ │     ├─deleted: A logical value
+│ │     ├─matrix_user_id: (Optional) A character value
+│ │     ├─admin: A logical value
+│ │     ├─bot_account: A logical value
+│ │     ├─ban_expires: (Optional) A character value
+│ │     └─instance_id: A numeric value
 │ ├─community_blocks: <list>
-│ │ ├─person: <list>
-│ │ │ ├─id: A numeric value
-│ │ │ ├─name: A character value
-│ │ │ ├─display_name: (Optional) A character value
-│ │ │ ├─avatar: (Optional) A character value
-│ │ │ ├─banned: A logical value
-│ │ │ ├─published: A character value
-│ │ │ ├─updated: (Optional) A character value
-│ │ │ ├─actor_id: A character value
-│ │ │ ├─bio: (Optional) A character value
-│ │ │ ├─local: A logical value
-│ │ │ ├─banner: (Optional) A character value
-│ │ │ ├─deleted: A logical value
-│ │ │ ├─matrix_user_id: (Optional) A character value
-│ │ │ ├─admin: A logical value
-│ │ │ ├─bot_account: A logical value
-│ │ │ ├─ban_expires: (Optional) A character value
-│ │ │ └─instance_id: A numeric value
-│ │ └─community: <list>
-│ │   ├─id: A numeric value
-│ │   ├─name: A character value
-│ │   ├─title: A character value
-│ │   ├─description: (Optional) A character value
-│ │   ├─removed: A logical value
-│ │   ├─published: A character value
-│ │   ├─updated: (Optional) A character value
-│ │   ├─deleted: A logical value
-│ │   ├─nsfw: A logical value
-│ │   ├─actor_id: A character value
-│ │   ├─local: A logical value
-│ │   ├─icon: (Optional) A character value
-│ │   ├─banner: (Optional) A character value
-│ │   ├─hidden: A logical value
-│ │   ├─posting_restricted_to_mods: A logical value
-│ │   └─instance_id: A numeric value
+│ │ └─[Each element]: <list>
+│ │   ├─person: <list>
+│ │   │ ├─id: A numeric value
+│ │   │ ├─name: A character value
+│ │   │ ├─display_name: (Optional) A character value
+│ │   │ ├─avatar: (Optional) A character value
+│ │   │ ├─banned: A logical value
+│ │   │ ├─published: A character value
+│ │   │ ├─updated: (Optional) A character value
+│ │   │ ├─actor_id: A character value
+│ │   │ ├─bio: (Optional) A character value
+│ │   │ ├─local: A logical value
+│ │   │ ├─banner: (Optional) A character value
+│ │   │ ├─deleted: A logical value
+│ │   │ ├─matrix_user_id: (Optional) A character value
+│ │   │ ├─admin: A logical value
+│ │   │ ├─bot_account: A logical value
+│ │   │ ├─ban_expires: (Optional) A character value
+│ │   │ └─instance_id: A numeric value
+│ │   └─community: <list>
+│ │     ├─id: A numeric value
+│ │     ├─name: A character value
+│ │     ├─title: A character value
+│ │     ├─description: (Optional) A character value
+│ │     ├─removed: A logical value
+│ │     ├─published: A character value
+│ │     ├─updated: (Optional) A character value
+│ │     ├─deleted: A logical value
+│ │     ├─nsfw: A logical value
+│ │     ├─actor_id: A character value
+│ │     ├─local: A logical value
+│ │     ├─icon: (Optional) A character value
+│ │     ├─banner: (Optional) A character value
+│ │     ├─hidden: A logical value
+│ │     ├─posting_restricted_to_mods: A logical value
+│ │     └─instance_id: A numeric value
 │ ├─person_blocks: <list>
-│ │ ├─person: <list>
-│ │ │ ├─id: A numeric value
-│ │ │ ├─name: A character value
-│ │ │ ├─display_name: (Optional) A character value
-│ │ │ ├─avatar: (Optional) A character value
-│ │ │ ├─banned: A logical value
-│ │ │ ├─published: A character value
-│ │ │ ├─updated: (Optional) A character value
-│ │ │ ├─actor_id: A character value
-│ │ │ ├─bio: (Optional) A character value
-│ │ │ ├─local: A logical value
-│ │ │ ├─banner: (Optional) A character value
-│ │ │ ├─deleted: A logical value
-│ │ │ ├─matrix_user_id: (Optional) A character value
-│ │ │ ├─admin: A logical value
-│ │ │ ├─bot_account: A logical value
-│ │ │ ├─ban_expires: (Optional) A character value
-│ │ │ └─instance_id: A numeric value
-│ │ └─target: <list>
-│ │   ├─id: A numeric value
-│ │   ├─name: A character value
-│ │   ├─display_name: (Optional) A character value
-│ │   ├─avatar: (Optional) A character value
-│ │   ├─banned: A logical value
-│ │   ├─published: A character value
-│ │   ├─updated: (Optional) A character value
-│ │   ├─actor_id: A character value
-│ │   ├─bio: (Optional) A character value
-│ │   ├─local: A logical value
-│ │   ├─banner: (Optional) A character value
-│ │   ├─deleted: A logical value
-│ │   ├─matrix_user_id: (Optional) A character value
-│ │   ├─admin: A logical value
-│ │   ├─bot_account: A logical value
-│ │   ├─ban_expires: (Optional) A character value
-│ │   └─instance_id: A numeric value
+│ │ └─[Each element]: <list>
+│ │   ├─person: <list>
+│ │   │ ├─id: A numeric value
+│ │   │ ├─name: A character value
+│ │   │ ├─display_name: (Optional) A character value
+│ │   │ ├─avatar: (Optional) A character value
+│ │   │ ├─banned: A logical value
+│ │   │ ├─published: A character value
+│ │   │ ├─updated: (Optional) A character value
+│ │   │ ├─actor_id: A character value
+│ │   │ ├─bio: (Optional) A character value
+│ │   │ ├─local: A logical value
+│ │   │ ├─banner: (Optional) A character value
+│ │   │ ├─deleted: A logical value
+│ │   │ ├─matrix_user_id: (Optional) A character value
+│ │   │ ├─admin: A logical value
+│ │   │ ├─bot_account: A logical value
+│ │   │ ├─ban_expires: (Optional) A character value
+│ │   │ └─instance_id: A numeric value
+│ │   └─target: <list>
+│ │     ├─id: A numeric value
+│ │     ├─name: A character value
+│ │     ├─display_name: (Optional) A character value
+│ │     ├─avatar: (Optional) A character value
+│ │     ├─banned: A logical value
+│ │     ├─published: A character value
+│ │     ├─updated: (Optional) A character value
+│ │     ├─actor_id: A character value
+│ │     ├─bio: (Optional) A character value
+│ │     ├─local: A logical value
+│ │     ├─banner: (Optional) A character value
+│ │     ├─deleted: A logical value
+│ │     ├─matrix_user_id: (Optional) A character value
+│ │     ├─admin: A logical value
+│ │     ├─bot_account: A logical value
+│ │     ├─ban_expires: (Optional) A character value
+│ │     └─instance_id: A numeric value
 │ └─discussion_languages: A numeric vector
 ├─all_languages: <list>
-│ ├─id: A numeric value
-│ ├─code: A character value
-│ └─name: A character value
+│ └─[Each element]: <list>
+│   ├─id: A numeric value
+│   ├─code: A character value
+│   └─name: A character value
 ├─discussion_languages: A numeric vector
 ├─taglines: <list>
-│ ├─id: A numeric value
-│ ├─local_site_id: A numeric value
-│ ├─content: A character value
-│ ├─published: A character value
-│ └─updated: (Optional) A character value
+│ └─[Each element]: <list>
+│   ├─id: A numeric value
+│   ├─local_site_id: A numeric value
+│   ├─content: A character value
+│   ├─published: A character value
+│   └─updated: (Optional) A character value
 └─custom_emojis: <list>
-  ├─custom_emoji: <list>
-  │ ├─id: A numeric value
-  │ ├─local_site_id: A numeric value
-  │ ├─shortcode: A character value
-  │ ├─image_url: A character value
-  │ ├─alt_text: A character value
-  │ ├─category: A character value
-  │ ├─published: A character value
-  │ └─updated: (Optional) A character value
-  └─keywords: <list>
-    ├─id: A numeric value
-    ├─custom_emoji_id: A numeric value
-    └─keyword: A character value
+  └─[Each element]: <list>
+    ├─custom_emoji: <list>
+    │ ├─id: A numeric value
+    │ ├─local_site_id: A numeric value
+    │ ├─shortcode: A character value
+    │ ├─image_url: A character value
+    │ ├─alt_text: A character value
+    │ ├─category: A character value
+    │ ├─published: A character value
+    │ └─updated: (Optional) A character value
+    └─keywords: <list>
+      └─[Each element]: <list>
+        ├─id: A numeric value
+        ├─custom_emoji_id: A numeric value
+        └─keyword: A character value
 }\if{html}{\out{</div>}}
 }
 \description{

@@ -208,11 +208,12 @@ A \code{list} of length 2:
 │   ├─users_active_month: A numeric value
 │   └─users_active_half_year: A numeric value
 └─taglines: <list>
-  ├─id: A numeric value
-  ├─local_site_id: A numeric value
-  ├─content: A character value
-  ├─published: A character value
-  └─updated: (Optional) A character value
+  └─[Each element]: <list>
+    ├─id: A numeric value
+    ├─local_site_id: A numeric value
+    ├─content: A character value
+    ├─published: A character value
+    └─updated: (Optional) A character value
 }\if{html}{\out{</div>}}
 }
 \description{

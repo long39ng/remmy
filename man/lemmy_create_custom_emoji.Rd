@@ -44,9 +44,10 @@ A \code{list} of length 1:
   │ ├─published: A character value
   │ └─updated: (Optional) A character value
   └─keywords: <list>
-    ├─id: A numeric value
-    ├─custom_emoji_id: A numeric value
-    └─keyword: A character value
+    └─[Each element]: <list>
+      ├─id: A numeric value
+      ├─custom_emoji_id: A numeric value
+      └─keyword: A character value
 }\if{html}{\out{</div>}}
 }
 \description{

@@ -8,6 +8,15 @@
 \description{
 An HTTP API client for Lemmy (\url{https://github.com/LemmyNet/lemmy}) in R. Code and documentation are generated from the official JavaScript client source (\url{https://github.com/LemmyNet/lemmy-js-client}).
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/long39ng/remmy}
+  \item \url{https://long39ng.github.io/remmy/}
+  \item Report bugs at \url{https://github.com/long39ng/remmy/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Long Nguyen \email{long.nguyen@uni-bielefeld.de} (\href{https://orcid.org/0000-0001-8878-7386}{ORCID})
 

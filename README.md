@@ -4,13 +4,13 @@
 # remmy
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
 An HTTP API client for [Lemmy](https://github.com/LemmyNet/lemmy) in R.
 
-Code and documentation are [generated](./dev/build.sh) from the
-[official JavaScript
+Code and documentation are
+[generated](https://github.com/long39ng/remmy/blob/main/dev/build.sh)
+from the [official JavaScript
 client](https://github.com/LemmyNet/lemmy-js-client) source.
 
 Lemmy version:
@@ -19,13 +19,9 @@ Lemmy version:
 ## Installation
 
 <!-- You can install the released version of remmy from CRAN: -->
-
 <!-- ``` r -->
-
 <!-- install.packages("remmy") -->
-
 <!-- ``` -->
-
 <!-- Or install the development version of remmy from GitHub with: -->
 
 You can install the development version of remmy from GitHub with:
@@ -33,4 +29,13 @@ You can install the development version of remmy from GitHub with:
 ``` r
 # install.packages("devtools")
 devtools::install_github("long39ng/remmy")
+```
+
+## Example
+
+``` r
+library(remmy)
+
+lemmy_get_comment(546564)$comment_view$comment$content
+#> [1] "I am not by nature a sentimental person regarding software but I will truly miss RiF."
 ```

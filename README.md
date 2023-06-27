@@ -8,7 +8,9 @@
 
 An HTTP API client for [Lemmy](https://github.com/LemmyNet/lemmy) in R.
 
-Code and documentation are
+Code and
+[documentation](https://long39ng.github.io/remmy/reference/index.html)
+are
 [generated](https://github.com/long39ng/remmy/blob/main/dev/build.sh)
 from the [official JavaScript
 client](https://github.com/LemmyNet/lemmy-js-client) source.

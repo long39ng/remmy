@@ -6,7 +6,7 @@ fun_definition <- function(method, method_name) {
     deparse() |>
     paste(collapse = "\n")
 
-  glue("{fun_name(method_name)} <- {definition_text}")
+  paste(fun_name(method_name), "<-", definition_text)
 }
 
 fun_name <- function(method_name) {

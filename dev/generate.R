@@ -1,4 +1,3 @@
-library(glue)
 library(purrr)
 library(rlang)
 
@@ -15,7 +14,7 @@ as_r_type <- function(js_type) {
 }
 
 http_methods <- jsonlite::fromJSON("lemmy-js-client/http-methods.json") |>
-  modify_depth(1, \(method) modify_at(method, "endpoint", \(x) sub("^/", "", x)))
+  modify(\(method) modify_at(method, "endpoint", \(x) sub("^/", "", x)))
 
 cat(
   "# Functions generated from ../dev/generate.R\n\n",

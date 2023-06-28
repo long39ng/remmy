@@ -15,7 +15,7 @@ doc_desc <- function(method) {
 
 doc_params <- function(method) {
   method$params |>
-    imap_chr(\(param, name) glue("#' @param {name} {doc_property(param)}.")) |>
+    imap_chr(\(param, name) glue::glue("#' @param {name} {doc_property(param)}.")) |>
     c("#' @param .lemmy_instance Default: \"https://lemmy.world\". Change the default instance by setting the `lemmy_instance` [options()].") |>
     paste(collapse = "\n")
 }
@@ -28,7 +28,7 @@ doc_returns <- function(method) {
     map_chr(\(line) paste("#'", line)) |>
     paste(collapse = "\n")
 
-  glue(
+  glue::glue(
     "#' @returns A `list` of length {length(method$resp)}:\n#'\n#' ```",
     props_doc,
     "#' ```\n#'\n#' @export",

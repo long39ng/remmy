@@ -45,7 +45,6 @@
 #' │ │ ├─slur_filter_regex: (Optional) A character value
 #' │ │ ├─actor_name_max_length: A numeric value
 #' │ │ ├─federation_enabled: A logical value
-#' │ │ ├─federation_worker_count: A numeric value
 #' │ │ ├─captcha_enabled: A logical value
 #' │ │ ├─captcha_difficulty: A character value
 #' │ │ ├─published: A character value
@@ -95,6 +94,7 @@
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -128,7 +128,8 @@
 #' │ │ │ ├─show_new_post_notifs: A logical value
 #' │ │ │ ├─email_verified: A logical value
 #' │ │ │ ├─accepted_application: A logical value
-#' │ │ │ └─totp_2fa_url: (Optional) A character value
+#' │ │ │ ├─totp_2fa_url: (Optional) A character value
+#' │ │ │ └─open_links_in_new_tab: A logical value
 #' │ │ ├─person: <list>
 #' │ │ │ ├─id: A numeric value
 #' │ │ │ ├─name: A character value
@@ -142,6 +143,7 @@
 #' │ │ │ ├─local: A logical value
 #' │ │ │ ├─banner: (Optional) A character value
 #' │ │ │ ├─deleted: A logical value
+#' │ │ │ ├─inbox_url: A character value
 #' │ │ │ ├─matrix_user_id: (Optional) A character value
 #' │ │ │ ├─admin: A logical value
 #' │ │ │ ├─bot_account: A logical value
@@ -170,6 +172,8 @@
 #' │ │   │ ├─local: A logical value
 #' │ │   │ ├─icon: (Optional) A character value
 #' │ │   │ ├─banner: (Optional) A character value
+#' │ │   │ ├─followers_url: A character value
+#' │ │   │ ├─inbox_url: A character value
 #' │ │   │ ├─hidden: A logical value
 #' │ │   │ ├─posting_restricted_to_mods: A logical value
 #' │ │   │ └─instance_id: A numeric value
@@ -186,6 +190,7 @@
 #' │ │     ├─local: A logical value
 #' │ │     ├─banner: (Optional) A character value
 #' │ │     ├─deleted: A logical value
+#' │ │     ├─inbox_url: A character value
 #' │ │     ├─matrix_user_id: (Optional) A character value
 #' │ │     ├─admin: A logical value
 #' │ │     ├─bot_account: A logical value
@@ -207,6 +212,8 @@
 #' │ │   │ ├─local: A logical value
 #' │ │   │ ├─icon: (Optional) A character value
 #' │ │   │ ├─banner: (Optional) A character value
+#' │ │   │ ├─followers_url: A character value
+#' │ │   │ ├─inbox_url: A character value
 #' │ │   │ ├─hidden: A logical value
 #' │ │   │ ├─posting_restricted_to_mods: A logical value
 #' │ │   │ └─instance_id: A numeric value
@@ -223,6 +230,7 @@
 #' │ │     ├─local: A logical value
 #' │ │     ├─banner: (Optional) A character value
 #' │ │     ├─deleted: A logical value
+#' │ │     ├─inbox_url: A character value
 #' │ │     ├─matrix_user_id: (Optional) A character value
 #' │ │     ├─admin: A logical value
 #' │ │     ├─bot_account: A logical value
@@ -243,6 +251,7 @@
 #' │ │   │ ├─local: A logical value
 #' │ │   │ ├─banner: (Optional) A character value
 #' │ │   │ ├─deleted: A logical value
+#' │ │   │ ├─inbox_url: A character value
 #' │ │   │ ├─matrix_user_id: (Optional) A character value
 #' │ │   │ ├─admin: A logical value
 #' │ │   │ ├─bot_account: A logical value
@@ -262,6 +271,8 @@
 #' │ │     ├─local: A logical value
 #' │ │     ├─icon: (Optional) A character value
 #' │ │     ├─banner: (Optional) A character value
+#' │ │     ├─followers_url: A character value
+#' │ │     ├─inbox_url: A character value
 #' │ │     ├─hidden: A logical value
 #' │ │     ├─posting_restricted_to_mods: A logical value
 #' │ │     └─instance_id: A numeric value
@@ -280,6 +291,7 @@
 #' │ │   │ ├─local: A logical value
 #' │ │   │ ├─banner: (Optional) A character value
 #' │ │   │ ├─deleted: A logical value
+#' │ │   │ ├─inbox_url: A character value
 #' │ │   │ ├─matrix_user_id: (Optional) A character value
 #' │ │   │ ├─admin: A logical value
 #' │ │   │ ├─bot_account: A logical value
@@ -298,6 +310,7 @@
 #' │ │     ├─local: A logical value
 #' │ │     ├─banner: (Optional) A character value
 #' │ │     ├─deleted: A logical value
+#' │ │     ├─inbox_url: A character value
 #' │ │     ├─matrix_user_id: (Optional) A character value
 #' │ │     ├─admin: A logical value
 #' │ │     ├─bot_account: A logical value
@@ -384,7 +397,6 @@ lemmy_get_site <- function(auth = NULL, .lemmy_instance = getOption(
 #' @param rate_limit_search_per_second (Optional) A numeric value.
 #' @param federation_enabled (Optional) A logical value.
 #' @param federation_debug (Optional) A logical value.
-#' @param federation_worker_count (Optional) A numeric value.
 #' @param captcha_enabled (Optional) A logical value.
 #' @param captcha_difficulty (Optional) A character value.
 #' @param allowed_instances (Optional) A character vector.
@@ -432,7 +444,6 @@ lemmy_get_site <- function(auth = NULL, .lemmy_instance = getOption(
 #' │ │ ├─slur_filter_regex: (Optional) A character value
 #' │ │ ├─actor_name_max_length: A numeric value
 #' │ │ ├─federation_enabled: A logical value
-#' │ │ ├─federation_worker_count: A numeric value
 #' │ │ ├─captcha_enabled: A logical value
 #' │ │ ├─captcha_difficulty: A character value
 #' │ │ ├─published: A character value
@@ -491,10 +502,12 @@ lemmy_create_site <- function(
     rate_limit_image = NULL, rate_limit_image_per_second = NULL,
     rate_limit_comment = NULL, rate_limit_comment_per_second = NULL,
     rate_limit_search = NULL, rate_limit_search_per_second = NULL,
-    federation_enabled = NULL, federation_debug = NULL, federation_worker_count = NULL,
-    captcha_enabled = NULL, captcha_difficulty = NULL, allowed_instances = NULL,
-    blocked_instances = NULL, taglines = NULL, registration_mode = NULL,
-    auth, .lemmy_instance = getOption("lemmy_instance", "https://lemmy.world")) {
+    federation_enabled = NULL, federation_debug = NULL, captcha_enabled = NULL,
+    captcha_difficulty = NULL, allowed_instances = NULL, blocked_instances = NULL,
+    taglines = NULL, registration_mode = NULL, auth, .lemmy_instance = getOption(
+      "lemmy_instance",
+      "https://lemmy.world"
+    )) {
   stopifnot(length(name) == 1L)
   stopifnot(length(sidebar) <= 1L)
   stopifnot(length(description) <= 1L)
@@ -527,7 +540,6 @@ lemmy_create_site <- function(
   stopifnot(length(rate_limit_search_per_second) <= 1L)
   stopifnot(length(federation_enabled) <= 1L)
   stopifnot(length(federation_debug) <= 1L)
-  stopifnot(length(federation_worker_count) <= 1L)
   stopifnot(length(captcha_enabled) <= 1L)
   stopifnot(length(captcha_difficulty) <= 1L)
   stopifnot(length(registration_mode) <= 1L)
@@ -564,7 +576,6 @@ lemmy_create_site <- function(
   stopifnot(is.null(rate_limit_search_per_second) || is.numeric(rate_limit_search_per_second))
   stopifnot(is.null(federation_enabled) || is.logical(federation_enabled))
   stopifnot(is.null(federation_debug) || is.logical(federation_debug))
-  stopifnot(is.null(federation_worker_count) || is.numeric(federation_worker_count))
   stopifnot(is.null(captcha_enabled) || is.logical(captcha_enabled))
   stopifnot(is.null(captcha_difficulty) || is.character(captcha_difficulty))
   stopifnot(is.null(allowed_instances) || is.character(allowed_instances))
@@ -593,10 +604,10 @@ lemmy_create_site <- function(
     rate_limit_comment = rate_limit_comment, rate_limit_comment_per_second = rate_limit_comment_per_second,
     rate_limit_search = rate_limit_search, rate_limit_search_per_second = rate_limit_search_per_second,
     federation_enabled = federation_enabled, federation_debug = federation_debug,
-    federation_worker_count = federation_worker_count, captcha_enabled = captcha_enabled,
-    captcha_difficulty = captcha_difficulty, allowed_instances = allowed_instances,
-    blocked_instances = blocked_instances, taglines = taglines,
-    registration_mode = registration_mode, auth = auth
+    captcha_enabled = captcha_enabled, captcha_difficulty = captcha_difficulty,
+    allowed_instances = allowed_instances, blocked_instances = blocked_instances,
+    taglines = taglines, registration_mode = registration_mode,
+    auth = auth
   )
 }
 #' Edit your site.
@@ -636,7 +647,6 @@ lemmy_create_site <- function(
 #' @param rate_limit_search_per_second (Optional) A numeric value.
 #' @param federation_enabled (Optional) A logical value.
 #' @param federation_debug (Optional) A logical value.
-#' @param federation_worker_count (Optional) A numeric value.
 #' @param captcha_enabled (Optional) A logical value.
 #' @param captcha_difficulty (Optional) A character value.
 #' @param allowed_instances (Optional) A character vector.
@@ -685,7 +695,6 @@ lemmy_create_site <- function(
 #' │ │ ├─slur_filter_regex: (Optional) A character value
 #' │ │ ├─actor_name_max_length: A numeric value
 #' │ │ ├─federation_enabled: A logical value
-#' │ │ ├─federation_worker_count: A numeric value
 #' │ │ ├─captcha_enabled: A logical value
 #' │ │ ├─captcha_difficulty: A character value
 #' │ │ ├─published: A character value
@@ -744,13 +753,10 @@ lemmy_edit_site <- function(
     rate_limit_image = NULL, rate_limit_image_per_second = NULL,
     rate_limit_comment = NULL, rate_limit_comment_per_second = NULL,
     rate_limit_search = NULL, rate_limit_search_per_second = NULL,
-    federation_enabled = NULL, federation_debug = NULL, federation_worker_count = NULL,
-    captcha_enabled = NULL, captcha_difficulty = NULL, allowed_instances = NULL,
-    blocked_instances = NULL, taglines = NULL, registration_mode = NULL,
-    reports_email_admins = NULL, auth, .lemmy_instance = getOption(
-      "lemmy_instance",
-      "https://lemmy.world"
-    )) {
+    federation_enabled = NULL, federation_debug = NULL, captcha_enabled = NULL,
+    captcha_difficulty = NULL, allowed_instances = NULL, blocked_instances = NULL,
+    taglines = NULL, registration_mode = NULL, reports_email_admins = NULL,
+    auth, .lemmy_instance = getOption("lemmy_instance", "https://lemmy.world")) {
   stopifnot(length(name) <= 1L)
   stopifnot(length(sidebar) <= 1L)
   stopifnot(length(description) <= 1L)
@@ -783,7 +789,6 @@ lemmy_edit_site <- function(
   stopifnot(length(rate_limit_search_per_second) <= 1L)
   stopifnot(length(federation_enabled) <= 1L)
   stopifnot(length(federation_debug) <= 1L)
-  stopifnot(length(federation_worker_count) <= 1L)
   stopifnot(length(captcha_enabled) <= 1L)
   stopifnot(length(captcha_difficulty) <= 1L)
   stopifnot(length(registration_mode) <= 1L)
@@ -821,7 +826,6 @@ lemmy_edit_site <- function(
   stopifnot(is.null(rate_limit_search_per_second) || is.numeric(rate_limit_search_per_second))
   stopifnot(is.null(federation_enabled) || is.logical(federation_enabled))
   stopifnot(is.null(federation_debug) || is.logical(federation_debug))
-  stopifnot(is.null(federation_worker_count) || is.numeric(federation_worker_count))
   stopifnot(is.null(captcha_enabled) || is.logical(captcha_enabled))
   stopifnot(is.null(captcha_difficulty) || is.character(captcha_difficulty))
   stopifnot(is.null(allowed_instances) || is.character(allowed_instances))
@@ -851,11 +855,10 @@ lemmy_edit_site <- function(
     rate_limit_comment = rate_limit_comment, rate_limit_comment_per_second = rate_limit_comment_per_second,
     rate_limit_search = rate_limit_search, rate_limit_search_per_second = rate_limit_search_per_second,
     federation_enabled = federation_enabled, federation_debug = federation_debug,
-    federation_worker_count = federation_worker_count, captcha_enabled = captcha_enabled,
-    captcha_difficulty = captcha_difficulty, allowed_instances = allowed_instances,
-    blocked_instances = blocked_instances, taglines = taglines,
-    registration_mode = registration_mode, reports_email_admins = reports_email_admins,
-    auth = auth
+    captcha_enabled = captcha_enabled, captcha_difficulty = captcha_difficulty,
+    allowed_instances = allowed_instances, blocked_instances = blocked_instances,
+    taglines = taglines, registration_mode = registration_mode,
+    reports_email_admins = reports_email_admins, auth = auth
   )
 }
 #' Leave the Site admins.
@@ -903,7 +906,6 @@ lemmy_edit_site <- function(
 #' │ │ ├─slur_filter_regex: (Optional) A character value
 #' │ │ ├─actor_name_max_length: A numeric value
 #' │ │ ├─federation_enabled: A logical value
-#' │ │ ├─federation_worker_count: A numeric value
 #' │ │ ├─captcha_enabled: A logical value
 #' │ │ ├─captcha_difficulty: A character value
 #' │ │ ├─published: A character value
@@ -953,6 +955,7 @@ lemmy_edit_site <- function(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -986,7 +989,8 @@ lemmy_edit_site <- function(
 #' │ │ │ ├─show_new_post_notifs: A logical value
 #' │ │ │ ├─email_verified: A logical value
 #' │ │ │ ├─accepted_application: A logical value
-#' │ │ │ └─totp_2fa_url: (Optional) A character value
+#' │ │ │ ├─totp_2fa_url: (Optional) A character value
+#' │ │ │ └─open_links_in_new_tab: A logical value
 #' │ │ ├─person: <list>
 #' │ │ │ ├─id: A numeric value
 #' │ │ │ ├─name: A character value
@@ -1000,6 +1004,7 @@ lemmy_edit_site <- function(
 #' │ │ │ ├─local: A logical value
 #' │ │ │ ├─banner: (Optional) A character value
 #' │ │ │ ├─deleted: A logical value
+#' │ │ │ ├─inbox_url: A character value
 #' │ │ │ ├─matrix_user_id: (Optional) A character value
 #' │ │ │ ├─admin: A logical value
 #' │ │ │ ├─bot_account: A logical value
@@ -1028,6 +1033,8 @@ lemmy_edit_site <- function(
 #' │ │   │ ├─local: A logical value
 #' │ │   │ ├─icon: (Optional) A character value
 #' │ │   │ ├─banner: (Optional) A character value
+#' │ │   │ ├─followers_url: A character value
+#' │ │   │ ├─inbox_url: A character value
 #' │ │   │ ├─hidden: A logical value
 #' │ │   │ ├─posting_restricted_to_mods: A logical value
 #' │ │   │ └─instance_id: A numeric value
@@ -1044,6 +1051,7 @@ lemmy_edit_site <- function(
 #' │ │     ├─local: A logical value
 #' │ │     ├─banner: (Optional) A character value
 #' │ │     ├─deleted: A logical value
+#' │ │     ├─inbox_url: A character value
 #' │ │     ├─matrix_user_id: (Optional) A character value
 #' │ │     ├─admin: A logical value
 #' │ │     ├─bot_account: A logical value
@@ -1065,6 +1073,8 @@ lemmy_edit_site <- function(
 #' │ │   │ ├─local: A logical value
 #' │ │   │ ├─icon: (Optional) A character value
 #' │ │   │ ├─banner: (Optional) A character value
+#' │ │   │ ├─followers_url: A character value
+#' │ │   │ ├─inbox_url: A character value
 #' │ │   │ ├─hidden: A logical value
 #' │ │   │ ├─posting_restricted_to_mods: A logical value
 #' │ │   │ └─instance_id: A numeric value
@@ -1081,6 +1091,7 @@ lemmy_edit_site <- function(
 #' │ │     ├─local: A logical value
 #' │ │     ├─banner: (Optional) A character value
 #' │ │     ├─deleted: A logical value
+#' │ │     ├─inbox_url: A character value
 #' │ │     ├─matrix_user_id: (Optional) A character value
 #' │ │     ├─admin: A logical value
 #' │ │     ├─bot_account: A logical value
@@ -1101,6 +1112,7 @@ lemmy_edit_site <- function(
 #' │ │   │ ├─local: A logical value
 #' │ │   │ ├─banner: (Optional) A character value
 #' │ │   │ ├─deleted: A logical value
+#' │ │   │ ├─inbox_url: A character value
 #' │ │   │ ├─matrix_user_id: (Optional) A character value
 #' │ │   │ ├─admin: A logical value
 #' │ │   │ ├─bot_account: A logical value
@@ -1120,6 +1132,8 @@ lemmy_edit_site <- function(
 #' │ │     ├─local: A logical value
 #' │ │     ├─icon: (Optional) A character value
 #' │ │     ├─banner: (Optional) A character value
+#' │ │     ├─followers_url: A character value
+#' │ │     ├─inbox_url: A character value
 #' │ │     ├─hidden: A logical value
 #' │ │     ├─posting_restricted_to_mods: A logical value
 #' │ │     └─instance_id: A numeric value
@@ -1138,6 +1152,7 @@ lemmy_edit_site <- function(
 #' │ │   │ ├─local: A logical value
 #' │ │   │ ├─banner: (Optional) A character value
 #' │ │   │ ├─deleted: A logical value
+#' │ │   │ ├─inbox_url: A character value
 #' │ │   │ ├─matrix_user_id: (Optional) A character value
 #' │ │   │ ├─admin: A logical value
 #' │ │   │ ├─bot_account: A logical value
@@ -1156,6 +1171,7 @@ lemmy_edit_site <- function(
 #' │ │     ├─local: A logical value
 #' │ │     ├─banner: (Optional) A character value
 #' │ │     ├─deleted: A logical value
+#' │ │     ├─inbox_url: A character value
 #' │ │     ├─matrix_user_id: (Optional) A character value
 #' │ │     ├─admin: A logical value
 #' │ │     ├─bot_account: A logical value
@@ -1244,6 +1260,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -1285,6 +1302,8 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │     ├─local: A logical value
 #' │     ├─icon: (Optional) A character value
 #' │     ├─banner: (Optional) A character value
+#' │     ├─followers_url: A character value
+#' │     ├─inbox_url: A character value
 #' │     ├─hidden: A logical value
 #' │     ├─posting_restricted_to_mods: A logical value
 #' │     └─instance_id: A numeric value
@@ -1309,6 +1328,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -1350,6 +1370,8 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │     ├─local: A logical value
 #' │     ├─icon: (Optional) A character value
 #' │     ├─banner: (Optional) A character value
+#' │     ├─followers_url: A character value
+#' │     ├─inbox_url: A character value
 #' │     ├─hidden: A logical value
 #' │     ├─posting_restricted_to_mods: A logical value
 #' │     └─instance_id: A numeric value
@@ -1375,6 +1397,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -1416,6 +1439,8 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │     ├─local: A logical value
 #' │     ├─icon: (Optional) A character value
 #' │     ├─banner: (Optional) A character value
+#' │     ├─followers_url: A character value
+#' │     ├─inbox_url: A character value
 #' │     ├─hidden: A logical value
 #' │     ├─posting_restricted_to_mods: A logical value
 #' │     └─instance_id: A numeric value
@@ -1441,6 +1466,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -1473,6 +1499,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -1514,6 +1541,8 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │     ├─local: A logical value
 #' │     ├─icon: (Optional) A character value
 #' │     ├─banner: (Optional) A character value
+#' │     ├─followers_url: A character value
+#' │     ├─inbox_url: A character value
 #' │     ├─hidden: A logical value
 #' │     ├─posting_restricted_to_mods: A logical value
 #' │     └─instance_id: A numeric value
@@ -1540,6 +1569,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -1559,6 +1589,8 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │     ├─local: A logical value
 #' │     ├─icon: (Optional) A character value
 #' │     ├─banner: (Optional) A character value
+#' │     ├─followers_url: A character value
+#' │     ├─inbox_url: A character value
 #' │     ├─hidden: A logical value
 #' │     ├─posting_restricted_to_mods: A logical value
 #' │     └─instance_id: A numeric value
@@ -1586,6 +1618,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -1605,6 +1638,8 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │   │ ├─local: A logical value
 #' │   │ ├─icon: (Optional) A character value
 #' │   │ ├─banner: (Optional) A character value
+#' │   │ ├─followers_url: A character value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─hidden: A logical value
 #' │   │ ├─posting_restricted_to_mods: A logical value
 #' │   │ └─instance_id: A numeric value
@@ -1621,6 +1656,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │     ├─local: A logical value
 #' │     ├─banner: (Optional) A character value
 #' │     ├─deleted: A logical value
+#' │     ├─inbox_url: A character value
 #' │     ├─matrix_user_id: (Optional) A character value
 #' │     ├─admin: A logical value
 #' │     ├─bot_account: A logical value
@@ -1649,6 +1685,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -1667,6 +1704,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │     ├─local: A logical value
 #' │     ├─banner: (Optional) A character value
 #' │     ├─deleted: A logical value
+#' │     ├─inbox_url: A character value
 #' │     ├─matrix_user_id: (Optional) A character value
 #' │     ├─admin: A logical value
 #' │     ├─bot_account: A logical value
@@ -1694,6 +1732,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -1713,6 +1752,8 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │   │ ├─local: A logical value
 #' │   │ ├─icon: (Optional) A character value
 #' │   │ ├─banner: (Optional) A character value
+#' │   │ ├─followers_url: A character value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─hidden: A logical value
 #' │   │ ├─posting_restricted_to_mods: A logical value
 #' │   │ └─instance_id: A numeric value
@@ -1729,6 +1770,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │     ├─local: A logical value
 #' │     ├─banner: (Optional) A character value
 #' │     ├─deleted: A logical value
+#' │     ├─inbox_url: A character value
 #' │     ├─matrix_user_id: (Optional) A character value
 #' │     ├─admin: A logical value
 #' │     ├─bot_account: A logical value
@@ -1755,6 +1797,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -1774,6 +1817,8 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │   │ ├─local: A logical value
 #' │   │ ├─icon: (Optional) A character value
 #' │   │ ├─banner: (Optional) A character value
+#' │   │ ├─followers_url: A character value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─hidden: A logical value
 #' │   │ ├─posting_restricted_to_mods: A logical value
 #' │   │ └─instance_id: A numeric value
@@ -1790,6 +1835,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │     ├─local: A logical value
 #' │     ├─banner: (Optional) A character value
 #' │     ├─deleted: A logical value
+#' │     ├─inbox_url: A character value
 #' │     ├─matrix_user_id: (Optional) A character value
 #' │     ├─admin: A logical value
 #' │     ├─bot_account: A logical value
@@ -1816,6 +1862,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -1834,6 +1881,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │     ├─local: A logical value
 #' │     ├─banner: (Optional) A character value
 #' │     ├─deleted: A logical value
+#' │     ├─inbox_url: A character value
 #' │     ├─matrix_user_id: (Optional) A character value
 #' │     ├─admin: A logical value
 #' │     ├─bot_account: A logical value
@@ -1859,6 +1907,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │     ├─local: A logical value
 #' │     ├─banner: (Optional) A character value
 #' │     ├─deleted: A logical value
+#' │     ├─inbox_url: A character value
 #' │     ├─matrix_user_id: (Optional) A character value
 #' │     ├─admin: A logical value
 #' │     ├─bot_account: A logical value
@@ -1884,6 +1933,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │     ├─local: A logical value
 #' │     ├─banner: (Optional) A character value
 #' │     ├─deleted: A logical value
+#' │     ├─inbox_url: A character value
 #' │     ├─matrix_user_id: (Optional) A character value
 #' │     ├─admin: A logical value
 #' │     ├─bot_account: A logical value
@@ -1910,6 +1960,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -1929,6 +1980,8 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │     ├─local: A logical value
 #' │     ├─icon: (Optional) A character value
 #' │     ├─banner: (Optional) A character value
+#' │     ├─followers_url: A character value
+#' │     ├─inbox_url: A character value
 #' │     ├─hidden: A logical value
 #' │     ├─posting_restricted_to_mods: A logical value
 #' │     └─instance_id: A numeric value
@@ -1953,6 +2006,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -2002,6 +2056,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -2021,6 +2076,8 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #'       ├─local: A logical value
 #'       ├─icon: (Optional) A character value
 #'       ├─banner: (Optional) A character value
+#'       ├─followers_url: A character value
+#'       ├─inbox_url: A character value
 #'       ├─hidden: A logical value
 #'       ├─posting_restricted_to_mods: A logical value
 #'       └─instance_id: A numeric value
@@ -2067,7 +2124,7 @@ lemmy_get_modlog <- function(
 #' @param community_name (Optional) A character value.
 #' @param creator_id (Optional) A numeric value.
 #' @param type_ (Optional) One of "All", "Comments", "Posts", "Communities", "Users", or "Url".
-#' @param sort (Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", or "TopTwelveHour".
+#' @param sort (Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", "TopTwelveHour", "TopThreeMonths", "TopSixMonths", or "TopNineMonths".
 #' @param listing_type (Optional) One of "All", "Local", or "Subscribed".
 #' @param page (Optional) A numeric value.
 #' @param limit (Optional) A numeric value.
@@ -2108,6 +2165,7 @@ lemmy_get_modlog <- function(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -2149,6 +2207,8 @@ lemmy_get_modlog <- function(
 #' │   │ ├─local: A logical value
 #' │   │ ├─icon: (Optional) A character value
 #' │   │ ├─banner: (Optional) A character value
+#' │   │ ├─followers_url: A character value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─hidden: A logical value
 #' │   │ ├─posting_restricted_to_mods: A logical value
 #' │   │ └─instance_id: A numeric value
@@ -2203,6 +2263,7 @@ lemmy_get_modlog <- function(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -2222,6 +2283,8 @@ lemmy_get_modlog <- function(
 #' │   │ ├─local: A logical value
 #' │   │ ├─icon: (Optional) A character value
 #' │   │ ├─banner: (Optional) A character value
+#' │   │ ├─followers_url: A character value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─hidden: A logical value
 #' │   │ ├─posting_restricted_to_mods: A logical value
 #' │   │ └─instance_id: A numeric value
@@ -2262,6 +2325,8 @@ lemmy_get_modlog <- function(
 #' │   │ ├─local: A logical value
 #' │   │ ├─icon: (Optional) A character value
 #' │   │ ├─banner: (Optional) A character value
+#' │   │ ├─followers_url: A character value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─hidden: A logical value
 #' │   │ ├─posting_restricted_to_mods: A logical value
 #' │   │ └─instance_id: A numeric value
@@ -2294,6 +2359,7 @@ lemmy_get_modlog <- function(
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -2340,7 +2406,8 @@ lemmy_search <- function(
   stopifnot(is.null(sort) || sort %in% c(
     "Active", "Hot", "New",
     "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll",
-    "MostComments", "NewComments", "TopHour", "TopSixHour", "TopTwelveHour"
+    "MostComments", "NewComments", "TopHour", "TopSixHour", "TopTwelveHour",
+    "TopThreeMonths", "TopSixMonths", "TopNineMonths"
   ))
   stopifnot(is.null(listing_type) || listing_type %in% c(
     "All",
@@ -2394,6 +2461,7 @@ lemmy_search <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─banner: (Optional) A character value
 #' │ │ ├─deleted: A logical value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─matrix_user_id: (Optional) A character value
 #' │ │ ├─admin: A logical value
 #' │ │ ├─bot_account: A logical value
@@ -2435,6 +2503,8 @@ lemmy_search <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -2488,6 +2558,7 @@ lemmy_search <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─banner: (Optional) A character value
 #' │ │ ├─deleted: A logical value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─matrix_user_id: (Optional) A character value
 #' │ │ ├─admin: A logical value
 #' │ │ ├─bot_account: A logical value
@@ -2507,6 +2578,8 @@ lemmy_search <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -2546,6 +2619,8 @@ lemmy_search <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -2577,6 +2652,7 @@ lemmy_search <- function(
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -2639,6 +2715,8 @@ lemmy_resolve_object <- function(q, auth, .lemmy_instance = getOption(
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -2716,6 +2794,8 @@ lemmy_create_community <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -2764,6 +2844,8 @@ lemmy_create_community <- function(
 #' │   │ ├─local: A logical value
 #' │   │ ├─icon: (Optional) A character value
 #' │   │ ├─banner: (Optional) A character value
+#' │   │ ├─followers_url: A character value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─hidden: A logical value
 #' │   │ ├─posting_restricted_to_mods: A logical value
 #' │   │ └─instance_id: A numeric value
@@ -2780,6 +2862,7 @@ lemmy_create_community <- function(
 #' │     ├─local: A logical value
 #' │     ├─banner: (Optional) A character value
 #' │     ├─deleted: A logical value
+#' │     ├─inbox_url: A character value
 #' │     ├─matrix_user_id: (Optional) A character value
 #' │     ├─admin: A logical value
 #' │     ├─bot_account: A logical value
@@ -2838,6 +2921,8 @@ lemmy_get_community <- function(id = NULL, name = NULL, auth = NULL, .lemmy_inst
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -2895,7 +2980,8 @@ lemmy_edit_community <- function(
 #' `HTTP.GET /community/list`
 #'
 #' @param type_ (Optional) One of "All", "Local", or "Subscribed".
-#' @param sort (Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", or "TopTwelveHour".
+#' @param sort (Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", "TopTwelveHour", "TopThreeMonths", "TopSixMonths", or "TopNineMonths".
+#' @param show_nsfw (Optional) A logical value.
 #' @param page (Optional) A numeric value.
 #' @param limit (Optional) A numeric value.
 #' @param auth (Optional) A character value.
@@ -2921,6 +3007,8 @@ lemmy_edit_community <- function(
 #'     │ ├─local: A logical value
 #'     │ ├─icon: (Optional) A character value
 #'     │ ├─banner: (Optional) A character value
+#'     │ ├─followers_url: A character value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─hidden: A logical value
 #'     │ ├─posting_restricted_to_mods: A logical value
 #'     │ └─instance_id: A numeric value
@@ -2942,16 +3030,18 @@ lemmy_edit_community <- function(
 #'
 #' @export
 lemmy_list_communities <- function(
-    type_ = NULL, sort = NULL, page = NULL, limit = NULL,
-    auth = NULL, .lemmy_instance = getOption(
+    type_ = NULL, sort = NULL, show_nsfw = NULL, page = NULL,
+    limit = NULL, auth = NULL, .lemmy_instance = getOption(
       "lemmy_instance",
       "https://lemmy.world"
     )) {
   stopifnot(length(type_) <= 1L)
   stopifnot(length(sort) <= 1L)
+  stopifnot(length(show_nsfw) <= 1L)
   stopifnot(length(page) <= 1L)
   stopifnot(length(limit) <= 1L)
   stopifnot(length(auth) <= 1L)
+  stopifnot(is.null(show_nsfw) || is.logical(show_nsfw))
   stopifnot(is.null(page) || is.numeric(page))
   stopifnot(is.null(limit) || is.numeric(limit))
   stopifnot(is.null(auth) || is.character(auth))
@@ -2962,12 +3052,13 @@ lemmy_list_communities <- function(
   stopifnot(is.null(sort) || sort %in% c(
     "Active", "Hot", "New",
     "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll",
-    "MostComments", "NewComments", "TopHour", "TopSixHour", "TopTwelveHour"
+    "MostComments", "NewComments", "TopHour", "TopSixHour", "TopTwelveHour",
+    "TopThreeMonths", "TopSixMonths", "TopNineMonths"
   ))
   wrapper(
     base_url = .lemmy_instance, req_type = "GET", endpoint = "community/list",
-    type_ = type_, sort = sort, page = page, limit = limit,
-    auth = auth
+    type_ = type_, sort = sort, show_nsfw = show_nsfw, page = page,
+    limit = limit, auth = auth
   )
 }
 #' Follow / subscribe to a community.
@@ -2998,6 +3089,8 @@ lemmy_list_communities <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -3062,6 +3155,8 @@ lemmy_follow_community <- function(community_id, follow, auth, .lemmy_instance =
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -3126,6 +3221,8 @@ lemmy_block_community <- function(community_id, block, auth, .lemmy_instance = g
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -3192,6 +3289,8 @@ lemmy_delete_community <- function(community_id, deleted, auth, .lemmy_instance 
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -3260,6 +3359,8 @@ lemmy_remove_community <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -3308,6 +3409,8 @@ lemmy_remove_community <- function(
 #' │   │ ├─local: A logical value
 #' │   │ ├─icon: (Optional) A character value
 #' │   │ ├─banner: (Optional) A character value
+#' │   │ ├─followers_url: A character value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─hidden: A logical value
 #' │   │ ├─posting_restricted_to_mods: A logical value
 #' │   │ └─instance_id: A numeric value
@@ -3324,6 +3427,7 @@ lemmy_remove_community <- function(
 #' │     ├─local: A logical value
 #' │     ├─banner: (Optional) A character value
 #' │     ├─deleted: A logical value
+#' │     ├─inbox_url: A character value
 #' │     ├─matrix_user_id: (Optional) A character value
 #' │     ├─admin: A logical value
 #' │     ├─bot_account: A logical value
@@ -3379,6 +3483,7 @@ lemmy_transfer_community <- function(community_id, person_id, auth, .lemmy_insta
 #' │ │ ├─local: A logical value
 #' │ │ ├─banner: (Optional) A character value
 #' │ │ ├─deleted: A logical value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─matrix_user_id: (Optional) A character value
 #' │ │ ├─admin: A logical value
 #' │ │ ├─bot_account: A logical value
@@ -3452,6 +3557,8 @@ lemmy_ban_from_community <- function(
 #'     │ ├─local: A logical value
 #'     │ ├─icon: (Optional) A character value
 #'     │ ├─banner: (Optional) A character value
+#'     │ ├─followers_url: A character value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─hidden: A logical value
 #'     │ ├─posting_restricted_to_mods: A logical value
 #'     │ └─instance_id: A numeric value
@@ -3468,6 +3575,7 @@ lemmy_ban_from_community <- function(
 #'       ├─local: A logical value
 #'       ├─banner: (Optional) A character value
 #'       ├─deleted: A logical value
+#'       ├─inbox_url: A character value
 #'       ├─matrix_user_id: (Optional) A character value
 #'       ├─admin: A logical value
 #'       ├─bot_account: A logical value
@@ -3548,6 +3656,7 @@ lemmy_add_mod_to_community <- function(community_id, person_id, added, auth, .le
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -3567,6 +3676,8 @@ lemmy_add_mod_to_community <- function(community_id, person_id, added, auth, .le
 #'   │ ├─local: A logical value
 #'   │ ├─icon: (Optional) A character value
 #'   │ ├─banner: (Optional) A character value
+#'   │ ├─followers_url: A character value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─hidden: A logical value
 #'   │ ├─posting_restricted_to_mods: A logical value
 #'   │ └─instance_id: A numeric value
@@ -3672,6 +3783,7 @@ lemmy_create_post <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─banner: (Optional) A character value
 #' │ │ ├─deleted: A logical value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─matrix_user_id: (Optional) A character value
 #' │ │ ├─admin: A logical value
 #' │ │ ├─bot_account: A logical value
@@ -3691,6 +3803,8 @@ lemmy_create_post <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -3730,6 +3844,8 @@ lemmy_create_post <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -3763,6 +3879,8 @@ lemmy_create_post <- function(
 #' │   │ ├─local: A logical value
 #' │   │ ├─icon: (Optional) A character value
 #' │   │ ├─banner: (Optional) A character value
+#' │   │ ├─followers_url: A character value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─hidden: A logical value
 #' │   │ ├─posting_restricted_to_mods: A logical value
 #' │   │ └─instance_id: A numeric value
@@ -3779,6 +3897,7 @@ lemmy_create_post <- function(
 #' │     ├─local: A logical value
 #' │     ├─banner: (Optional) A character value
 #' │     ├─deleted: A logical value
+#' │     ├─inbox_url: A character value
 #' │     ├─matrix_user_id: (Optional) A character value
 #' │     ├─admin: A logical value
 #' │     ├─bot_account: A logical value
@@ -3821,6 +3940,7 @@ lemmy_create_post <- function(
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -3840,6 +3960,8 @@ lemmy_create_post <- function(
 #'     │ ├─local: A logical value
 #'     │ ├─icon: (Optional) A character value
 #'     │ ├─banner: (Optional) A character value
+#'     │ ├─followers_url: A character value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─hidden: A logical value
 #'     │ ├─posting_restricted_to_mods: A logical value
 #'     │ └─instance_id: A numeric value
@@ -3935,6 +4057,7 @@ lemmy_get_post <- function(id = NULL, comment_id = NULL, auth = NULL, .lemmy_ins
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -3954,6 +4077,8 @@ lemmy_get_post <- function(id = NULL, comment_id = NULL, auth = NULL, .lemmy_ins
 #'   │ ├─local: A logical value
 #'   │ ├─icon: (Optional) A character value
 #'   │ ├─banner: (Optional) A character value
+#'   │ ├─followers_url: A character value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─hidden: A logical value
 #'   │ ├─posting_restricted_to_mods: A logical value
 #'   │ └─instance_id: A numeric value
@@ -4056,6 +4181,7 @@ lemmy_edit_post <- function(
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -4075,6 +4201,8 @@ lemmy_edit_post <- function(
 #'   │ ├─local: A logical value
 #'   │ ├─icon: (Optional) A character value
 #'   │ ├─banner: (Optional) A character value
+#'   │ ├─followers_url: A character value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─hidden: A logical value
 #'   │ ├─posting_restricted_to_mods: A logical value
 #'   │ └─instance_id: A numeric value
@@ -4167,6 +4295,7 @@ lemmy_delete_post <- function(post_id, deleted, auth, .lemmy_instance = getOptio
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -4186,6 +4315,8 @@ lemmy_delete_post <- function(post_id, deleted, auth, .lemmy_instance = getOptio
 #'   │ ├─local: A logical value
 #'   │ ├─icon: (Optional) A character value
 #'   │ ├─banner: (Optional) A character value
+#'   │ ├─followers_url: A character value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─hidden: A logical value
 #'   │ ├─posting_restricted_to_mods: A logical value
 #'   │ └─instance_id: A numeric value
@@ -4280,6 +4411,7 @@ lemmy_remove_post <- function(post_id, removed, reason = NULL, auth, .lemmy_inst
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -4299,6 +4431,8 @@ lemmy_remove_post <- function(post_id, removed, reason = NULL, auth, .lemmy_inst
 #'   │ ├─local: A logical value
 #'   │ ├─icon: (Optional) A character value
 #'   │ ├─banner: (Optional) A character value
+#'   │ ├─followers_url: A character value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─hidden: A logical value
 #'   │ ├─posting_restricted_to_mods: A logical value
 #'   │ └─instance_id: A numeric value
@@ -4390,6 +4524,7 @@ lemmy_mark_post_as_read <- function(post_id, read, auth, .lemmy_instance = getOp
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -4409,6 +4544,8 @@ lemmy_mark_post_as_read <- function(post_id, read, auth, .lemmy_instance = getOp
 #'   │ ├─local: A logical value
 #'   │ ├─icon: (Optional) A character value
 #'   │ ├─banner: (Optional) A character value
+#'   │ ├─followers_url: A character value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─hidden: A logical value
 #'   │ ├─posting_restricted_to_mods: A logical value
 #'   │ └─instance_id: A numeric value
@@ -4501,6 +4638,7 @@ lemmy_lock_post <- function(post_id, locked, auth, .lemmy_instance = getOption(
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -4520,6 +4658,8 @@ lemmy_lock_post <- function(post_id, locked, auth, .lemmy_instance = getOption(
 #'   │ ├─local: A logical value
 #'   │ ├─icon: (Optional) A character value
 #'   │ ├─banner: (Optional) A character value
+#'   │ ├─followers_url: A character value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─hidden: A logical value
 #'   │ ├─posting_restricted_to_mods: A logical value
 #'   │ └─instance_id: A numeric value
@@ -4570,7 +4710,7 @@ lemmy_feature_post <- function(post_id, featured, feature_type, auth, .lemmy_ins
 #' `HTTP.GET /post/list`
 #'
 #' @param type_ (Optional) One of "All", "Local", or "Subscribed".
-#' @param sort (Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", or "TopTwelveHour".
+#' @param sort (Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", "TopTwelveHour", "TopThreeMonths", "TopSixMonths", or "TopNineMonths".
 #' @param page (Optional) A numeric value.
 #' @param limit (Optional) A numeric value.
 #' @param community_id (Optional) A numeric value.
@@ -4620,6 +4760,7 @@ lemmy_feature_post <- function(post_id, featured, feature_type, auth, .lemmy_ins
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -4639,6 +4780,8 @@ lemmy_feature_post <- function(post_id, featured, feature_type, auth, .lemmy_ins
 #'     │ ├─local: A logical value
 #'     │ ├─icon: (Optional) A character value
 #'     │ ├─banner: (Optional) A character value
+#'     │ ├─followers_url: A character value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─hidden: A logical value
 #'     │ ├─posting_restricted_to_mods: A logical value
 #'     │ └─instance_id: A numeric value
@@ -4694,7 +4837,8 @@ lemmy_get_posts <- function(
   stopifnot(is.null(sort) || sort %in% c(
     "Active", "Hot", "New",
     "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll",
-    "MostComments", "NewComments", "TopHour", "TopSixHour", "TopTwelveHour"
+    "MostComments", "NewComments", "TopHour", "TopSixHour", "TopTwelveHour",
+    "TopThreeMonths", "TopSixMonths", "TopNineMonths"
   ))
   wrapper(
     base_url = .lemmy_instance, req_type = "GET", endpoint = "post/list",
@@ -4752,6 +4896,7 @@ lemmy_get_posts <- function(
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -4771,6 +4916,8 @@ lemmy_get_posts <- function(
 #'   │ ├─local: A logical value
 #'   │ ├─icon: (Optional) A character value
 #'   │ ├─banner: (Optional) A character value
+#'   │ ├─followers_url: A character value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─hidden: A logical value
 #'   │ ├─posting_restricted_to_mods: A logical value
 #'   │ └─instance_id: A numeric value
@@ -4862,6 +5009,7 @@ lemmy_like_post <- function(post_id, score, auth, .lemmy_instance = getOption(
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -4881,6 +5029,8 @@ lemmy_like_post <- function(post_id, score, auth, .lemmy_instance = getOption(
 #'   │ ├─local: A logical value
 #'   │ ├─icon: (Optional) A character value
 #'   │ ├─banner: (Optional) A character value
+#'   │ ├─followers_url: A character value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─hidden: A logical value
 #'   │ ├─posting_restricted_to_mods: A logical value
 #'   │ └─instance_id: A numeric value
@@ -4985,6 +5135,8 @@ lemmy_save_post <- function(post_id, save, auth, .lemmy_instance = getOption(
 #'   │ ├─local: A logical value
 #'   │ ├─icon: (Optional) A character value
 #'   │ ├─banner: (Optional) A character value
+#'   │ ├─followers_url: A character value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─hidden: A logical value
 #'   │ ├─posting_restricted_to_mods: A logical value
 #'   │ └─instance_id: A numeric value
@@ -5001,6 +5153,7 @@ lemmy_save_post <- function(post_id, save, auth, .lemmy_instance = getOption(
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -5019,6 +5172,7 @@ lemmy_save_post <- function(post_id, save, auth, .lemmy_instance = getOption(
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -5053,6 +5207,7 @@ lemmy_save_post <- function(post_id, save, auth, .lemmy_instance = getOption(
 #'     ├─local: A logical value
 #'     ├─banner: (Optional) A character value
 #'     ├─deleted: A logical value
+#'     ├─inbox_url: A character value
 #'     ├─matrix_user_id: (Optional) A character value
 #'     ├─admin: A logical value
 #'     ├─bot_account: A logical value
@@ -5138,6 +5293,8 @@ lemmy_create_post_report <- function(post_id, reason, auth, .lemmy_instance = ge
 #'   │ ├─local: A logical value
 #'   │ ├─icon: (Optional) A character value
 #'   │ ├─banner: (Optional) A character value
+#'   │ ├─followers_url: A character value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─hidden: A logical value
 #'   │ ├─posting_restricted_to_mods: A logical value
 #'   │ └─instance_id: A numeric value
@@ -5154,6 +5311,7 @@ lemmy_create_post_report <- function(post_id, reason, auth, .lemmy_instance = ge
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -5172,6 +5330,7 @@ lemmy_create_post_report <- function(post_id, reason, auth, .lemmy_instance = ge
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -5206,6 +5365,7 @@ lemmy_create_post_report <- function(post_id, reason, auth, .lemmy_instance = ge
 #'     ├─local: A logical value
 #'     ├─banner: (Optional) A character value
 #'     ├─deleted: A logical value
+#'     ├─inbox_url: A character value
 #'     ├─matrix_user_id: (Optional) A character value
 #'     ├─admin: A logical value
 #'     ├─bot_account: A logical value
@@ -5294,6 +5454,8 @@ lemmy_resolve_post_report <- function(report_id, resolved, auth, .lemmy_instance
 #'     │ ├─local: A logical value
 #'     │ ├─icon: (Optional) A character value
 #'     │ ├─banner: (Optional) A character value
+#'     │ ├─followers_url: A character value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─hidden: A logical value
 #'     │ ├─posting_restricted_to_mods: A logical value
 #'     │ └─instance_id: A numeric value
@@ -5310,6 +5472,7 @@ lemmy_resolve_post_report <- function(report_id, resolved, auth, .lemmy_instance
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -5328,6 +5491,7 @@ lemmy_resolve_post_report <- function(report_id, resolved, auth, .lemmy_instance
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -5362,6 +5526,7 @@ lemmy_resolve_post_report <- function(report_id, resolved, auth, .lemmy_instance
 #'       ├─local: A logical value
 #'       ├─banner: (Optional) A character value
 #'       ├─deleted: A logical value
+#'       ├─inbox_url: A character value
 #'       ├─matrix_user_id: (Optional) A character value
 #'       ├─admin: A logical value
 #'       ├─bot_account: A logical value
@@ -5466,6 +5631,7 @@ lemmy_get_site_metadata <- function(url, .lemmy_instance = getOption(
 #' │ │ ├─local: A logical value
 #' │ │ ├─banner: (Optional) A character value
 #' │ │ ├─deleted: A logical value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─matrix_user_id: (Optional) A character value
 #' │ │ ├─admin: A logical value
 #' │ │ ├─bot_account: A logical value
@@ -5507,6 +5673,8 @@ lemmy_get_site_metadata <- function(url, .lemmy_instance = getOption(
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -5596,6 +5764,7 @@ lemmy_create_comment <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─banner: (Optional) A character value
 #' │ │ ├─deleted: A logical value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─matrix_user_id: (Optional) A character value
 #' │ │ ├─admin: A logical value
 #' │ │ ├─bot_account: A logical value
@@ -5637,6 +5806,8 @@ lemmy_create_comment <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -5719,6 +5890,7 @@ lemmy_edit_comment <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─banner: (Optional) A character value
 #' │ │ ├─deleted: A logical value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─matrix_user_id: (Optional) A character value
 #' │ │ ├─admin: A logical value
 #' │ │ ├─bot_account: A logical value
@@ -5760,6 +5932,8 @@ lemmy_edit_comment <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -5839,6 +6013,7 @@ lemmy_delete_comment <- function(comment_id, deleted, auth, .lemmy_instance = ge
 #' │ │ ├─local: A logical value
 #' │ │ ├─banner: (Optional) A character value
 #' │ │ ├─deleted: A logical value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─matrix_user_id: (Optional) A character value
 #' │ │ ├─admin: A logical value
 #' │ │ ├─bot_account: A logical value
@@ -5880,6 +6055,8 @@ lemmy_delete_comment <- function(comment_id, deleted, auth, .lemmy_instance = ge
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -5967,6 +6144,7 @@ lemmy_remove_comment <- function(comment_id, removed, reason = NULL, auth, .lemm
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -6008,6 +6186,8 @@ lemmy_remove_comment <- function(comment_id, removed, reason = NULL, auth, .lemm
 #'   │ ├─local: A logical value
 #'   │ ├─icon: (Optional) A character value
 #'   │ ├─banner: (Optional) A character value
+#'   │ ├─followers_url: A character value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─hidden: A logical value
 #'   │ ├─posting_restricted_to_mods: A logical value
 #'   │ └─instance_id: A numeric value
@@ -6024,6 +6204,7 @@ lemmy_remove_comment <- function(comment_id, removed, reason = NULL, auth, .lemm
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -6102,6 +6283,7 @@ lemmy_mark_comment_reply_as_read <- function(comment_reply_id, read, auth, .lemm
 #' │ │ ├─local: A logical value
 #' │ │ ├─banner: (Optional) A character value
 #' │ │ ├─deleted: A logical value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─matrix_user_id: (Optional) A character value
 #' │ │ ├─admin: A logical value
 #' │ │ ├─bot_account: A logical value
@@ -6143,6 +6325,8 @@ lemmy_mark_comment_reply_as_read <- function(comment_reply_id, read, auth, .lemm
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -6221,6 +6405,7 @@ lemmy_like_comment <- function(comment_id, score, auth, .lemmy_instance = getOpt
 #' │ │ ├─local: A logical value
 #' │ │ ├─banner: (Optional) A character value
 #' │ │ ├─deleted: A logical value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─matrix_user_id: (Optional) A character value
 #' │ │ ├─admin: A logical value
 #' │ │ ├─bot_account: A logical value
@@ -6262,6 +6447,8 @@ lemmy_like_comment <- function(comment_id, score, auth, .lemmy_instance = getOpt
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -6340,6 +6527,7 @@ lemmy_save_comment <- function(comment_id, save, auth, .lemmy_instance = getOpti
 #' │ │ ├─local: A logical value
 #' │ │ ├─banner: (Optional) A character value
 #' │ │ ├─deleted: A logical value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─matrix_user_id: (Optional) A character value
 #' │ │ ├─admin: A logical value
 #' │ │ ├─bot_account: A logical value
@@ -6381,6 +6569,8 @@ lemmy_save_comment <- function(comment_id, save, auth, .lemmy_instance = getOpti
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -6469,6 +6659,7 @@ lemmy_distinguish_comment <- function(comment_id, distinguished, auth, .lemmy_in
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -6510,6 +6701,8 @@ lemmy_distinguish_comment <- function(comment_id, distinguished, auth, .lemmy_in
 #'     │ ├─local: A logical value
 #'     │ ├─icon: (Optional) A character value
 #'     │ ├─banner: (Optional) A character value
+#'     │ ├─followers_url: A character value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─hidden: A logical value
 #'     │ ├─posting_restricted_to_mods: A logical value
 #'     │ └─instance_id: A numeric value
@@ -6611,6 +6804,7 @@ lemmy_get_comments <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─banner: (Optional) A character value
 #' │ │ ├─deleted: A logical value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─matrix_user_id: (Optional) A character value
 #' │ │ ├─admin: A logical value
 #' │ │ ├─bot_account: A logical value
@@ -6652,6 +6846,8 @@ lemmy_get_comments <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─icon: (Optional) A character value
 #' │ │ ├─banner: (Optional) A character value
+#' │ │ ├─followers_url: A character value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─hidden: A logical value
 #' │ │ ├─posting_restricted_to_mods: A logical value
 #' │ │ └─instance_id: A numeric value
@@ -6761,6 +6957,8 @@ lemmy_get_comment <- function(id, auth = NULL, .lemmy_instance = getOption(
 #'   │ ├─local: A logical value
 #'   │ ├─icon: (Optional) A character value
 #'   │ ├─banner: (Optional) A character value
+#'   │ ├─followers_url: A character value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─hidden: A logical value
 #'   │ ├─posting_restricted_to_mods: A logical value
 #'   │ └─instance_id: A numeric value
@@ -6777,6 +6975,7 @@ lemmy_get_comment <- function(id, auth = NULL, .lemmy_instance = getOption(
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -6795,6 +6994,7 @@ lemmy_get_comment <- function(id, auth = NULL, .lemmy_instance = getOption(
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -6824,6 +7024,7 @@ lemmy_get_comment <- function(id, auth = NULL, .lemmy_instance = getOption(
 #'     ├─local: A logical value
 #'     ├─banner: (Optional) A character value
 #'     ├─deleted: A logical value
+#'     ├─inbox_url: A character value
 #'     ├─matrix_user_id: (Optional) A character value
 #'     ├─admin: A logical value
 #'     ├─bot_account: A logical value
@@ -6921,6 +7122,8 @@ lemmy_create_comment_report <- function(comment_id, reason, auth, .lemmy_instanc
 #'   │ ├─local: A logical value
 #'   │ ├─icon: (Optional) A character value
 #'   │ ├─banner: (Optional) A character value
+#'   │ ├─followers_url: A character value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─hidden: A logical value
 #'   │ ├─posting_restricted_to_mods: A logical value
 #'   │ └─instance_id: A numeric value
@@ -6937,6 +7140,7 @@ lemmy_create_comment_report <- function(comment_id, reason, auth, .lemmy_instanc
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -6955,6 +7159,7 @@ lemmy_create_comment_report <- function(comment_id, reason, auth, .lemmy_instanc
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -6984,6 +7189,7 @@ lemmy_create_comment_report <- function(comment_id, reason, auth, .lemmy_instanc
 #'     ├─local: A logical value
 #'     ├─banner: (Optional) A character value
 #'     ├─deleted: A logical value
+#'     ├─inbox_url: A character value
 #'     ├─matrix_user_id: (Optional) A character value
 #'     ├─admin: A logical value
 #'     ├─bot_account: A logical value
@@ -7084,6 +7290,8 @@ lemmy_resolve_comment_report <- function(report_id, resolved, auth, .lemmy_insta
 #'     │ ├─local: A logical value
 #'     │ ├─icon: (Optional) A character value
 #'     │ ├─banner: (Optional) A character value
+#'     │ ├─followers_url: A character value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─hidden: A logical value
 #'     │ ├─posting_restricted_to_mods: A logical value
 #'     │ └─instance_id: A numeric value
@@ -7100,6 +7308,7 @@ lemmy_resolve_comment_report <- function(report_id, resolved, auth, .lemmy_insta
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -7118,6 +7327,7 @@ lemmy_resolve_comment_report <- function(report_id, resolved, auth, .lemmy_insta
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -7147,6 +7357,7 @@ lemmy_resolve_comment_report <- function(report_id, resolved, auth, .lemmy_insta
 #'       ├─local: A logical value
 #'       ├─banner: (Optional) A character value
 #'       ├─deleted: A logical value
+#'       ├─inbox_url: A character value
 #'       ├─matrix_user_id: (Optional) A character value
 #'       ├─admin: A logical value
 #'       ├─bot_account: A logical value
@@ -7217,6 +7428,7 @@ lemmy_list_comment_reports <- function(
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -7235,6 +7447,7 @@ lemmy_list_comment_reports <- function(
 #'       ├─local: A logical value
 #'       ├─banner: (Optional) A character value
 #'       ├─deleted: A logical value
+#'       ├─inbox_url: A character value
 #'       ├─matrix_user_id: (Optional) A character value
 #'       ├─admin: A logical value
 #'       ├─bot_account: A logical value
@@ -7298,6 +7511,7 @@ lemmy_get_private_messages <- function(
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -7316,6 +7530,7 @@ lemmy_get_private_messages <- function(
 #'     ├─local: A logical value
 #'     ├─banner: (Optional) A character value
 #'     ├─deleted: A logical value
+#'     ├─inbox_url: A character value
 #'     ├─matrix_user_id: (Optional) A character value
 #'     ├─admin: A logical value
 #'     ├─bot_account: A logical value
@@ -7377,6 +7592,7 @@ lemmy_create_private_message <- function(content, recipient_id, auth, .lemmy_ins
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -7395,6 +7611,7 @@ lemmy_create_private_message <- function(content, recipient_id, auth, .lemmy_ins
 #'     ├─local: A logical value
 #'     ├─banner: (Optional) A character value
 #'     ├─deleted: A logical value
+#'     ├─inbox_url: A character value
 #'     ├─matrix_user_id: (Optional) A character value
 #'     ├─admin: A logical value
 #'     ├─bot_account: A logical value
@@ -7457,6 +7674,7 @@ lemmy_edit_private_message <- function(private_message_id, content, auth, .lemmy
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -7475,6 +7693,7 @@ lemmy_edit_private_message <- function(private_message_id, content, auth, .lemmy
 #'     ├─local: A logical value
 #'     ├─banner: (Optional) A character value
 #'     ├─deleted: A logical value
+#'     ├─inbox_url: A character value
 #'     ├─matrix_user_id: (Optional) A character value
 #'     ├─admin: A logical value
 #'     ├─bot_account: A logical value
@@ -7537,6 +7756,7 @@ lemmy_delete_private_message <- function(private_message_id, deleted, auth, .lem
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -7555,6 +7775,7 @@ lemmy_delete_private_message <- function(private_message_id, deleted, auth, .lem
 #'     ├─local: A logical value
 #'     ├─banner: (Optional) A character value
 #'     ├─deleted: A logical value
+#'     ├─inbox_url: A character value
 #'     ├─matrix_user_id: (Optional) A character value
 #'     ├─admin: A logical value
 #'     ├─bot_account: A logical value
@@ -7627,6 +7848,7 @@ lemmy_mark_private_message_as_read <- function(private_message_id, read, auth, .
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -7645,6 +7867,7 @@ lemmy_mark_private_message_as_read <- function(private_message_id, read, auth, .
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -7663,6 +7886,7 @@ lemmy_mark_private_message_as_read <- function(private_message_id, read, auth, .
 #'     ├─local: A logical value
 #'     ├─banner: (Optional) A character value
 #'     ├─deleted: A logical value
+#'     ├─inbox_url: A character value
 #'     ├─matrix_user_id: (Optional) A character value
 #'     ├─admin: A logical value
 #'     ├─bot_account: A logical value
@@ -7735,6 +7959,7 @@ lemmy_create_private_message_report <- function(private_message_id, reason, auth
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -7753,6 +7978,7 @@ lemmy_create_private_message_report <- function(private_message_id, reason, auth
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -7771,6 +7997,7 @@ lemmy_create_private_message_report <- function(private_message_id, reason, auth
 #'     ├─local: A logical value
 #'     ├─banner: (Optional) A character value
 #'     ├─deleted: A logical value
+#'     ├─inbox_url: A character value
 #'     ├─matrix_user_id: (Optional) A character value
 #'     ├─admin: A logical value
 #'     ├─bot_account: A logical value
@@ -7844,6 +8071,7 @@ lemmy_resolve_private_message_report <- function(report_id, resolved, auth, .lem
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -7862,6 +8090,7 @@ lemmy_resolve_private_message_report <- function(report_id, resolved, auth, .lem
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -7880,6 +8109,7 @@ lemmy_resolve_private_message_report <- function(report_id, resolved, auth, .lem
 #'       ├─local: A logical value
 #'       ├─banner: (Optional) A character value
 #'       ├─deleted: A logical value
+#'       ├─inbox_url: A character value
 #'       ├─matrix_user_id: (Optional) A character value
 #'       ├─admin: A logical value
 #'       ├─bot_account: A logical value
@@ -8003,7 +8233,7 @@ lemmy_login <- function(
 #'
 #' @param person_id (Optional) A numeric value.
 #' @param username (Optional) A character value.
-#' @param sort (Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", or "TopTwelveHour".
+#' @param sort (Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", "TopTwelveHour", "TopThreeMonths", "TopSixMonths", or "TopNineMonths".
 #' @param page (Optional) A numeric value.
 #' @param limit (Optional) A numeric value.
 #' @param community_id (Optional) A numeric value.
@@ -8029,6 +8259,7 @@ lemmy_login <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─banner: (Optional) A character value
 #' │ │ ├─deleted: A logical value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─matrix_user_id: (Optional) A character value
 #' │ │ ├─admin: A logical value
 #' │ │ ├─bot_account: A logical value
@@ -8070,6 +8301,7 @@ lemmy_login <- function(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -8111,6 +8343,8 @@ lemmy_login <- function(
 #' │   │ ├─local: A logical value
 #' │   │ ├─icon: (Optional) A character value
 #' │   │ ├─banner: (Optional) A character value
+#' │   │ ├─followers_url: A character value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─hidden: A logical value
 #' │   │ ├─posting_restricted_to_mods: A logical value
 #' │   │ └─instance_id: A numeric value
@@ -8165,6 +8399,7 @@ lemmy_login <- function(
 #' │   │ ├─local: A logical value
 #' │   │ ├─banner: (Optional) A character value
 #' │   │ ├─deleted: A logical value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─matrix_user_id: (Optional) A character value
 #' │   │ ├─admin: A logical value
 #' │   │ ├─bot_account: A logical value
@@ -8184,6 +8419,8 @@ lemmy_login <- function(
 #' │   │ ├─local: A logical value
 #' │   │ ├─icon: (Optional) A character value
 #' │   │ ├─banner: (Optional) A character value
+#' │   │ ├─followers_url: A character value
+#' │   │ ├─inbox_url: A character value
 #' │   │ ├─hidden: A logical value
 #' │   │ ├─posting_restricted_to_mods: A logical value
 #' │   │ └─instance_id: A numeric value
@@ -8224,6 +8461,8 @@ lemmy_login <- function(
 #'     │ ├─local: A logical value
 #'     │ ├─icon: (Optional) A character value
 #'     │ ├─banner: (Optional) A character value
+#'     │ ├─followers_url: A character value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─hidden: A logical value
 #'     │ ├─posting_restricted_to_mods: A logical value
 #'     │ └─instance_id: A numeric value
@@ -8240,6 +8479,7 @@ lemmy_login <- function(
 #'       ├─local: A logical value
 #'       ├─banner: (Optional) A character value
 #'       ├─deleted: A logical value
+#'       ├─inbox_url: A character value
 #'       ├─matrix_user_id: (Optional) A character value
 #'       ├─admin: A logical value
 #'       ├─bot_account: A logical value
@@ -8270,7 +8510,8 @@ lemmy_get_person_details <- function(
   stopifnot(is.null(sort) || sort %in% c(
     "Active", "Hot", "New",
     "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll",
-    "MostComments", "NewComments", "TopHour", "TopSixHour", "TopTwelveHour"
+    "MostComments", "NewComments", "TopHour", "TopSixHour", "TopTwelveHour",
+    "TopThreeMonths", "TopSixMonths", "TopNineMonths"
   ))
   wrapper(
     base_url = .lemmy_instance, req_type = "GET", endpoint = "user",
@@ -8329,6 +8570,7 @@ lemmy_get_person_details <- function(
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -8370,6 +8612,8 @@ lemmy_get_person_details <- function(
 #'     │ ├─local: A logical value
 #'     │ ├─icon: (Optional) A character value
 #'     │ ├─banner: (Optional) A character value
+#'     │ ├─followers_url: A character value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─hidden: A logical value
 #'     │ ├─posting_restricted_to_mods: A logical value
 #'     │ └─instance_id: A numeric value
@@ -8386,6 +8630,7 @@ lemmy_get_person_details <- function(
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -8477,6 +8722,7 @@ lemmy_get_person_mentions <- function(
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -8518,6 +8764,8 @@ lemmy_get_person_mentions <- function(
 #'   │ ├─local: A logical value
 #'   │ ├─icon: (Optional) A character value
 #'   │ ├─banner: (Optional) A character value
+#'   │ ├─followers_url: A character value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─hidden: A logical value
 #'   │ ├─posting_restricted_to_mods: A logical value
 #'   │ └─instance_id: A numeric value
@@ -8534,6 +8782,7 @@ lemmy_get_person_mentions <- function(
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -8621,6 +8870,7 @@ lemmy_mark_person_mention_as_read <- function(person_mention_id, read, auth, .le
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -8662,6 +8912,8 @@ lemmy_mark_person_mention_as_read <- function(person_mention_id, read, auth, .le
 #'     │ ├─local: A logical value
 #'     │ ├─icon: (Optional) A character value
 #'     │ ├─banner: (Optional) A character value
+#'     │ ├─followers_url: A character value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─hidden: A logical value
 #'     │ ├─posting_restricted_to_mods: A logical value
 #'     │ └─instance_id: A numeric value
@@ -8678,6 +8930,7 @@ lemmy_mark_person_mention_as_read <- function(person_mention_id, read, auth, .le
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -8752,6 +9005,7 @@ lemmy_get_replies <- function(
 #' │ │ ├─local: A logical value
 #' │ │ ├─banner: (Optional) A character value
 #' │ │ ├─deleted: A logical value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─matrix_user_id: (Optional) A character value
 #' │ │ ├─admin: A logical value
 #' │ │ ├─bot_account: A logical value
@@ -8818,6 +9072,7 @@ lemmy_ban_person <- function(
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -8871,6 +9126,7 @@ lemmy_get_banned_persons <- function(auth, .lemmy_instance = getOption(
 #' │ │ ├─local: A logical value
 #' │ │ ├─banner: (Optional) A character value
 #' │ │ ├─deleted: A logical value
+#' │ │ ├─inbox_url: A character value
 #' │ │ ├─matrix_user_id: (Optional) A character value
 #' │ │ ├─admin: A logical value
 #' │ │ ├─bot_account: A logical value
@@ -9064,6 +9320,7 @@ lemmy_password_change_after_reset <- function(token, password, password_verify, 
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -9105,6 +9362,8 @@ lemmy_password_change_after_reset <- function(token, password, password_verify, 
 #'     │ ├─local: A logical value
 #'     │ ├─icon: (Optional) A character value
 #'     │ ├─banner: (Optional) A character value
+#'     │ ├─followers_url: A character value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─hidden: A logical value
 #'     │ ├─posting_restricted_to_mods: A logical value
 #'     │ └─instance_id: A numeric value
@@ -9121,6 +9380,7 @@ lemmy_password_change_after_reset <- function(token, password, password_verify, 
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -9161,7 +9421,7 @@ lemmy_mark_all_as_read <- function(auth, .lemmy_instance = getOption(
 #' @param show_nsfw (Optional) A logical value.
 #' @param show_scores (Optional) A logical value.
 #' @param theme (Optional) A character value.
-#' @param default_sort_type (Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", or "TopTwelveHour".
+#' @param default_sort_type (Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", "TopTwelveHour", "TopThreeMonths", "TopSixMonths", or "TopNineMonths".
 #' @param default_listing_type (Optional) One of "All", "Local", or "Subscribed".
 #' @param interface_language (Optional) A character value.
 #' @param avatar (Optional) A character value.
@@ -9179,6 +9439,7 @@ lemmy_mark_all_as_read <- function(auth, .lemmy_instance = getOption(
 #' @param discussion_languages (Optional) A numeric vector.
 #' @param generate_totp_2fa (Optional) A logical value.
 #' @param auth A character value.
+#' @param open_links_in_new_tab (Optional) A logical value.
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 3:
@@ -9198,10 +9459,8 @@ lemmy_save_user_settings <- function(
     bio = NULL, matrix_user_id = NULL, show_avatars = NULL, send_notifications_to_email = NULL,
     bot_account = NULL, show_bot_accounts = NULL, show_read_posts = NULL,
     show_new_post_notifs = NULL, discussion_languages = NULL,
-    generate_totp_2fa = NULL, auth, .lemmy_instance = getOption(
-      "lemmy_instance",
-      "https://lemmy.world"
-    )) {
+    generate_totp_2fa = NULL, auth, open_links_in_new_tab = NULL,
+    .lemmy_instance = getOption("lemmy_instance", "https://lemmy.world")) {
   stopifnot(length(show_nsfw) <= 1L)
   stopifnot(length(show_scores) <= 1L)
   stopifnot(length(theme) <= 1L)
@@ -9222,6 +9481,7 @@ lemmy_save_user_settings <- function(
   stopifnot(length(show_new_post_notifs) <= 1L)
   stopifnot(length(generate_totp_2fa) <= 1L)
   stopifnot(length(auth) == 1L)
+  stopifnot(length(open_links_in_new_tab) <= 1L)
   stopifnot(is.null(show_nsfw) || is.logical(show_nsfw))
   stopifnot(is.null(show_scores) || is.logical(show_scores))
   stopifnot(is.null(theme) || is.character(theme))
@@ -9241,11 +9501,13 @@ lemmy_save_user_settings <- function(
   stopifnot(is.null(discussion_languages) || is.numeric(discussion_languages))
   stopifnot(is.null(generate_totp_2fa) || is.logical(generate_totp_2fa))
   stopifnot(is.character(auth))
+  stopifnot(is.null(open_links_in_new_tab) || is.logical(open_links_in_new_tab))
   stopifnot(is.null(default_sort_type) || default_sort_type %in%
     c(
       "Active", "Hot", "New", "Old", "TopDay", "TopWeek",
       "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments",
-      "TopHour", "TopSixHour", "TopTwelveHour"
+      "TopHour", "TopSixHour", "TopTwelveHour", "TopThreeMonths",
+      "TopSixMonths", "TopNineMonths"
     ))
   stopifnot(is.null(default_listing_type) || default_listing_type %in%
     c("All", "Local", "Subscribed"))
@@ -9260,7 +9522,7 @@ lemmy_save_user_settings <- function(
     bot_account = bot_account, show_bot_accounts = show_bot_accounts,
     show_read_posts = show_read_posts, show_new_post_notifs = show_new_post_notifs,
     discussion_languages = discussion_languages, generate_totp_2fa = generate_totp_2fa,
-    auth = auth
+    auth = auth, open_links_in_new_tab = open_links_in_new_tab
   )
 }
 #' Change your user password.
@@ -9413,6 +9675,7 @@ lemmy_verify_email <- function(token, .lemmy_instance = getOption(
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -9510,7 +9773,8 @@ lemmy_get_unread_registration_application_count <- function(auth, .lemmy_instanc
 #'     │ ├─show_new_post_notifs: A logical value
 #'     │ ├─email_verified: A logical value
 #'     │ ├─accepted_application: A logical value
-#'     │ └─totp_2fa_url: (Optional) A character value
+#'     │ ├─totp_2fa_url: (Optional) A character value
+#'     │ └─open_links_in_new_tab: A logical value
 #'     ├─creator: <list>
 #'     │ ├─id: A numeric value
 #'     │ ├─name: A character value
@@ -9524,6 +9788,7 @@ lemmy_get_unread_registration_application_count <- function(auth, .lemmy_instanc
 #'     │ ├─local: A logical value
 #'     │ ├─banner: (Optional) A character value
 #'     │ ├─deleted: A logical value
+#'     │ ├─inbox_url: A character value
 #'     │ ├─matrix_user_id: (Optional) A character value
 #'     │ ├─admin: A logical value
 #'     │ ├─bot_account: A logical value
@@ -9542,6 +9807,7 @@ lemmy_get_unread_registration_application_count <- function(auth, .lemmy_instanc
 #'       ├─local: A logical value
 #'       ├─banner: (Optional) A character value
 #'       ├─deleted: A logical value
+#'       ├─inbox_url: A character value
 #'       ├─matrix_user_id: (Optional) A character value
 #'       ├─admin: A logical value
 #'       ├─bot_account: A logical value
@@ -9607,7 +9873,8 @@ lemmy_list_registration_applications <- function(
 #'   │ ├─show_new_post_notifs: A logical value
 #'   │ ├─email_verified: A logical value
 #'   │ ├─accepted_application: A logical value
-#'   │ └─totp_2fa_url: (Optional) A character value
+#'   │ ├─totp_2fa_url: (Optional) A character value
+#'   │ └─open_links_in_new_tab: A logical value
 #'   ├─creator: <list>
 #'   │ ├─id: A numeric value
 #'   │ ├─name: A character value
@@ -9621,6 +9888,7 @@ lemmy_list_registration_applications <- function(
 #'   │ ├─local: A logical value
 #'   │ ├─banner: (Optional) A character value
 #'   │ ├─deleted: A logical value
+#'   │ ├─inbox_url: A character value
 #'   │ ├─matrix_user_id: (Optional) A character value
 #'   │ ├─admin: A logical value
 #'   │ ├─bot_account: A logical value
@@ -9639,6 +9907,7 @@ lemmy_list_registration_applications <- function(
 #'     ├─local: A logical value
 #'     ├─banner: (Optional) A character value
 #'     ├─deleted: A logical value
+#'     ├─inbox_url: A character value
 #'     ├─matrix_user_id: (Optional) A character value
 #'     ├─admin: A logical value
 #'     ├─bot_account: A logical value

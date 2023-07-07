@@ -15,7 +15,7 @@ the [official JavaScript
 client](https://github.com/LemmyNet/lemmy-js-client) source.
 
 Lemmy version:
-[0.18.0](https://github.com/LemmyNet/lemmy/releases/tag/0.18.0)
+[0.18.1](https://github.com/LemmyNet/lemmy/releases/tag/0.18.1)
 
 ## Installation
 
@@ -47,13 +47,13 @@ lemmy_get_comment(546564)$comment_view$comment$content
 generation](https://github.com/long39ng/remmy/tree/main/dev) was made
 possible by:
 
-- [ts-morph](https://github.com/dsherret/ts-morph) for navigating the
-  TypeScript AST of the [official JavaScript
-  client](https://github.com/LemmyNet/lemmy-js-client) source and
-  extracting the HTTP request methods into JSON.
-- [jsonlite](https://github.com/jeroen/jsonlite) for parsing objects
-  from JSON to R.
-- [rlang](https://github.com/r-lib/rlang) (and the [metaprogramming
-  capabilities of R](https://adv-r.hadley.nz/expressions.html)) for
-  programmatically generating function definitions and parameter and
-  return type documentation.
+  - [ts-morph](https://github.com/dsherret/ts-morph) for navigating the
+    TypeScript AST of the [official JavaScript
+    client](https://github.com/LemmyNet/lemmy-js-client) source and
+    extracting the HTTP request methods into JSON.
+  - [jsonlite](https://github.com/jeroen/jsonlite) for parsing objects
+    from JSON to R.
+  - [rlang](https://github.com/r-lib/rlang) (and the [metaprogramming
+    capabilities of R](https://adv-r.hadley.nz/expressions.html)) for
+    programmatically generating function definitions and parameter and
+    return type documentation.

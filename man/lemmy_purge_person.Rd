@@ -23,9 +23,10 @@ lemmy_purge_person(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 └─success: A logical value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.POST /admin/purge/person}

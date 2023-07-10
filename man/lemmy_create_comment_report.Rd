@@ -23,7 +23,8 @@ lemmy_create_comment_report(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 └─comment_report_view: <list>
   ├─comment_report: <list>
   │ ├─id: A numeric value
@@ -158,7 +159,7 @@ A \code{list} of length 1:
     ├─bot_account: A logical value
     ├─ban_expires: (Optional) A character value
     └─instance_id: A numeric value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.POST /comment/report}

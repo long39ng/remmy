@@ -17,11 +17,12 @@ lemmy_get_unread_count(
 \value{
 A \code{list} of length 3:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 ├─replies: A numeric value
 ├─mentions: A numeric value
 └─private_messages: A numeric value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.GET /user/unread_count}

@@ -23,11 +23,12 @@ lemmy_login(
 \value{
 A \code{list} of length 3:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 ├─jwt: (Optional) A character value
 ├─registration_created: A logical value
 └─verify_email_sent: A logical value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.POST /user/login}

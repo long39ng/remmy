@@ -20,7 +20,8 @@ lemmy_resolve_object(
 \value{
 A \code{list} of length 4:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 ├─comment: <list>
 │ ├─comment: <list>
 │ │ ├─id: A numeric value
@@ -253,7 +254,7 @@ A \code{list} of length 4:
     ├─post_score: A numeric value
     ├─comment_count: A numeric value
     └─comment_score: A numeric value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.GET /resolve_object}

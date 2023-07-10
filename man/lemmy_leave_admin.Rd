@@ -17,7 +17,8 @@ lemmy_leave_admin(
 \value{
 A \code{list} of length 8:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 ├─site_view: <list>
 │ ├─site: <list>
 │ │ ├─id: A numeric value
@@ -353,7 +354,7 @@ A \code{list} of length 8:
         ├─id: A numeric value
         ├─custom_emoji_id: A numeric value
         └─keyword: A character value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.POST /user/leave_admin}

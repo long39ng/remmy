@@ -26,7 +26,8 @@ lemmy_list_private_message_reports(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 └─private_message_reports: <list>
   └─[Each element]: <list>
     ├─private_message_report: <list>
@@ -107,7 +108,7 @@ A \code{list} of length 1:
       ├─bot_account: A logical value
       ├─ban_expires: (Optional) A character value
       └─instance_id: A numeric value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.GET /private_message/report/list}

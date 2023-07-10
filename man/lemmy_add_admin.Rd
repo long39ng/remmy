@@ -23,7 +23,8 @@ lemmy_add_admin(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 └─admins: <list>
   └─[Each element]: <list>
     ├─person: <list>
@@ -52,7 +53,7 @@ A \code{list} of length 1:
       ├─post_score: A numeric value
       ├─comment_count: A numeric value
       └─comment_score: A numeric value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.POST /admin/add}

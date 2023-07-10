@@ -44,7 +44,8 @@ lemmy_search(
 \value{
 A \code{list} of length 5:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 ├─type_: One of "All", "Comments", "Posts...
 ├─comments: <list>
 │ └─[Each element]: <list>
@@ -282,7 +283,7 @@ A \code{list} of length 5:
       ├─post_score: A numeric value
       ├─comment_count: A numeric value
       └─comment_score: A numeric value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.GET /search}

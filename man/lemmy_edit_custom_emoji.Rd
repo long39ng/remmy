@@ -32,7 +32,8 @@ lemmy_edit_custom_emoji(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 └─custom_emoji: <list>
   ├─custom_emoji: <list>
   │ ├─id: A numeric value
@@ -48,7 +49,7 @@ A \code{list} of length 1:
       ├─id: A numeric value
       ├─custom_emoji_id: A numeric value
       └─keyword: A character value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.PUT /custom_emoji}

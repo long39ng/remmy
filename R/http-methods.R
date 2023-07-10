@@ -9,7 +9,7 @@
 #'
 #' @returns A `list` of length 8:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─site_view: <list>
 #' │ ├─site: <list>
@@ -346,7 +346,7 @@
 #'         ├─id: A numeric value
 #'         ├─custom_emoji_id: A numeric value
 #'         └─keyword: A character value
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_site <- function(auth = NULL, .lemmy_instance = getOption(
@@ -408,7 +408,7 @@ lemmy_get_site <- function(auth = NULL, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─site_view: <list>
 #' │ ├─site: <list>
@@ -485,7 +485,7 @@ lemmy_get_site <- function(auth = NULL, .lemmy_instance = getOption(
 #'     ├─content: A character value
 #'     ├─published: A character value
 #'     └─updated: (Optional) A character value
-#' ```
+#' }
 #'
 #' @export
 lemmy_create_site <- function(
@@ -659,7 +659,7 @@ lemmy_create_site <- function(
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─site_view: <list>
 #' │ ├─site: <list>
@@ -736,7 +736,7 @@ lemmy_create_site <- function(
 #'     ├─content: A character value
 #'     ├─published: A character value
 #'     └─updated: (Optional) A character value
-#' ```
+#' }
 #'
 #' @export
 lemmy_edit_site <- function(
@@ -870,7 +870,7 @@ lemmy_edit_site <- function(
 #'
 #' @returns A `list` of length 8:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─site_view: <list>
 #' │ ├─site: <list>
@@ -1207,7 +1207,7 @@ lemmy_edit_site <- function(
 #'         ├─id: A numeric value
 #'         ├─custom_emoji_id: A numeric value
 #'         └─keyword: A character value
-#' ```
+#' }
 #'
 #' @export
 lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
@@ -1236,7 +1236,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 15:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─removed_posts: <list>
 #' │ └─[Each element]: <list>
@@ -2081,7 +2081,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #'       ├─hidden: A logical value
 #'       ├─posting_restricted_to_mods: A logical value
 #'       └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_modlog <- function(
@@ -2133,7 +2133,7 @@ lemmy_get_modlog <- function(
 #'
 #' @returns A `list` of length 5:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─type_: One of "All", "Comments", "Posts...
 #' ├─comments: <list>
@@ -2372,7 +2372,7 @@ lemmy_get_modlog <- function(
 #'       ├─post_score: A numeric value
 #'       ├─comment_count: A numeric value
 #'       └─comment_score: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_search <- function(
@@ -2431,7 +2431,7 @@ lemmy_search <- function(
 #'
 #' @returns A `list` of length 4:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─comment: <list>
 #' │ ├─comment: <list>
@@ -2665,7 +2665,7 @@ lemmy_search <- function(
 #'     ├─post_score: A numeric value
 #'     ├─comment_count: A numeric value
 #'     └─comment_score: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_resolve_object <- function(q, auth, .lemmy_instance = getOption(
@@ -2698,7 +2698,7 @@ lemmy_resolve_object <- function(q, auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─community_view: <list>
 #' │ ├─community: <list>
@@ -2735,7 +2735,7 @@ lemmy_resolve_object <- function(q, auth, .lemmy_instance = getOption(
 #' │   ├─users_active_half_year: A numeric value
 #' │   └─hot_rank: A numeric value
 #' └─discussion_languages: A numeric vector
-#' ```
+#' }
 #'
 #' @export
 lemmy_create_community <- function(
@@ -2777,7 +2777,7 @@ lemmy_create_community <- function(
 #'
 #' @returns A `list` of length 4:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─community_view: <list>
 #' │ ├─community: <list>
@@ -2869,7 +2869,7 @@ lemmy_create_community <- function(
 #' │     ├─ban_expires: (Optional) A character value
 #' │     └─instance_id: A numeric value
 #' └─discussion_languages: A numeric vector
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_community <- function(id = NULL, name = NULL, auth = NULL, .lemmy_instance = getOption(
@@ -2904,7 +2904,7 @@ lemmy_get_community <- function(id = NULL, name = NULL, auth = NULL, .lemmy_inst
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─community_view: <list>
 #' │ ├─community: <list>
@@ -2941,7 +2941,7 @@ lemmy_get_community <- function(id = NULL, name = NULL, auth = NULL, .lemmy_inst
 #' │   ├─users_active_half_year: A numeric value
 #' │   └─hot_rank: A numeric value
 #' └─discussion_languages: A numeric vector
-#' ```
+#' }
 #'
 #' @export
 lemmy_edit_community <- function(
@@ -2989,7 +2989,7 @@ lemmy_edit_community <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─communities: <list>
 #'   └─[Each element]: <list>
@@ -3026,7 +3026,7 @@ lemmy_edit_community <- function(
 #'       ├─users_active_month: A numeric value
 #'       ├─users_active_half_year: A numeric value
 #'       └─hot_rank: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_list_communities <- function(
@@ -3072,7 +3072,7 @@ lemmy_list_communities <- function(
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─community_view: <list>
 #' │ ├─community: <list>
@@ -3109,7 +3109,7 @@ lemmy_list_communities <- function(
 #' │   ├─users_active_half_year: A numeric value
 #' │   └─hot_rank: A numeric value
 #' └─discussion_languages: A numeric vector
-#' ```
+#' }
 #'
 #' @export
 lemmy_follow_community <- function(community_id, follow, auth, .lemmy_instance = getOption(
@@ -3138,7 +3138,7 @@ lemmy_follow_community <- function(community_id, follow, auth, .lemmy_instance =
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─community_view: <list>
 #' │ ├─community: <list>
@@ -3175,7 +3175,7 @@ lemmy_follow_community <- function(community_id, follow, auth, .lemmy_instance =
 #' │   ├─users_active_half_year: A numeric value
 #' │   └─hot_rank: A numeric value
 #' └─blocked: A logical value
-#' ```
+#' }
 #'
 #' @export
 lemmy_block_community <- function(community_id, block, auth, .lemmy_instance = getOption(
@@ -3204,7 +3204,7 @@ lemmy_block_community <- function(community_id, block, auth, .lemmy_instance = g
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─community_view: <list>
 #' │ ├─community: <list>
@@ -3241,7 +3241,7 @@ lemmy_block_community <- function(community_id, block, auth, .lemmy_instance = g
 #' │   ├─users_active_half_year: A numeric value
 #' │   └─hot_rank: A numeric value
 #' └─discussion_languages: A numeric vector
-#' ```
+#' }
 #'
 #' @export
 lemmy_delete_community <- function(community_id, deleted, auth, .lemmy_instance = getOption(
@@ -3272,7 +3272,7 @@ lemmy_delete_community <- function(community_id, deleted, auth, .lemmy_instance 
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─community_view: <list>
 #' │ ├─community: <list>
@@ -3309,7 +3309,7 @@ lemmy_delete_community <- function(community_id, deleted, auth, .lemmy_instance 
 #' │   ├─users_active_half_year: A numeric value
 #' │   └─hot_rank: A numeric value
 #' └─discussion_languages: A numeric vector
-#' ```
+#' }
 #'
 #' @export
 lemmy_remove_community <- function(
@@ -3342,7 +3342,7 @@ lemmy_remove_community <- function(
 #'
 #' @returns A `list` of length 4:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─community_view: <list>
 #' │ ├─community: <list>
@@ -3434,7 +3434,7 @@ lemmy_remove_community <- function(
 #' │     ├─ban_expires: (Optional) A character value
 #' │     └─instance_id: A numeric value
 #' └─discussion_languages: A numeric vector
-#' ```
+#' }
 #'
 #' @export
 lemmy_transfer_community <- function(community_id, person_id, auth, .lemmy_instance = getOption(
@@ -3467,7 +3467,7 @@ lemmy_transfer_community <- function(community_id, person_id, auth, .lemmy_insta
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─person_view: <list>
 #' │ ├─person: <list>
@@ -3497,7 +3497,7 @@ lemmy_transfer_community <- function(community_id, person_id, auth, .lemmy_insta
 #' │   ├─comment_count: A numeric value
 #' │   └─comment_score: A numeric value
 #' └─banned: A logical value
-#' ```
+#' }
 #'
 #' @export
 lemmy_ban_from_community <- function(
@@ -3539,7 +3539,7 @@ lemmy_ban_from_community <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─moderators: <list>
 #'   └─[Each element]: <list>
@@ -3581,7 +3581,7 @@ lemmy_ban_from_community <- function(
 #'       ├─bot_account: A logical value
 #'       ├─ban_expires: (Optional) A character value
 #'       └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_add_mod_to_community <- function(community_id, person_id, added, auth, .lemmy_instance = getOption(
@@ -3618,7 +3618,7 @@ lemmy_add_mod_to_community <- function(community_id, person_id, added, auth, .le
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -3702,7 +3702,7 @@ lemmy_add_mod_to_community <- function(community_id, person_id, added, auth, .le
 #'   ├─creator_blocked: A logical value
 #'   ├─my_vote: (Optional) A numeric value
 #'   └─unread_comments: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_create_post <- function(
@@ -3745,7 +3745,7 @@ lemmy_create_post <- function(
 #'
 #' @returns A `list` of length 4:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─post_view: <list>
 #' │ ├─post: <list>
@@ -3986,7 +3986,7 @@ lemmy_create_post <- function(
 #'     ├─creator_blocked: A logical value
 #'     ├─my_vote: (Optional) A numeric value
 #'     └─unread_comments: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_post <- function(id = NULL, comment_id = NULL, auth = NULL, .lemmy_instance = getOption(
@@ -4019,7 +4019,7 @@ lemmy_get_post <- function(id = NULL, comment_id = NULL, auth = NULL, .lemmy_ins
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -4103,7 +4103,7 @@ lemmy_get_post <- function(id = NULL, comment_id = NULL, auth = NULL, .lemmy_ins
 #'   ├─creator_blocked: A logical value
 #'   ├─my_vote: (Optional) A numeric value
 #'   └─unread_comments: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_edit_post <- function(
@@ -4143,7 +4143,7 @@ lemmy_edit_post <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -4227,7 +4227,7 @@ lemmy_edit_post <- function(
 #'   ├─creator_blocked: A logical value
 #'   ├─my_vote: (Optional) A numeric value
 #'   └─unread_comments: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_delete_post <- function(post_id, deleted, auth, .lemmy_instance = getOption(
@@ -4257,7 +4257,7 @@ lemmy_delete_post <- function(post_id, deleted, auth, .lemmy_instance = getOptio
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -4341,7 +4341,7 @@ lemmy_delete_post <- function(post_id, deleted, auth, .lemmy_instance = getOptio
 #'   ├─creator_blocked: A logical value
 #'   ├─my_vote: (Optional) A numeric value
 #'   └─unread_comments: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_remove_post <- function(post_id, removed, reason = NULL, auth, .lemmy_instance = getOption(
@@ -4373,7 +4373,7 @@ lemmy_remove_post <- function(post_id, removed, reason = NULL, auth, .lemmy_inst
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -4457,7 +4457,7 @@ lemmy_remove_post <- function(post_id, removed, reason = NULL, auth, .lemmy_inst
 #'   ├─creator_blocked: A logical value
 #'   ├─my_vote: (Optional) A numeric value
 #'   └─unread_comments: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_mark_post_as_read <- function(post_id, read, auth, .lemmy_instance = getOption(
@@ -4486,7 +4486,7 @@ lemmy_mark_post_as_read <- function(post_id, read, auth, .lemmy_instance = getOp
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -4570,7 +4570,7 @@ lemmy_mark_post_as_read <- function(post_id, read, auth, .lemmy_instance = getOp
 #'   ├─creator_blocked: A logical value
 #'   ├─my_vote: (Optional) A numeric value
 #'   └─unread_comments: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_lock_post <- function(post_id, locked, auth, .lemmy_instance = getOption(
@@ -4600,7 +4600,7 @@ lemmy_lock_post <- function(post_id, locked, auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -4684,7 +4684,7 @@ lemmy_lock_post <- function(post_id, locked, auth, .lemmy_instance = getOption(
 #'   ├─creator_blocked: A logical value
 #'   ├─my_vote: (Optional) A numeric value
 #'   └─unread_comments: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_feature_post <- function(post_id, featured, feature_type, auth, .lemmy_instance = getOption(
@@ -4721,7 +4721,7 @@ lemmy_feature_post <- function(post_id, featured, feature_type, auth, .lemmy_ins
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─posts: <list>
 #'   └─[Each element]: <list>
@@ -4806,7 +4806,7 @@ lemmy_feature_post <- function(post_id, featured, feature_type, auth, .lemmy_ins
 #'     ├─creator_blocked: A logical value
 #'     ├─my_vote: (Optional) A numeric value
 #'     └─unread_comments: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_posts <- function(
@@ -4858,7 +4858,7 @@ lemmy_get_posts <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -4942,7 +4942,7 @@ lemmy_get_posts <- function(
 #'   ├─creator_blocked: A logical value
 #'   ├─my_vote: (Optional) A numeric value
 #'   └─unread_comments: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_like_post <- function(post_id, score, auth, .lemmy_instance = getOption(
@@ -4971,7 +4971,7 @@ lemmy_like_post <- function(post_id, score, auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -5055,7 +5055,7 @@ lemmy_like_post <- function(post_id, score, auth, .lemmy_instance = getOption(
 #'   ├─creator_blocked: A logical value
 #'   ├─my_vote: (Optional) A numeric value
 #'   └─unread_comments: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_save_post <- function(post_id, save, auth, .lemmy_instance = getOption(
@@ -5084,7 +5084,7 @@ lemmy_save_post <- function(post_id, save, auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─post_report_view: <list>
 #'   ├─post_report: <list>
@@ -5213,7 +5213,7 @@ lemmy_save_post <- function(post_id, save, auth, .lemmy_instance = getOption(
 #'     ├─bot_account: A logical value
 #'     ├─ban_expires: (Optional) A character value
 #'     └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_create_post_report <- function(post_id, reason, auth, .lemmy_instance = getOption(
@@ -5242,7 +5242,7 @@ lemmy_create_post_report <- function(post_id, reason, auth, .lemmy_instance = ge
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─post_report_view: <list>
 #'   ├─post_report: <list>
@@ -5371,7 +5371,7 @@ lemmy_create_post_report <- function(post_id, reason, auth, .lemmy_instance = ge
 #'     ├─bot_account: A logical value
 #'     ├─ban_expires: (Optional) A character value
 #'     └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_resolve_post_report <- function(report_id, resolved, auth, .lemmy_instance = getOption(
@@ -5402,7 +5402,7 @@ lemmy_resolve_post_report <- function(report_id, resolved, auth, .lemmy_instance
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─post_reports: <list>
 #'   └─[Each element]: <list>
@@ -5532,7 +5532,7 @@ lemmy_resolve_post_report <- function(report_id, resolved, auth, .lemmy_instance
 #'       ├─bot_account: A logical value
 #'       ├─ban_expires: (Optional) A character value
 #'       └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_list_post_reports <- function(
@@ -5566,14 +5566,14 @@ lemmy_list_post_reports <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─metadata: <list>
 #'   ├─title: (Optional) A character value
 #'   ├─description: (Optional) A character value
 #'   ├─image: (Optional) A character value
 #'   └─embed_video_url: (Optional) A character value
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_site_metadata <- function(url, .lemmy_instance = getOption(
@@ -5601,7 +5601,7 @@ lemmy_get_site_metadata <- function(url, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─comment_view: <list>
 #' │ ├─comment: <list>
@@ -5694,7 +5694,7 @@ lemmy_get_site_metadata <- function(url, .lemmy_instance = getOption(
 #' │ └─my_vote: (Optional) A numeric value
 #' ├─recipient_ids: A numeric vector
 #' └─form_id: (Optional) A character value
-#' ```
+#' }
 #'
 #' @export
 lemmy_create_comment <- function(
@@ -5734,7 +5734,7 @@ lemmy_create_comment <- function(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─comment_view: <list>
 #' │ ├─comment: <list>
@@ -5827,7 +5827,7 @@ lemmy_create_comment <- function(
 #' │ └─my_vote: (Optional) A numeric value
 #' ├─recipient_ids: A numeric vector
 #' └─form_id: (Optional) A character value
-#' ```
+#' }
 #'
 #' @export
 lemmy_edit_comment <- function(
@@ -5860,7 +5860,7 @@ lemmy_edit_comment <- function(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─comment_view: <list>
 #' │ ├─comment: <list>
@@ -5953,7 +5953,7 @@ lemmy_edit_comment <- function(
 #' │ └─my_vote: (Optional) A numeric value
 #' ├─recipient_ids: A numeric vector
 #' └─form_id: (Optional) A character value
-#' ```
+#' }
 #'
 #' @export
 lemmy_delete_comment <- function(comment_id, deleted, auth, .lemmy_instance = getOption(
@@ -5983,7 +5983,7 @@ lemmy_delete_comment <- function(comment_id, deleted, auth, .lemmy_instance = ge
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─comment_view: <list>
 #' │ ├─comment: <list>
@@ -6076,7 +6076,7 @@ lemmy_delete_comment <- function(comment_id, deleted, auth, .lemmy_instance = ge
 #' │ └─my_vote: (Optional) A numeric value
 #' ├─recipient_ids: A numeric vector
 #' └─form_id: (Optional) A character value
-#' ```
+#' }
 #'
 #' @export
 lemmy_remove_comment <- function(comment_id, removed, reason = NULL, auth, .lemmy_instance = getOption(
@@ -6108,7 +6108,7 @@ lemmy_remove_comment <- function(comment_id, removed, reason = NULL, auth, .lemm
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─comment_reply_view: <list>
 #'   ├─comment_reply: <list>
@@ -6224,7 +6224,7 @@ lemmy_remove_comment <- function(comment_id, removed, reason = NULL, auth, .lemm
 #'   ├─saved: A logical value
 #'   ├─creator_blocked: A logical value
 #'   └─my_vote: (Optional) A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_mark_comment_reply_as_read <- function(comment_reply_id, read, auth, .lemmy_instance = getOption(
@@ -6253,7 +6253,7 @@ lemmy_mark_comment_reply_as_read <- function(comment_reply_id, read, auth, .lemm
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─comment_view: <list>
 #' │ ├─comment: <list>
@@ -6346,7 +6346,7 @@ lemmy_mark_comment_reply_as_read <- function(comment_reply_id, read, auth, .lemm
 #' │ └─my_vote: (Optional) A numeric value
 #' ├─recipient_ids: A numeric vector
 #' └─form_id: (Optional) A character value
-#' ```
+#' }
 #'
 #' @export
 lemmy_like_comment <- function(comment_id, score, auth, .lemmy_instance = getOption(
@@ -6375,7 +6375,7 @@ lemmy_like_comment <- function(comment_id, score, auth, .lemmy_instance = getOpt
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─comment_view: <list>
 #' │ ├─comment: <list>
@@ -6468,7 +6468,7 @@ lemmy_like_comment <- function(comment_id, score, auth, .lemmy_instance = getOpt
 #' │ └─my_vote: (Optional) A numeric value
 #' ├─recipient_ids: A numeric vector
 #' └─form_id: (Optional) A character value
-#' ```
+#' }
 #'
 #' @export
 lemmy_save_comment <- function(comment_id, save, auth, .lemmy_instance = getOption(
@@ -6497,7 +6497,7 @@ lemmy_save_comment <- function(comment_id, save, auth, .lemmy_instance = getOpti
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─comment_view: <list>
 #' │ ├─comment: <list>
@@ -6590,7 +6590,7 @@ lemmy_save_comment <- function(comment_id, save, auth, .lemmy_instance = getOpti
 #' │ └─my_vote: (Optional) A numeric value
 #' ├─recipient_ids: A numeric vector
 #' └─form_id: (Optional) A character value
-#' ```
+#' }
 #'
 #' @export
 lemmy_distinguish_comment <- function(comment_id, distinguished, auth, .lemmy_instance = getOption(
@@ -6628,7 +6628,7 @@ lemmy_distinguish_comment <- function(comment_id, distinguished, auth, .lemmy_in
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─comments: <list>
 #'   └─[Each element]: <list>
@@ -6720,7 +6720,7 @@ lemmy_distinguish_comment <- function(comment_id, distinguished, auth, .lemmy_in
 #'     ├─saved: A logical value
 #'     ├─creator_blocked: A logical value
 #'     └─my_vote: (Optional) A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_comments <- function(
@@ -6774,7 +6774,7 @@ lemmy_get_comments <- function(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─comment_view: <list>
 #' │ ├─comment: <list>
@@ -6867,7 +6867,7 @@ lemmy_get_comments <- function(
 #' │ └─my_vote: (Optional) A numeric value
 #' ├─recipient_ids: A numeric vector
 #' └─form_id: (Optional) A character value
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_comment <- function(id, auth = NULL, .lemmy_instance = getOption(
@@ -6894,7 +6894,7 @@ lemmy_get_comment <- function(id, auth = NULL, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─comment_report_view: <list>
 #'   ├─comment_report: <list>
@@ -7030,7 +7030,7 @@ lemmy_get_comment <- function(id, auth = NULL, .lemmy_instance = getOption(
 #'     ├─bot_account: A logical value
 #'     ├─ban_expires: (Optional) A character value
 #'     └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_create_comment_report <- function(comment_id, reason, auth, .lemmy_instance = getOption(
@@ -7059,7 +7059,7 @@ lemmy_create_comment_report <- function(comment_id, reason, auth, .lemmy_instanc
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─comment_report_view: <list>
 #'   ├─comment_report: <list>
@@ -7195,7 +7195,7 @@ lemmy_create_comment_report <- function(comment_id, reason, auth, .lemmy_instanc
 #'     ├─bot_account: A logical value
 #'     ├─ban_expires: (Optional) A character value
 #'     └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_resolve_comment_report <- function(report_id, resolved, auth, .lemmy_instance = getOption(
@@ -7226,7 +7226,7 @@ lemmy_resolve_comment_report <- function(report_id, resolved, auth, .lemmy_insta
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─comment_reports: <list>
 #'   └─[Each element]: <list>
@@ -7363,7 +7363,7 @@ lemmy_resolve_comment_report <- function(report_id, resolved, auth, .lemmy_insta
 #'       ├─bot_account: A logical value
 #'       ├─ban_expires: (Optional) A character value
 #'       └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_list_comment_reports <- function(
@@ -7400,7 +7400,7 @@ lemmy_list_comment_reports <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─private_messages: <list>
 #'   └─[Each element]: <list>
@@ -7453,7 +7453,7 @@ lemmy_list_comment_reports <- function(
 #'       ├─bot_account: A logical value
 #'       ├─ban_expires: (Optional) A character value
 #'       └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_private_messages <- function(
@@ -7484,7 +7484,7 @@ lemmy_get_private_messages <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─private_message_view: <list>
 #'   ├─private_message: <list>
@@ -7536,7 +7536,7 @@ lemmy_get_private_messages <- function(
 #'     ├─bot_account: A logical value
 #'     ├─ban_expires: (Optional) A character value
 #'     └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_create_private_message <- function(content, recipient_id, auth, .lemmy_instance = getOption(
@@ -7565,7 +7565,7 @@ lemmy_create_private_message <- function(content, recipient_id, auth, .lemmy_ins
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─private_message_view: <list>
 #'   ├─private_message: <list>
@@ -7617,7 +7617,7 @@ lemmy_create_private_message <- function(content, recipient_id, auth, .lemmy_ins
 #'     ├─bot_account: A logical value
 #'     ├─ban_expires: (Optional) A character value
 #'     └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_edit_private_message <- function(private_message_id, content, auth, .lemmy_instance = getOption(
@@ -7647,7 +7647,7 @@ lemmy_edit_private_message <- function(private_message_id, content, auth, .lemmy
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─private_message_view: <list>
 #'   ├─private_message: <list>
@@ -7699,7 +7699,7 @@ lemmy_edit_private_message <- function(private_message_id, content, auth, .lemmy
 #'     ├─bot_account: A logical value
 #'     ├─ban_expires: (Optional) A character value
 #'     └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_delete_private_message <- function(private_message_id, deleted, auth, .lemmy_instance = getOption(
@@ -7729,7 +7729,7 @@ lemmy_delete_private_message <- function(private_message_id, deleted, auth, .lem
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─private_message_view: <list>
 #'   ├─private_message: <list>
@@ -7781,7 +7781,7 @@ lemmy_delete_private_message <- function(private_message_id, deleted, auth, .lem
 #'     ├─bot_account: A logical value
 #'     ├─ban_expires: (Optional) A character value
 #'     └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_mark_private_message_as_read <- function(private_message_id, read, auth, .lemmy_instance = getOption(
@@ -7811,7 +7811,7 @@ lemmy_mark_private_message_as_read <- function(private_message_id, read, auth, .
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─private_message_report_view: <list>
 #'   ├─private_message_report: <list>
@@ -7892,7 +7892,7 @@ lemmy_mark_private_message_as_read <- function(private_message_id, read, auth, .
 #'     ├─bot_account: A logical value
 #'     ├─ban_expires: (Optional) A character value
 #'     └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_create_private_message_report <- function(private_message_id, reason, auth, .lemmy_instance = getOption(
@@ -7922,7 +7922,7 @@ lemmy_create_private_message_report <- function(private_message_id, reason, auth
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─private_message_report_view: <list>
 #'   ├─private_message_report: <list>
@@ -8003,7 +8003,7 @@ lemmy_create_private_message_report <- function(private_message_id, reason, auth
 #'     ├─bot_account: A logical value
 #'     ├─ban_expires: (Optional) A character value
 #'     └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_resolve_private_message_report <- function(report_id, resolved, auth, .lemmy_instance = getOption(
@@ -8033,7 +8033,7 @@ lemmy_resolve_private_message_report <- function(report_id, resolved, auth, .lem
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─private_message_reports: <list>
 #'   └─[Each element]: <list>
@@ -8115,7 +8115,7 @@ lemmy_resolve_private_message_report <- function(report_id, resolved, auth, .lem
 #'       ├─bot_account: A logical value
 #'       ├─ban_expires: (Optional) A character value
 #'       └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_list_private_message_reports <- function(
@@ -8152,12 +8152,12 @@ lemmy_list_private_message_reports <- function(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─jwt: (Optional) A character value
 #' ├─registration_created: A logical value
 #' └─verify_email_sent: A logical value
-#' ```
+#' }
 #'
 #' @export
 lemmy_register <- function(
@@ -8204,12 +8204,12 @@ lemmy_register <- function(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─jwt: (Optional) A character value
 #' ├─registration_created: A logical value
 #' └─verify_email_sent: A logical value
-#' ```
+#' }
 #'
 #' @export
 lemmy_login <- function(
@@ -8243,7 +8243,7 @@ lemmy_login <- function(
 #'
 #' @returns A `list` of length 4:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─person_view: <list>
 #' │ ├─person: <list>
@@ -8485,7 +8485,7 @@ lemmy_login <- function(
 #'       ├─bot_account: A logical value
 #'       ├─ban_expires: (Optional) A character value
 #'       └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_person_details <- function(
@@ -8533,7 +8533,7 @@ lemmy_get_person_details <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─mentions: <list>
 #'   └─[Each element]: <list>
@@ -8650,7 +8650,7 @@ lemmy_get_person_details <- function(
 #'     ├─saved: A logical value
 #'     ├─creator_blocked: A logical value
 #'     └─my_vote: (Optional) A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_person_mentions <- function(
@@ -8686,7 +8686,7 @@ lemmy_get_person_mentions <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─person_mention_view: <list>
 #'   ├─person_mention: <list>
@@ -8802,7 +8802,7 @@ lemmy_get_person_mentions <- function(
 #'   ├─saved: A logical value
 #'   ├─creator_blocked: A logical value
 #'   └─my_vote: (Optional) A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_mark_person_mention_as_read <- function(person_mention_id, read, auth, .lemmy_instance = getOption(
@@ -8833,7 +8833,7 @@ lemmy_mark_person_mention_as_read <- function(person_mention_id, read, auth, .le
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─replies: <list>
 #'   └─[Each element]: <list>
@@ -8950,7 +8950,7 @@ lemmy_mark_person_mention_as_read <- function(person_mention_id, read, auth, .le
 #'     ├─saved: A logical value
 #'     ├─creator_blocked: A logical value
 #'     └─my_vote: (Optional) A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_replies <- function(
@@ -8989,7 +8989,7 @@ lemmy_get_replies <- function(
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─person_view: <list>
 #' │ ├─person: <list>
@@ -9019,7 +9019,7 @@ lemmy_get_replies <- function(
 #' │   ├─comment_count: A numeric value
 #' │   └─comment_score: A numeric value
 #' └─banned: A logical value
-#' ```
+#' }
 #'
 #' @export
 lemmy_ban_person <- function(
@@ -9055,7 +9055,7 @@ lemmy_ban_person <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─banned: <list>
 #'   └─[Each element]: <list>
@@ -9085,7 +9085,7 @@ lemmy_ban_person <- function(
 #'       ├─post_score: A numeric value
 #'       ├─comment_count: A numeric value
 #'       └─comment_score: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_banned_persons <- function(auth, .lemmy_instance = getOption(
@@ -9110,7 +9110,7 @@ lemmy_get_banned_persons <- function(auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─person_view: <list>
 #' │ ├─person: <list>
@@ -9140,7 +9140,7 @@ lemmy_get_banned_persons <- function(auth, .lemmy_instance = getOption(
 #' │   ├─comment_count: A numeric value
 #' │   └─comment_score: A numeric value
 #' └─blocked: A logical value
-#' ```
+#' }
 #'
 #' @export
 lemmy_block_person <- function(person_id, block, auth, .lemmy_instance = getOption(
@@ -9167,13 +9167,13 @@ lemmy_block_person <- function(person_id, block, auth, .lemmy_instance = getOpti
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─ok: <list>
 #'   ├─png: A character value
 #'   ├─wav: A character value
 #'   └─uuid: A character value
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_captcha <- function(auth = NULL, .lemmy_instance = getOption(
@@ -9197,9 +9197,9 @@ lemmy_get_captcha <- function(auth = NULL, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 0:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
-#' ```
+#' }
 #'
 #' @export
 lemmy_delete_account <- function(password, auth, .lemmy_instance = getOption(
@@ -9224,9 +9224,9 @@ lemmy_delete_account <- function(password, auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 0:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
-#' ```
+#' }
 #'
 #' @export
 lemmy_password_reset <- function(email, .lemmy_instance = getOption(
@@ -9251,12 +9251,12 @@ lemmy_password_reset <- function(email, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─jwt: (Optional) A character value
 #' ├─registration_created: A logical value
 #' └─verify_email_sent: A logical value
-#' ```
+#' }
 #'
 #' @export
 lemmy_password_change_after_reset <- function(token, password, password_verify, .lemmy_instance = getOption(
@@ -9283,7 +9283,7 @@ lemmy_password_change_after_reset <- function(token, password, password_verify, 
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─replies: <list>
 #'   └─[Each element]: <list>
@@ -9400,7 +9400,7 @@ lemmy_password_change_after_reset <- function(token, password, password_verify, 
 #'     ├─saved: A logical value
 #'     ├─creator_blocked: A logical value
 #'     └─my_vote: (Optional) A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_mark_all_as_read <- function(auth, .lemmy_instance = getOption(
@@ -9444,12 +9444,12 @@ lemmy_mark_all_as_read <- function(auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─jwt: (Optional) A character value
 #' ├─registration_created: A logical value
 #' └─verify_email_sent: A logical value
-#' ```
+#' }
 #'
 #' @export
 lemmy_save_user_settings <- function(
@@ -9537,12 +9537,12 @@ lemmy_save_user_settings <- function(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─jwt: (Optional) A character value
 #' ├─registration_created: A logical value
 #' └─verify_email_sent: A logical value
-#' ```
+#' }
 #'
 #' @export
 lemmy_change_password <- function(
@@ -9572,13 +9572,13 @@ lemmy_change_password <- function(
 #'
 #' @returns A `list` of length 4:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─community_id: (Optional) A numeric value
 #' ├─comment_reports: A numeric value
 #' ├─post_reports: A numeric value
 #' └─private_message_reports: (Optional) A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_report_count <- function(community_id = NULL, auth, .lemmy_instance = getOption(
@@ -9603,12 +9603,12 @@ lemmy_get_report_count <- function(community_id = NULL, auth, .lemmy_instance = 
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─replies: A numeric value
 #' ├─mentions: A numeric value
 #' └─private_messages: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_unread_count <- function(auth, .lemmy_instance = getOption(
@@ -9631,9 +9631,9 @@ lemmy_get_unread_count <- function(auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 0:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
-#' ```
+#' }
 #'
 #' @export
 lemmy_verify_email <- function(token, .lemmy_instance = getOption(
@@ -9658,7 +9658,7 @@ lemmy_verify_email <- function(token, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─admins: <list>
 #'   └─[Each element]: <list>
@@ -9688,7 +9688,7 @@ lemmy_verify_email <- function(token, .lemmy_instance = getOption(
 #'       ├─post_score: A numeric value
 #'       ├─comment_count: A numeric value
 #'       └─comment_score: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_add_admin <- function(person_id, added, auth, .lemmy_instance = getOption(
@@ -9715,10 +9715,10 @@ lemmy_add_admin <- function(person_id, added, auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─registration_applications: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_unread_registration_application_count <- function(auth, .lemmy_instance = getOption(
@@ -9744,7 +9744,7 @@ lemmy_get_unread_registration_application_count <- function(auth, .lemmy_instanc
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─registration_applications: <list>
 #'   └─[Each element]: <list>
@@ -9813,7 +9813,7 @@ lemmy_get_unread_registration_application_count <- function(auth, .lemmy_instanc
 #'       ├─bot_account: A logical value
 #'       ├─ban_expires: (Optional) A character value
 #'       └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_list_registration_applications <- function(
@@ -9845,7 +9845,7 @@ lemmy_list_registration_applications <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─registration_application: <list>
 #'   ├─registration_application: <list>
@@ -9913,7 +9913,7 @@ lemmy_list_registration_applications <- function(
 #'     ├─bot_account: A logical value
 #'     ├─ban_expires: (Optional) A character value
 #'     └─instance_id: A numeric value
-#' ```
+#' }
 #'
 #' @export
 lemmy_approve_registration_application <- function(id, approve, deny_reason = NULL, auth, .lemmy_instance = getOption(
@@ -9945,10 +9945,10 @@ lemmy_approve_registration_application <- function(id, approve, deny_reason = NU
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─success: A logical value
-#' ```
+#' }
 #'
 #' @export
 lemmy_purge_person <- function(person_id, reason = NULL, auth, .lemmy_instance = getOption(
@@ -9977,10 +9977,10 @@ lemmy_purge_person <- function(person_id, reason = NULL, auth, .lemmy_instance =
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─success: A logical value
-#' ```
+#' }
 #'
 #' @export
 lemmy_purge_community <- function(community_id, reason = NULL, auth, .lemmy_instance = getOption(
@@ -10009,10 +10009,10 @@ lemmy_purge_community <- function(community_id, reason = NULL, auth, .lemmy_inst
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─success: A logical value
-#' ```
+#' }
 #'
 #' @export
 lemmy_purge_post <- function(post_id, reason = NULL, auth, .lemmy_instance = getOption(
@@ -10041,10 +10041,10 @@ lemmy_purge_post <- function(post_id, reason = NULL, auth, .lemmy_instance = get
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─success: A logical value
-#' ```
+#' }
 #'
 #' @export
 lemmy_purge_comment <- function(comment_id, reason = NULL, auth, .lemmy_instance = getOption(
@@ -10076,7 +10076,7 @@ lemmy_purge_comment <- function(comment_id, reason = NULL, auth, .lemmy_instance
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─custom_emoji: <list>
 #'   ├─custom_emoji: <list>
@@ -10093,7 +10093,7 @@ lemmy_purge_comment <- function(comment_id, reason = NULL, auth, .lemmy_instance
 #'       ├─id: A numeric value
 #'       ├─custom_emoji_id: A numeric value
 #'       └─keyword: A character value
-#' ```
+#' }
 #'
 #' @export
 lemmy_create_custom_emoji <- function(
@@ -10130,7 +10130,7 @@ lemmy_create_custom_emoji <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─custom_emoji: <list>
 #'   ├─custom_emoji: <list>
@@ -10147,7 +10147,7 @@ lemmy_create_custom_emoji <- function(
 #'       ├─id: A numeric value
 #'       ├─custom_emoji_id: A numeric value
 #'       └─keyword: A character value
-#' ```
+#' }
 #'
 #' @export
 lemmy_edit_custom_emoji <- function(
@@ -10180,11 +10180,11 @@ lemmy_edit_custom_emoji <- function(
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' ├─id: A numeric value
 #' └─success: A logical value
-#' ```
+#' }
 #'
 #' @export
 lemmy_delete_custom_emoji <- function(id, auth, .lemmy_instance = getOption(
@@ -10209,7 +10209,7 @@ lemmy_delete_custom_emoji <- function(id, auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```plaintext
+#' \preformatted{
 #' <list>
 #' └─federated_instances: <list>
 #'   ├─linked: <list>
@@ -10236,7 +10236,7 @@ lemmy_delete_custom_emoji <- function(id, auth, .lemmy_instance = getOption(
 #'       ├─updated: (Optional) A character value
 #'       ├─software: (Optional) A character value
 #'       └─version: (Optional) A character value
-#' ```
+#' }
 #'
 #' @export
 lemmy_get_federated_instances <- function(auth = NULL, .lemmy_instance = getOption(

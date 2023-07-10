@@ -35,7 +35,8 @@ lemmy_get_modlog(
 \value{
 A \code{list} of length 15:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 ├─removed_posts: <list>
 │ └─[Each element]: <list>
 │   ├─mod_remove_post: <list>
@@ -879,7 +880,7 @@ A \code{list} of length 15:
       ├─hidden: A logical value
       ├─posting_restricted_to_mods: A logical value
       └─instance_id: A numeric value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.GET /modlog}

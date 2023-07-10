@@ -23,7 +23,8 @@ lemmy_mark_comment_reply_as_read(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 └─comment_reply_view: <list>
   ├─comment_reply: <list>
   │ ├─id: A numeric value
@@ -138,7 +139,7 @@ A \code{list} of length 1:
   ├─saved: A logical value
   ├─creator_blocked: A logical value
   └─my_vote: (Optional) A numeric value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.POST /comment/mark_as_read}

@@ -17,7 +17,8 @@ lemmy_get_federated_instances(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 └─federated_instances: <list>
   ├─linked: <list>
   │ └─[Each element]: <list>
@@ -43,7 +44,7 @@ A \code{list} of length 1:
       ├─updated: (Optional) A character value
       ├─software: (Optional) A character value
       └─version: (Optional) A character value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.Get /federated_instances}

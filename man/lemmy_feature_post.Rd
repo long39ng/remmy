@@ -26,7 +26,8 @@ lemmy_feature_post(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 └─post_view: <list>
   ├─post: <list>
   │ ├─id: A numeric value
@@ -109,7 +110,7 @@ A \code{list} of length 1:
   ├─creator_blocked: A logical value
   ├─my_vote: (Optional) A numeric value
   └─unread_comments: A numeric value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.POST /post/feature}

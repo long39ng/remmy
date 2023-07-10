@@ -23,7 +23,8 @@ lemmy_block_person(
 \value{
 A \code{list} of length 2:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 ├─person_view: <list>
 │ ├─person: <list>
 │ │ ├─id: A numeric value
@@ -52,7 +53,7 @@ A \code{list} of length 2:
 │   ├─comment_count: A numeric value
 │   └─comment_score: A numeric value
 └─blocked: A logical value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.POST /user/block}

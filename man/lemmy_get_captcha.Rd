@@ -17,12 +17,13 @@ lemmy_get_captcha(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 └─ok: <list>
   ├─png: A character value
   ├─wav: A character value
   └─uuid: A character value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.GET /user/get_captcha}

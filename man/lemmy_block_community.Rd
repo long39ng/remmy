@@ -23,7 +23,8 @@ lemmy_block_community(
 \value{
 A \code{list} of length 2:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 ├─community_view: <list>
 │ ├─community: <list>
 │ │ ├─id: A numeric value
@@ -59,7 +60,7 @@ A \code{list} of length 2:
 │   ├─users_active_half_year: A numeric value
 │   └─hot_rank: A numeric value
 └─blocked: A logical value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.POST /community/block}

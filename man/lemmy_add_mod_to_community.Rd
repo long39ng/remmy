@@ -26,7 +26,8 @@ lemmy_add_mod_to_community(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 └─moderators: <list>
   └─[Each element]: <list>
     ├─community: <list>
@@ -67,7 +68,7 @@ A \code{list} of length 1:
       ├─bot_account: A logical value
       ├─ban_expires: (Optional) A character value
       └─instance_id: A numeric value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.POST /community/mod}

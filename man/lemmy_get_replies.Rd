@@ -29,7 +29,8 @@ lemmy_get_replies(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 └─replies: <list>
   └─[Each element]: <list>
     ├─comment_reply: <list>
@@ -145,7 +146,7 @@ A \code{list} of length 1:
     ├─saved: A logical value
     ├─creator_blocked: A logical value
     └─my_vote: (Optional) A numeric value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.GET /user/replies}

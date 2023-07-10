@@ -17,8 +17,9 @@ lemmy_password_reset(
 \value{
 A \code{list} of length 0:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
-}\if{html}{\out{</div>}}
+\preformatted{
+<list>
+}
 }
 \description{
 \code{HTTP.POST /user/password_reset}

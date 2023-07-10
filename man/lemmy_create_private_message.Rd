@@ -23,7 +23,8 @@ lemmy_create_private_message(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 └─private_message_view: <list>
   ├─private_message: <list>
   │ ├─id: A numeric value
@@ -74,7 +75,7 @@ A \code{list} of length 1:
     ├─bot_account: A logical value
     ├─ban_expires: (Optional) A character value
     └─instance_id: A numeric value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.POST /private_message}

@@ -38,7 +38,8 @@ lemmy_get_person_details(
 \value{
 A \code{list} of length 4:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 ├─person_view: <list>
 │ ├─person: <list>
 │ │ ├─id: A numeric value
@@ -279,7 +280,7 @@ A \code{list} of length 4:
       ├─bot_account: A logical value
       ├─ban_expires: (Optional) A character value
       └─instance_id: A numeric value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.GET /user}

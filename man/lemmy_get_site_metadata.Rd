@@ -17,13 +17,14 @@ lemmy_get_site_metadata(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 └─metadata: <list>
   ├─title: (Optional) A character value
   ├─description: (Optional) A character value
   ├─image: (Optional) A character value
   └─embed_video_url: (Optional) A character value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.GET /post/site_metadata}

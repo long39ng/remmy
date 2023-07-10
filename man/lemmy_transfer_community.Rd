@@ -23,7 +23,8 @@ lemmy_transfer_community(
 \value{
 A \code{list} of length 4:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 ├─community_view: <list>
 │ ├─community: <list>
 │ │ ├─id: A numeric value
@@ -114,7 +115,7 @@ A \code{list} of length 4:
 │     ├─ban_expires: (Optional) A character value
 │     └─instance_id: A numeric value
 └─discussion_languages: A numeric vector
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.POST /community/transfer}

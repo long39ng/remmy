@@ -20,7 +20,8 @@ lemmy_get_comment(
 \value{
 A \code{list} of length 3:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 ├─comment_view: <list>
 │ ├─comment: <list>
 │ │ ├─id: A numeric value
@@ -112,7 +113,7 @@ A \code{list} of length 3:
 │ └─my_vote: (Optional) A numeric value
 ├─recipient_ids: A numeric vector
 └─form_id: (Optional) A character value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.GET /comment}

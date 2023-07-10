@@ -32,7 +32,8 @@ lemmy_list_communities(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
+\preformatted{
+<list>
 └─communities: <list>
   └─[Each element]: <list>
     ├─community: <list>
@@ -68,7 +69,7 @@ A \code{list} of length 1:
       ├─users_active_month: A numeric value
       ├─users_active_half_year: A numeric value
       └─hot_rank: A numeric value
-}\if{html}{\out{</div>}}
+}
 }
 \description{
 \code{HTTP.GET /community/list}

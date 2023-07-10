@@ -17,7 +17,7 @@ lemmy_get_site(
 \value{
 A \code{list} of length 8:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 ├─site_view: <list>
 │ ├─site: <list>
 │ │ ├─id: A numeric value
@@ -52,7 +52,6 @@ A \code{list} of length 8:
 │ │ ├─slur_filter_regex: (Optional) A character value
 │ │ ├─actor_name_max_length: A numeric value
 │ │ ├─federation_enabled: A logical value
-│ │ ├─federation_worker_count: A numeric value
 │ │ ├─captcha_enabled: A logical value
 │ │ ├─captcha_difficulty: A character value
 │ │ ├─published: A character value
@@ -102,6 +101,7 @@ A \code{list} of length 8:
 │   │ ├─local: A logical value
 │   │ ├─banner: (Optional) A character value
 │   │ ├─deleted: A logical value
+│   │ ├─inbox_url: A character value
 │   │ ├─matrix_user_id: (Optional) A character value
 │   │ ├─admin: A logical value
 │   │ ├─bot_account: A logical value
@@ -135,7 +135,8 @@ A \code{list} of length 8:
 │ │ │ ├─show_new_post_notifs: A logical value
 │ │ │ ├─email_verified: A logical value
 │ │ │ ├─accepted_application: A logical value
-│ │ │ └─totp_2fa_url: (Optional) A character value
+│ │ │ ├─totp_2fa_url: (Optional) A character value
+│ │ │ └─open_links_in_new_tab: A logical value
 │ │ ├─person: <list>
 │ │ │ ├─id: A numeric value
 │ │ │ ├─name: A character value
@@ -149,6 +150,7 @@ A \code{list} of length 8:
 │ │ │ ├─local: A logical value
 │ │ │ ├─banner: (Optional) A character value
 │ │ │ ├─deleted: A logical value
+│ │ │ ├─inbox_url: A character value
 │ │ │ ├─matrix_user_id: (Optional) A character value
 │ │ │ ├─admin: A logical value
 │ │ │ ├─bot_account: A logical value
@@ -177,6 +179,8 @@ A \code{list} of length 8:
 │ │   │ ├─local: A logical value
 │ │   │ ├─icon: (Optional) A character value
 │ │   │ ├─banner: (Optional) A character value
+│ │   │ ├─followers_url: A character value
+│ │   │ ├─inbox_url: A character value
 │ │   │ ├─hidden: A logical value
 │ │   │ ├─posting_restricted_to_mods: A logical value
 │ │   │ └─instance_id: A numeric value
@@ -193,6 +197,7 @@ A \code{list} of length 8:
 │ │     ├─local: A logical value
 │ │     ├─banner: (Optional) A character value
 │ │     ├─deleted: A logical value
+│ │     ├─inbox_url: A character value
 │ │     ├─matrix_user_id: (Optional) A character value
 │ │     ├─admin: A logical value
 │ │     ├─bot_account: A logical value
@@ -214,6 +219,8 @@ A \code{list} of length 8:
 │ │   │ ├─local: A logical value
 │ │   │ ├─icon: (Optional) A character value
 │ │   │ ├─banner: (Optional) A character value
+│ │   │ ├─followers_url: A character value
+│ │   │ ├─inbox_url: A character value
 │ │   │ ├─hidden: A logical value
 │ │   │ ├─posting_restricted_to_mods: A logical value
 │ │   │ └─instance_id: A numeric value
@@ -230,6 +237,7 @@ A \code{list} of length 8:
 │ │     ├─local: A logical value
 │ │     ├─banner: (Optional) A character value
 │ │     ├─deleted: A logical value
+│ │     ├─inbox_url: A character value
 │ │     ├─matrix_user_id: (Optional) A character value
 │ │     ├─admin: A logical value
 │ │     ├─bot_account: A logical value
@@ -250,6 +258,7 @@ A \code{list} of length 8:
 │ │   │ ├─local: A logical value
 │ │   │ ├─banner: (Optional) A character value
 │ │   │ ├─deleted: A logical value
+│ │   │ ├─inbox_url: A character value
 │ │   │ ├─matrix_user_id: (Optional) A character value
 │ │   │ ├─admin: A logical value
 │ │   │ ├─bot_account: A logical value
@@ -269,6 +278,8 @@ A \code{list} of length 8:
 │ │     ├─local: A logical value
 │ │     ├─icon: (Optional) A character value
 │ │     ├─banner: (Optional) A character value
+│ │     ├─followers_url: A character value
+│ │     ├─inbox_url: A character value
 │ │     ├─hidden: A logical value
 │ │     ├─posting_restricted_to_mods: A logical value
 │ │     └─instance_id: A numeric value
@@ -287,6 +298,7 @@ A \code{list} of length 8:
 │ │   │ ├─local: A logical value
 │ │   │ ├─banner: (Optional) A character value
 │ │   │ ├─deleted: A logical value
+│ │   │ ├─inbox_url: A character value
 │ │   │ ├─matrix_user_id: (Optional) A character value
 │ │   │ ├─admin: A logical value
 │ │   │ ├─bot_account: A logical value
@@ -305,6 +317,7 @@ A \code{list} of length 8:
 │ │     ├─local: A logical value
 │ │     ├─banner: (Optional) A character value
 │ │     ├─deleted: A logical value
+│ │     ├─inbox_url: A character value
 │ │     ├─matrix_user_id: (Optional) A character value
 │ │     ├─admin: A logical value
 │ │     ├─bot_account: A logical value

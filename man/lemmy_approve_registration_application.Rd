@@ -26,7 +26,7 @@ lemmy_approve_registration_application(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 └─registration_application: <list>
   ├─registration_application: <list>
   │ ├─id: A numeric value
@@ -53,7 +53,8 @@ A \code{list} of length 1:
   │ ├─show_new_post_notifs: A logical value
   │ ├─email_verified: A logical value
   │ ├─accepted_application: A logical value
-  │ └─totp_2fa_url: (Optional) A character value
+  │ ├─totp_2fa_url: (Optional) A character value
+  │ └─open_links_in_new_tab: A logical value
   ├─creator: <list>
   │ ├─id: A numeric value
   │ ├─name: A character value
@@ -67,6 +68,7 @@ A \code{list} of length 1:
   │ ├─local: A logical value
   │ ├─banner: (Optional) A character value
   │ ├─deleted: A logical value
+  │ ├─inbox_url: A character value
   │ ├─matrix_user_id: (Optional) A character value
   │ ├─admin: A logical value
   │ ├─bot_account: A logical value
@@ -85,6 +87,7 @@ A \code{list} of length 1:
     ├─local: A logical value
     ├─banner: (Optional) A character value
     ├─deleted: A logical value
+    ├─inbox_url: A character value
     ├─matrix_user_id: (Optional) A character value
     ├─admin: A logical value
     ├─bot_account: A logical value

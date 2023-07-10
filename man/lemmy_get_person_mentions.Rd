@@ -29,7 +29,7 @@ lemmy_get_person_mentions(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 └─mentions: <list>
   └─[Each element]: <list>
     ├─person_mention: <list>
@@ -65,6 +65,7 @@ A \code{list} of length 1:
     │ ├─local: A logical value
     │ ├─banner: (Optional) A character value
     │ ├─deleted: A logical value
+    │ ├─inbox_url: A character value
     │ ├─matrix_user_id: (Optional) A character value
     │ ├─admin: A logical value
     │ ├─bot_account: A logical value
@@ -106,6 +107,8 @@ A \code{list} of length 1:
     │ ├─local: A logical value
     │ ├─icon: (Optional) A character value
     │ ├─banner: (Optional) A character value
+    │ ├─followers_url: A character value
+    │ ├─inbox_url: A character value
     │ ├─hidden: A logical value
     │ ├─posting_restricted_to_mods: A logical value
     │ └─instance_id: A numeric value
@@ -122,6 +125,7 @@ A \code{list} of length 1:
     │ ├─local: A logical value
     │ ├─banner: (Optional) A character value
     │ ├─deleted: A logical value
+    │ ├─inbox_url: A character value
     │ ├─matrix_user_id: (Optional) A character value
     │ ├─admin: A logical value
     │ ├─bot_account: A logical value

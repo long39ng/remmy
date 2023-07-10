@@ -20,7 +20,7 @@ lemmy_delete_account(
 \value{
 A \code{list} of length 0:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 }\if{html}{\out{</div>}}
 }
 \description{

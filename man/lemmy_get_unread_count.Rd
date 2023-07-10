@@ -17,7 +17,7 @@ lemmy_get_unread_count(
 \value{
 A \code{list} of length 3:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 ├─replies: A numeric value
 ├─mentions: A numeric value
 └─private_messages: A numeric value

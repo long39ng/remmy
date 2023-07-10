@@ -21,7 +21,7 @@ lemmy_get_person_details(
 
 \item{username}{(Optional) A character value.}
 
-\item{sort}{(Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", or "TopTwelveHour".}
+\item{sort}{(Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", "TopTwelveHour", "TopThreeMonths", "TopSixMonths", or "TopNineMonths".}
 
 \item{page}{(Optional) A numeric value.}
 
@@ -38,7 +38,7 @@ lemmy_get_person_details(
 \value{
 A \code{list} of length 4:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 ├─person_view: <list>
 │ ├─person: <list>
 │ │ ├─id: A numeric value
@@ -53,6 +53,7 @@ A \code{list} of length 4:
 │ │ ├─local: A logical value
 │ │ ├─banner: (Optional) A character value
 │ │ ├─deleted: A logical value
+│ │ ├─inbox_url: A character value
 │ │ ├─matrix_user_id: (Optional) A character value
 │ │ ├─admin: A logical value
 │ │ ├─bot_account: A logical value
@@ -94,6 +95,7 @@ A \code{list} of length 4:
 │   │ ├─local: A logical value
 │   │ ├─banner: (Optional) A character value
 │   │ ├─deleted: A logical value
+│   │ ├─inbox_url: A character value
 │   │ ├─matrix_user_id: (Optional) A character value
 │   │ ├─admin: A logical value
 │   │ ├─bot_account: A logical value
@@ -135,6 +137,8 @@ A \code{list} of length 4:
 │   │ ├─local: A logical value
 │   │ ├─icon: (Optional) A character value
 │   │ ├─banner: (Optional) A character value
+│   │ ├─followers_url: A character value
+│   │ ├─inbox_url: A character value
 │   │ ├─hidden: A logical value
 │   │ ├─posting_restricted_to_mods: A logical value
 │   │ └─instance_id: A numeric value
@@ -189,6 +193,7 @@ A \code{list} of length 4:
 │   │ ├─local: A logical value
 │   │ ├─banner: (Optional) A character value
 │   │ ├─deleted: A logical value
+│   │ ├─inbox_url: A character value
 │   │ ├─matrix_user_id: (Optional) A character value
 │   │ ├─admin: A logical value
 │   │ ├─bot_account: A logical value
@@ -208,6 +213,8 @@ A \code{list} of length 4:
 │   │ ├─local: A logical value
 │   │ ├─icon: (Optional) A character value
 │   │ ├─banner: (Optional) A character value
+│   │ ├─followers_url: A character value
+│   │ ├─inbox_url: A character value
 │   │ ├─hidden: A logical value
 │   │ ├─posting_restricted_to_mods: A logical value
 │   │ └─instance_id: A numeric value
@@ -248,6 +255,8 @@ A \code{list} of length 4:
     │ ├─local: A logical value
     │ ├─icon: (Optional) A character value
     │ ├─banner: (Optional) A character value
+    │ ├─followers_url: A character value
+    │ ├─inbox_url: A character value
     │ ├─hidden: A logical value
     │ ├─posting_restricted_to_mods: A logical value
     │ └─instance_id: A numeric value
@@ -264,6 +273,7 @@ A \code{list} of length 4:
       ├─local: A logical value
       ├─banner: (Optional) A character value
       ├─deleted: A logical value
+      ├─inbox_url: A character value
       ├─matrix_user_id: (Optional) A character value
       ├─admin: A logical value
       ├─bot_account: A logical value

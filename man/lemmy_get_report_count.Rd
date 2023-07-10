@@ -20,7 +20,7 @@ lemmy_get_report_count(
 \value{
 A \code{list} of length 4:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 ├─community_id: (Optional) A numeric value
 ├─comment_reports: A numeric value
 ├─post_reports: A numeric value

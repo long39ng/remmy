@@ -17,7 +17,7 @@ lemmy_get_site_metadata(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 └─metadata: <list>
   ├─title: (Optional) A character value
   ├─description: (Optional) A character value

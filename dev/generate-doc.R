@@ -29,7 +29,7 @@ doc_returns <- function(method) {
     paste(collapse = "\n")
 
   glue::glue(
-    "#' @returns A `list` of length {length(method$resp)}:\n#'\n#' ```",
+    "#' @returns A `list` of length {length(method$resp)}:\n#'\n#' ```plaintext",
     props_doc,
     "#' ```\n#'\n#' @export",
     .sep = "\n"

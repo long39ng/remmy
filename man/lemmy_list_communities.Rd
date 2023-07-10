@@ -7,6 +7,7 @@
 lemmy_list_communities(
   type_ = NULL,
   sort = NULL,
+  show_nsfw = NULL,
   page = NULL,
   limit = NULL,
   auth = NULL,
@@ -16,7 +17,9 @@ lemmy_list_communities(
 \arguments{
 \item{type_}{(Optional) One of "All", "Local", or "Subscribed".}
 
-\item{sort}{(Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", or "TopTwelveHour".}
+\item{sort}{(Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", "TopTwelveHour", "TopThreeMonths", "TopSixMonths", or "TopNineMonths".}
+
+\item{show_nsfw}{(Optional) A logical value.}
 
 \item{page}{(Optional) A numeric value.}
 
@@ -29,7 +32,7 @@ lemmy_list_communities(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 └─communities: <list>
   └─[Each element]: <list>
     ├─community: <list>
@@ -46,6 +49,8 @@ A \code{list} of length 1:
     │ ├─local: A logical value
     │ ├─icon: (Optional) A character value
     │ ├─banner: (Optional) A character value
+    │ ├─followers_url: A character value
+    │ ├─inbox_url: A character value
     │ ├─hidden: A logical value
     │ ├─posting_restricted_to_mods: A logical value
     │ └─instance_id: A numeric value

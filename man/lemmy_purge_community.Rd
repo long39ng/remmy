@@ -23,7 +23,7 @@ lemmy_purge_community(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 └─success: A logical value
 }\if{html}{\out{</div>}}
 }

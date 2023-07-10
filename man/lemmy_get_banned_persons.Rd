@@ -17,7 +17,7 @@ lemmy_get_banned_persons(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 └─banned: <list>
   └─[Each element]: <list>
     ├─person: <list>
@@ -33,6 +33,7 @@ A \code{list} of length 1:
     │ ├─local: A logical value
     │ ├─banner: (Optional) A character value
     │ ├─deleted: A logical value
+    │ ├─inbox_url: A character value
     │ ├─matrix_user_id: (Optional) A character value
     │ ├─admin: A logical value
     │ ├─bot_account: A logical value

@@ -38,7 +38,6 @@ lemmy_create_site(
   rate_limit_search_per_second = NULL,
   federation_enabled = NULL,
   federation_debug = NULL,
-  federation_worker_count = NULL,
   captcha_enabled = NULL,
   captcha_difficulty = NULL,
   allowed_instances = NULL,
@@ -116,8 +115,6 @@ lemmy_create_site(
 
 \item{federation_debug}{(Optional) A logical value.}
 
-\item{federation_worker_count}{(Optional) A numeric value.}
-
 \item{captcha_enabled}{(Optional) A logical value.}
 
 \item{captcha_difficulty}{(Optional) A character value.}
@@ -137,7 +134,7 @@ lemmy_create_site(
 \value{
 A \code{list} of length 2:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 ├─site_view: <list>
 │ ├─site: <list>
 │ │ ├─id: A numeric value
@@ -172,7 +169,6 @@ A \code{list} of length 2:
 │ │ ├─slur_filter_regex: (Optional) A character value
 │ │ ├─actor_name_max_length: A numeric value
 │ │ ├─federation_enabled: A logical value
-│ │ ├─federation_worker_count: A numeric value
 │ │ ├─captcha_enabled: A logical value
 │ │ ├─captcha_difficulty: A character value
 │ │ ├─published: A character value

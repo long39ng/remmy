@@ -23,7 +23,7 @@ lemmy_password_change_after_reset(
 \value{
 A \code{list} of length 3:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 ├─jwt: (Optional) A character value
 ├─registration_created: A logical value
 └─verify_email_sent: A logical value

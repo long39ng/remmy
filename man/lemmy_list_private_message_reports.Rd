@@ -26,7 +26,7 @@ lemmy_list_private_message_reports(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 └─private_message_reports: <list>
   └─[Each element]: <list>
     ├─private_message_report: <list>
@@ -63,6 +63,7 @@ A \code{list} of length 1:
     │ ├─local: A logical value
     │ ├─banner: (Optional) A character value
     │ ├─deleted: A logical value
+    │ ├─inbox_url: A character value
     │ ├─matrix_user_id: (Optional) A character value
     │ ├─admin: A logical value
     │ ├─bot_account: A logical value
@@ -81,6 +82,7 @@ A \code{list} of length 1:
     │ ├─local: A logical value
     │ ├─banner: (Optional) A character value
     │ ├─deleted: A logical value
+    │ ├─inbox_url: A character value
     │ ├─matrix_user_id: (Optional) A character value
     │ ├─admin: A logical value
     │ ├─bot_account: A logical value
@@ -99,6 +101,7 @@ A \code{list} of length 1:
       ├─local: A logical value
       ├─banner: (Optional) A character value
       ├─deleted: A logical value
+      ├─inbox_url: A character value
       ├─matrix_user_id: (Optional) A character value
       ├─admin: A logical value
       ├─bot_account: A logical value

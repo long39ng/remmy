@@ -35,7 +35,7 @@ lemmy_ban_from_community(
 \value{
 A \code{list} of length 2:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 ├─person_view: <list>
 │ ├─person: <list>
 │ │ ├─id: A numeric value
@@ -50,6 +50,7 @@ A \code{list} of length 2:
 │ │ ├─local: A logical value
 │ │ ├─banner: (Optional) A character value
 │ │ ├─deleted: A logical value
+│ │ ├─inbox_url: A character value
 │ │ ├─matrix_user_id: (Optional) A character value
 │ │ ├─admin: A logical value
 │ │ ├─bot_account: A logical value

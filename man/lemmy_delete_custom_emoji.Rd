@@ -20,7 +20,7 @@ lemmy_delete_custom_emoji(
 \value{
 A \code{list} of length 2:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 ├─id: A numeric value
 └─success: A logical value
 }\if{html}{\out{</div>}}

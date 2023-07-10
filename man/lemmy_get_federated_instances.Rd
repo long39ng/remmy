@@ -17,7 +17,7 @@ lemmy_get_federated_instances(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 └─federated_instances: <list>
   ├─linked: <list>
   │ └─[Each element]: <list>

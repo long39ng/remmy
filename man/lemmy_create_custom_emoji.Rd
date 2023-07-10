@@ -32,7 +32,7 @@ lemmy_create_custom_emoji(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 └─custom_emoji: <list>
   ├─custom_emoji: <list>
   │ ├─id: A numeric value

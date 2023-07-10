@@ -29,7 +29,7 @@ lemmy_search(
 
 \item{type_}{(Optional) One of "All", "Comments", "Posts", "Communities", "Users", or "Url".}
 
-\item{sort}{(Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", or "TopTwelveHour".}
+\item{sort}{(Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", "TopTwelveHour", "TopThreeMonths", "TopSixMonths", or "TopNineMonths".}
 
 \item{listing_type}{(Optional) One of "All", "Local", or "Subscribed".}
 
@@ -44,7 +44,7 @@ lemmy_search(
 \value{
 A \code{list} of length 5:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 ├─type_: One of "All", "Comments", "Posts...
 ├─comments: <list>
 │ └─[Each element]: <list>
@@ -75,6 +75,7 @@ A \code{list} of length 5:
 │   │ ├─local: A logical value
 │   │ ├─banner: (Optional) A character value
 │   │ ├─deleted: A logical value
+│   │ ├─inbox_url: A character value
 │   │ ├─matrix_user_id: (Optional) A character value
 │   │ ├─admin: A logical value
 │   │ ├─bot_account: A logical value
@@ -116,6 +117,8 @@ A \code{list} of length 5:
 │   │ ├─local: A logical value
 │   │ ├─icon: (Optional) A character value
 │   │ ├─banner: (Optional) A character value
+│   │ ├─followers_url: A character value
+│   │ ├─inbox_url: A character value
 │   │ ├─hidden: A logical value
 │   │ ├─posting_restricted_to_mods: A logical value
 │   │ └─instance_id: A numeric value
@@ -170,6 +173,7 @@ A \code{list} of length 5:
 │   │ ├─local: A logical value
 │   │ ├─banner: (Optional) A character value
 │   │ ├─deleted: A logical value
+│   │ ├─inbox_url: A character value
 │   │ ├─matrix_user_id: (Optional) A character value
 │   │ ├─admin: A logical value
 │   │ ├─bot_account: A logical value
@@ -189,6 +193,8 @@ A \code{list} of length 5:
 │   │ ├─local: A logical value
 │   │ ├─icon: (Optional) A character value
 │   │ ├─banner: (Optional) A character value
+│   │ ├─followers_url: A character value
+│   │ ├─inbox_url: A character value
 │   │ ├─hidden: A logical value
 │   │ ├─posting_restricted_to_mods: A logical value
 │   │ └─instance_id: A numeric value
@@ -229,6 +235,8 @@ A \code{list} of length 5:
 │   │ ├─local: A logical value
 │   │ ├─icon: (Optional) A character value
 │   │ ├─banner: (Optional) A character value
+│   │ ├─followers_url: A character value
+│   │ ├─inbox_url: A character value
 │   │ ├─hidden: A logical value
 │   │ ├─posting_restricted_to_mods: A logical value
 │   │ └─instance_id: A numeric value
@@ -261,6 +269,7 @@ A \code{list} of length 5:
     │ ├─local: A logical value
     │ ├─banner: (Optional) A character value
     │ ├─deleted: A logical value
+    │ ├─inbox_url: A character value
     │ ├─matrix_user_id: (Optional) A character value
     │ ├─admin: A logical value
     │ ├─bot_account: A logical value

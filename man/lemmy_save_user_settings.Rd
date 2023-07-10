@@ -26,6 +26,7 @@ lemmy_save_user_settings(
   discussion_languages = NULL,
   generate_totp_2fa = NULL,
   auth,
+  open_links_in_new_tab = NULL,
   .lemmy_instance = getOption("lemmy_instance", "https://lemmy.world")
 )
 }
@@ -36,7 +37,7 @@ lemmy_save_user_settings(
 
 \item{theme}{(Optional) A character value.}
 
-\item{default_sort_type}{(Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", or "TopTwelveHour".}
+\item{default_sort_type}{(Optional) One of "Active", "Hot", "New", "Old", "TopDay", "TopWeek", "TopMonth", "TopYear", "TopAll", "MostComments", "NewComments", "TopHour", "TopSixHour", "TopTwelveHour", "TopThreeMonths", "TopSixMonths", or "TopNineMonths".}
 
 \item{default_listing_type}{(Optional) One of "All", "Local", or "Subscribed".}
 
@@ -72,12 +73,14 @@ lemmy_save_user_settings(
 
 \item{auth}{A character value.}
 
+\item{open_links_in_new_tab}{(Optional) A logical value.}
+
 \item{.lemmy_instance}{Default: "https://lemmy.world". Change the default instance by setting the \code{lemmy_instance} \code{\link[=options]{options()}}.}
 }
 \value{
 A \code{list} of length 3:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 ├─jwt: (Optional) A character value
 ├─registration_created: A logical value
 └─verify_email_sent: A logical value

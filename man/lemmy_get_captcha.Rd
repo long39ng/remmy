@@ -17,7 +17,7 @@ lemmy_get_captcha(
 \value{
 A \code{list} of length 1:
 
-\if{html}{\out{<div class="sourceCode">}}\preformatted{<list>
+\if{html}{\out{<div class="sourceCode plaintext">}}\preformatted{<list>
 └─ok: <list>
   ├─png: A character value
   ├─wav: A character value

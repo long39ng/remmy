@@ -9,7 +9,7 @@
 #'
 #' @returns A `list` of length 8:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─site_view: <list>
 #' │ ├─site: <list>
@@ -408,7 +408,7 @@ lemmy_get_site <- function(auth = NULL, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─site_view: <list>
 #' │ ├─site: <list>
@@ -659,7 +659,7 @@ lemmy_create_site <- function(
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─site_view: <list>
 #' │ ├─site: <list>
@@ -870,7 +870,7 @@ lemmy_edit_site <- function(
 #'
 #' @returns A `list` of length 8:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─site_view: <list>
 #' │ ├─site: <list>
@@ -1236,7 +1236,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 15:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─removed_posts: <list>
 #' │ └─[Each element]: <list>
@@ -2133,7 +2133,7 @@ lemmy_get_modlog <- function(
 #'
 #' @returns A `list` of length 5:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─type_: One of "All", "Comments", "Posts...
 #' ├─comments: <list>
@@ -2431,7 +2431,7 @@ lemmy_search <- function(
 #'
 #' @returns A `list` of length 4:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─comment: <list>
 #' │ ├─comment: <list>
@@ -2698,7 +2698,7 @@ lemmy_resolve_object <- function(q, auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─community_view: <list>
 #' │ ├─community: <list>
@@ -2777,7 +2777,7 @@ lemmy_create_community <- function(
 #'
 #' @returns A `list` of length 4:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─community_view: <list>
 #' │ ├─community: <list>
@@ -2904,7 +2904,7 @@ lemmy_get_community <- function(id = NULL, name = NULL, auth = NULL, .lemmy_inst
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─community_view: <list>
 #' │ ├─community: <list>
@@ -2989,7 +2989,7 @@ lemmy_edit_community <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─communities: <list>
 #'   └─[Each element]: <list>
@@ -3072,7 +3072,7 @@ lemmy_list_communities <- function(
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─community_view: <list>
 #' │ ├─community: <list>
@@ -3138,7 +3138,7 @@ lemmy_follow_community <- function(community_id, follow, auth, .lemmy_instance =
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─community_view: <list>
 #' │ ├─community: <list>
@@ -3204,7 +3204,7 @@ lemmy_block_community <- function(community_id, block, auth, .lemmy_instance = g
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─community_view: <list>
 #' │ ├─community: <list>
@@ -3272,7 +3272,7 @@ lemmy_delete_community <- function(community_id, deleted, auth, .lemmy_instance 
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─community_view: <list>
 #' │ ├─community: <list>
@@ -3342,7 +3342,7 @@ lemmy_remove_community <- function(
 #'
 #' @returns A `list` of length 4:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─community_view: <list>
 #' │ ├─community: <list>
@@ -3467,7 +3467,7 @@ lemmy_transfer_community <- function(community_id, person_id, auth, .lemmy_insta
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─person_view: <list>
 #' │ ├─person: <list>
@@ -3539,7 +3539,7 @@ lemmy_ban_from_community <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─moderators: <list>
 #'   └─[Each element]: <list>
@@ -3618,7 +3618,7 @@ lemmy_add_mod_to_community <- function(community_id, person_id, added, auth, .le
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -3745,7 +3745,7 @@ lemmy_create_post <- function(
 #'
 #' @returns A `list` of length 4:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─post_view: <list>
 #' │ ├─post: <list>
@@ -4019,7 +4019,7 @@ lemmy_get_post <- function(id = NULL, comment_id = NULL, auth = NULL, .lemmy_ins
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -4143,7 +4143,7 @@ lemmy_edit_post <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -4257,7 +4257,7 @@ lemmy_delete_post <- function(post_id, deleted, auth, .lemmy_instance = getOptio
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -4373,7 +4373,7 @@ lemmy_remove_post <- function(post_id, removed, reason = NULL, auth, .lemmy_inst
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -4486,7 +4486,7 @@ lemmy_mark_post_as_read <- function(post_id, read, auth, .lemmy_instance = getOp
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -4600,7 +4600,7 @@ lemmy_lock_post <- function(post_id, locked, auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -4721,7 +4721,7 @@ lemmy_feature_post <- function(post_id, featured, feature_type, auth, .lemmy_ins
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─posts: <list>
 #'   └─[Each element]: <list>
@@ -4858,7 +4858,7 @@ lemmy_get_posts <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -4971,7 +4971,7 @@ lemmy_like_post <- function(post_id, score, auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─post_view: <list>
 #'   ├─post: <list>
@@ -5084,7 +5084,7 @@ lemmy_save_post <- function(post_id, save, auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─post_report_view: <list>
 #'   ├─post_report: <list>
@@ -5242,7 +5242,7 @@ lemmy_create_post_report <- function(post_id, reason, auth, .lemmy_instance = ge
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─post_report_view: <list>
 #'   ├─post_report: <list>
@@ -5402,7 +5402,7 @@ lemmy_resolve_post_report <- function(report_id, resolved, auth, .lemmy_instance
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─post_reports: <list>
 #'   └─[Each element]: <list>
@@ -5566,7 +5566,7 @@ lemmy_list_post_reports <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─metadata: <list>
 #'   ├─title: (Optional) A character value
@@ -5601,7 +5601,7 @@ lemmy_get_site_metadata <- function(url, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─comment_view: <list>
 #' │ ├─comment: <list>
@@ -5734,7 +5734,7 @@ lemmy_create_comment <- function(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─comment_view: <list>
 #' │ ├─comment: <list>
@@ -5860,7 +5860,7 @@ lemmy_edit_comment <- function(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─comment_view: <list>
 #' │ ├─comment: <list>
@@ -5983,7 +5983,7 @@ lemmy_delete_comment <- function(comment_id, deleted, auth, .lemmy_instance = ge
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─comment_view: <list>
 #' │ ├─comment: <list>
@@ -6108,7 +6108,7 @@ lemmy_remove_comment <- function(comment_id, removed, reason = NULL, auth, .lemm
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─comment_reply_view: <list>
 #'   ├─comment_reply: <list>
@@ -6253,7 +6253,7 @@ lemmy_mark_comment_reply_as_read <- function(comment_reply_id, read, auth, .lemm
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─comment_view: <list>
 #' │ ├─comment: <list>
@@ -6375,7 +6375,7 @@ lemmy_like_comment <- function(comment_id, score, auth, .lemmy_instance = getOpt
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─comment_view: <list>
 #' │ ├─comment: <list>
@@ -6497,7 +6497,7 @@ lemmy_save_comment <- function(comment_id, save, auth, .lemmy_instance = getOpti
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─comment_view: <list>
 #' │ ├─comment: <list>
@@ -6628,7 +6628,7 @@ lemmy_distinguish_comment <- function(comment_id, distinguished, auth, .lemmy_in
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─comments: <list>
 #'   └─[Each element]: <list>
@@ -6774,7 +6774,7 @@ lemmy_get_comments <- function(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─comment_view: <list>
 #' │ ├─comment: <list>
@@ -6894,7 +6894,7 @@ lemmy_get_comment <- function(id, auth = NULL, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─comment_report_view: <list>
 #'   ├─comment_report: <list>
@@ -7059,7 +7059,7 @@ lemmy_create_comment_report <- function(comment_id, reason, auth, .lemmy_instanc
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─comment_report_view: <list>
 #'   ├─comment_report: <list>
@@ -7226,7 +7226,7 @@ lemmy_resolve_comment_report <- function(report_id, resolved, auth, .lemmy_insta
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─comment_reports: <list>
 #'   └─[Each element]: <list>
@@ -7400,7 +7400,7 @@ lemmy_list_comment_reports <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─private_messages: <list>
 #'   └─[Each element]: <list>
@@ -7484,7 +7484,7 @@ lemmy_get_private_messages <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─private_message_view: <list>
 #'   ├─private_message: <list>
@@ -7565,7 +7565,7 @@ lemmy_create_private_message <- function(content, recipient_id, auth, .lemmy_ins
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─private_message_view: <list>
 #'   ├─private_message: <list>
@@ -7647,7 +7647,7 @@ lemmy_edit_private_message <- function(private_message_id, content, auth, .lemmy
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─private_message_view: <list>
 #'   ├─private_message: <list>
@@ -7729,7 +7729,7 @@ lemmy_delete_private_message <- function(private_message_id, deleted, auth, .lem
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─private_message_view: <list>
 #'   ├─private_message: <list>
@@ -7811,7 +7811,7 @@ lemmy_mark_private_message_as_read <- function(private_message_id, read, auth, .
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─private_message_report_view: <list>
 #'   ├─private_message_report: <list>
@@ -7922,7 +7922,7 @@ lemmy_create_private_message_report <- function(private_message_id, reason, auth
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─private_message_report_view: <list>
 #'   ├─private_message_report: <list>
@@ -8033,7 +8033,7 @@ lemmy_resolve_private_message_report <- function(report_id, resolved, auth, .lem
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─private_message_reports: <list>
 #'   └─[Each element]: <list>
@@ -8152,7 +8152,7 @@ lemmy_list_private_message_reports <- function(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─jwt: (Optional) A character value
 #' ├─registration_created: A logical value
@@ -8204,7 +8204,7 @@ lemmy_register <- function(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─jwt: (Optional) A character value
 #' ├─registration_created: A logical value
@@ -8243,7 +8243,7 @@ lemmy_login <- function(
 #'
 #' @returns A `list` of length 4:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─person_view: <list>
 #' │ ├─person: <list>
@@ -8533,7 +8533,7 @@ lemmy_get_person_details <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─mentions: <list>
 #'   └─[Each element]: <list>
@@ -8686,7 +8686,7 @@ lemmy_get_person_mentions <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─person_mention_view: <list>
 #'   ├─person_mention: <list>
@@ -8833,7 +8833,7 @@ lemmy_mark_person_mention_as_read <- function(person_mention_id, read, auth, .le
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─replies: <list>
 #'   └─[Each element]: <list>
@@ -8989,7 +8989,7 @@ lemmy_get_replies <- function(
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─person_view: <list>
 #' │ ├─person: <list>
@@ -9055,7 +9055,7 @@ lemmy_ban_person <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─banned: <list>
 #'   └─[Each element]: <list>
@@ -9110,7 +9110,7 @@ lemmy_get_banned_persons <- function(auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─person_view: <list>
 #' │ ├─person: <list>
@@ -9167,7 +9167,7 @@ lemmy_block_person <- function(person_id, block, auth, .lemmy_instance = getOpti
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─ok: <list>
 #'   ├─png: A character value
@@ -9197,7 +9197,7 @@ lemmy_get_captcha <- function(auth = NULL, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 0:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ```
 #'
@@ -9224,7 +9224,7 @@ lemmy_delete_account <- function(password, auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 0:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ```
 #'
@@ -9251,7 +9251,7 @@ lemmy_password_reset <- function(email, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─jwt: (Optional) A character value
 #' ├─registration_created: A logical value
@@ -9283,7 +9283,7 @@ lemmy_password_change_after_reset <- function(token, password, password_verify, 
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─replies: <list>
 #'   └─[Each element]: <list>
@@ -9444,7 +9444,7 @@ lemmy_mark_all_as_read <- function(auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─jwt: (Optional) A character value
 #' ├─registration_created: A logical value
@@ -9537,7 +9537,7 @@ lemmy_save_user_settings <- function(
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─jwt: (Optional) A character value
 #' ├─registration_created: A logical value
@@ -9572,7 +9572,7 @@ lemmy_change_password <- function(
 #'
 #' @returns A `list` of length 4:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─community_id: (Optional) A numeric value
 #' ├─comment_reports: A numeric value
@@ -9603,7 +9603,7 @@ lemmy_get_report_count <- function(community_id = NULL, auth, .lemmy_instance = 
 #'
 #' @returns A `list` of length 3:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─replies: A numeric value
 #' ├─mentions: A numeric value
@@ -9631,7 +9631,7 @@ lemmy_get_unread_count <- function(auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 0:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ```
 #'
@@ -9658,7 +9658,7 @@ lemmy_verify_email <- function(token, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─admins: <list>
 #'   └─[Each element]: <list>
@@ -9715,7 +9715,7 @@ lemmy_add_admin <- function(person_id, added, auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─registration_applications: A numeric value
 #' ```
@@ -9744,7 +9744,7 @@ lemmy_get_unread_registration_application_count <- function(auth, .lemmy_instanc
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─registration_applications: <list>
 #'   └─[Each element]: <list>
@@ -9845,7 +9845,7 @@ lemmy_list_registration_applications <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─registration_application: <list>
 #'   ├─registration_application: <list>
@@ -9945,7 +9945,7 @@ lemmy_approve_registration_application <- function(id, approve, deny_reason = NU
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─success: A logical value
 #' ```
@@ -9977,7 +9977,7 @@ lemmy_purge_person <- function(person_id, reason = NULL, auth, .lemmy_instance =
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─success: A logical value
 #' ```
@@ -10009,7 +10009,7 @@ lemmy_purge_community <- function(community_id, reason = NULL, auth, .lemmy_inst
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─success: A logical value
 #' ```
@@ -10041,7 +10041,7 @@ lemmy_purge_post <- function(post_id, reason = NULL, auth, .lemmy_instance = get
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─success: A logical value
 #' ```
@@ -10076,7 +10076,7 @@ lemmy_purge_comment <- function(comment_id, reason = NULL, auth, .lemmy_instance
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─custom_emoji: <list>
 #'   ├─custom_emoji: <list>
@@ -10130,7 +10130,7 @@ lemmy_create_custom_emoji <- function(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─custom_emoji: <list>
 #'   ├─custom_emoji: <list>
@@ -10180,7 +10180,7 @@ lemmy_edit_custom_emoji <- function(
 #'
 #' @returns A `list` of length 2:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' ├─id: A numeric value
 #' └─success: A logical value
@@ -10209,7 +10209,7 @@ lemmy_delete_custom_emoji <- function(id, auth, .lemmy_instance = getOption(
 #'
 #' @returns A `list` of length 1:
 #'
-#' ```
+#' ```plaintext
 #' <list>
 #' └─federated_instances: <list>
 #'   ├─linked: <list>

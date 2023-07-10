@@ -4,6 +4,14 @@
 # remmy
 
 <!-- badges: start -->
+
+[![CRAN
+status](https://www.r-pkg.org/badges/version/remmy)](https://CRAN.R-project.org/package=remmy)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/long39ng/remmy/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/long39ng/remmy/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/long39ng/remmy/branch/main/graph/badge.svg)](https://app.codecov.io/gh/long39ng/remmy?branch=main)
 <!-- badges: end -->
 
 An HTTP API client for [Lemmy](https://github.com/LemmyNet/lemmy) in R.
@@ -47,13 +55,13 @@ lemmy_get_comment(546564)$comment_view$comment$content
 generation](https://github.com/long39ng/remmy/tree/main/dev) was made
 possible by:
 
-  - [ts-morph](https://github.com/dsherret/ts-morph) for navigating the
-    TypeScript AST of the [official JavaScript
-    client](https://github.com/LemmyNet/lemmy-js-client) source and
-    extracting the HTTP request methods into JSON.
-  - [jsonlite](https://github.com/jeroen/jsonlite) for parsing objects
-    from JSON to R.
-  - [rlang](https://github.com/r-lib/rlang) (and the [metaprogramming
-    capabilities of R](https://adv-r.hadley.nz/expressions.html)) for
-    programmatically generating function definitions and parameter and
-    return type documentation.
+- [ts-morph](https://github.com/dsherret/ts-morph) for navigating the
+  TypeScript AST of the [official JavaScript
+  client](https://github.com/LemmyNet/lemmy-js-client) source and
+  extracting the HTTP request methods into JSON.
+- [jsonlite](https://github.com/jeroen/jsonlite) for parsing objects
+  from JSON to R.
+- [rlang](https://github.com/r-lib/rlang) (and the [metaprogramming
+  capabilities of R](https://adv-r.hadley.nz/expressions.html)) for
+  programmatically generating function definitions and parameter and
+  return type documentation.

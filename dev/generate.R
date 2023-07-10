@@ -32,3 +32,5 @@ iwalk(http_methods, \(method, name) {
 })
 
 styler::style_file("../R/http-methods.R")
+
+devtools::document(roclets = c("rd", "collate", "namespace"))

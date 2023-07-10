@@ -16,6 +16,10 @@ knitr::opts_chunk$set(
 # remmy
 
 <!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/remmy)](https://CRAN.R-project.org/package=remmy)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/long39ng/remmy/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/long39ng/remmy/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/long39ng/remmy/branch/main/graph/badge.svg)](https://app.codecov.io/gh/long39ng/remmy?branch=main)
 <!-- badges: end -->
 
 An HTTP API client for [Lemmy](https://github.com/LemmyNet/lemmy) in R.

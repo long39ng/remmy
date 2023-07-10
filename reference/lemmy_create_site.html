@@ -266,7 +266,84 @@
 <p>A <code>list</code> of length 2:</p>
 
 
-<p></p><div class="sourceCode plaintext"><pre><code></code></pre><p></p></div>
+<div class="sourceCode"><pre><code>
+&lt;list&gt;
+├─site_view: &lt;list&gt;
+│ ├─site: &lt;list&gt;
+│ │ ├─id: A numeric value
+│ │ ├─name: A character value
+│ │ ├─sidebar: (Optional) A character value
+│ │ ├─published: A character value
+│ │ ├─updated: (Optional) A character value
+│ │ ├─icon: (Optional) A character value
+│ │ ├─banner: (Optional) A character value
+│ │ ├─description: (Optional) A character value
+│ │ ├─actor_id: A character value
+│ │ ├─last_refreshed_at: A character value
+│ │ ├─inbox_url: A character value
+│ │ ├─private_key: (Optional) A character value
+│ │ ├─public_key: A character value
+│ │ └─instance_id: A numeric value
+│ ├─local_site: &lt;list&gt;
+│ │ ├─id: A numeric value
+│ │ ├─site_id: A numeric value
+│ │ ├─site_setup: A logical value
+│ │ ├─enable_downvotes: A logical value
+│ │ ├─enable_nsfw: A logical value
+│ │ ├─community_creation_admin_only: A logical value
+│ │ ├─require_email_verification: A logical value
+│ │ ├─application_question: (Optional) A character value
+│ │ ├─private_instance: A logical value
+│ │ ├─default_theme: A character value
+│ │ ├─default_post_listing_type: One of "All", "Local", or "Subsc...
+│ │ ├─legal_information: (Optional) A character value
+│ │ ├─hide_modlog_mod_names: A logical value
+│ │ ├─application_email_admins: A logical value
+│ │ ├─slur_filter_regex: (Optional) A character value
+│ │ ├─actor_name_max_length: A numeric value
+│ │ ├─federation_enabled: A logical value
+│ │ ├─captcha_enabled: A logical value
+│ │ ├─captcha_difficulty: A character value
+│ │ ├─published: A character value
+│ │ ├─updated: (Optional) A character value
+│ │ ├─registration_mode: One of "Closed", "RequireApplica...
+│ │ └─reports_email_admins: A logical value
+│ ├─local_site_rate_limit: &lt;list&gt;
+│ │ ├─id: A numeric value
+│ │ ├─local_site_id: A numeric value
+│ │ ├─message: A numeric value
+│ │ ├─message_per_second: A numeric value
+│ │ ├─post: A numeric value
+│ │ ├─post_per_second: A numeric value
+│ │ ├─register: A numeric value
+│ │ ├─register_per_second: A numeric value
+│ │ ├─image: A numeric value
+│ │ ├─image_per_second: A numeric value
+│ │ ├─comment: A numeric value
+│ │ ├─comment_per_second: A numeric value
+│ │ ├─search: A numeric value
+│ │ ├─search_per_second: A numeric value
+│ │ ├─published: A character value
+│ │ └─updated: (Optional) A character value
+│ └─counts: &lt;list&gt;
+│   ├─id: A numeric value
+│   ├─site_id: A numeric value
+│   ├─users: A numeric value
+│   ├─posts: A numeric value
+│   ├─comments: A numeric value
+│   ├─communities: A numeric value
+│   ├─users_active_day: A numeric value
+│   ├─users_active_week: A numeric value
+│   ├─users_active_month: A numeric value
+│   └─users_active_half_year: A numeric value
+└─taglines: &lt;list&gt;
+  └─[Each element]: &lt;list&gt;
+    ├─id: A numeric value
+    ├─local_site_id: A numeric value
+    ├─content: A character value
+    ├─published: A character value
+    └─updated: (Optional) A character value
+</code></pre></div>
 
 
     </div>

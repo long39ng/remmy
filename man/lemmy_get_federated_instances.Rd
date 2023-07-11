@@ -19,31 +19,31 @@ A \code{list} of length 1:
 
 \preformatted{
 <list>
-└─federated_instances: <list>
-  ├─linked: <list>
-  │ └─[Each element]: <list>
-  │   ├─id: A numeric value
-  │   ├─domain: A character value
-  │   ├─published: A character value
-  │   ├─updated: (Optional) A character value
-  │   ├─software: (Optional) A character value
-  │   └─version: (Optional) A character value
-  ├─allowed: <list>
-  │ └─[Each element]: <list>
-  │   ├─id: A numeric value
-  │   ├─domain: A character value
-  │   ├─published: A character value
-  │   ├─updated: (Optional) A character value
-  │   ├─software: (Optional) A character value
-  │   └─version: (Optional) A character value
-  └─blocked: <list>
-    └─[Each element]: <list>
-      ├─id: A numeric value
-      ├─domain: A character value
-      ├─published: A character value
-      ├─updated: (Optional) A character value
-      ├─software: (Optional) A character value
-      └─version: (Optional) A character value
+`-federated_instances: <list>
+  |-linked: <list>
+  | `-[Each element]: <list>
+  |   |-id: A numeric value
+  |   |-domain: A character value
+  |   |-published: A character value
+  |   |-updated: (Optional) A character value
+  |   |-software: (Optional) A character value
+  |   `-version: (Optional) A character value
+  |-allowed: <list>
+  | `-[Each element]: <list>
+  |   |-id: A numeric value
+  |   |-domain: A character value
+  |   |-published: A character value
+  |   |-updated: (Optional) A character value
+  |   |-software: (Optional) A character value
+  |   `-version: (Optional) A character value
+  `-blocked: <list>
+    `-[Each element]: <list>
+      |-id: A numeric value
+      |-domain: A character value
+      |-published: A character value
+      |-updated: (Optional) A character value
+      |-software: (Optional) A character value
+      `-version: (Optional) A character value
 }
 }
 \description{

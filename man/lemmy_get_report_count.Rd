@@ -22,10 +22,10 @@ A \code{list} of length 4:
 
 \preformatted{
 <list>
-├─community_id: (Optional) A numeric value
-├─comment_reports: A numeric value
-├─post_reports: A numeric value
-└─private_message_reports: (Optional) A numeric value
+|-community_id: (Optional) A numeric value
+|-comment_reports: A numeric value
+|-post_reports: A numeric value
+`-private_message_reports: (Optional) A numeric value
 }
 }
 \description{

@@ -34,21 +34,21 @@ A \code{list} of length 1:
 
 \preformatted{
 <list>
-└─custom_emoji: <list>
-  ├─custom_emoji: <list>
-  │ ├─id: A numeric value
-  │ ├─local_site_id: A numeric value
-  │ ├─shortcode: A character value
-  │ ├─image_url: A character value
-  │ ├─alt_text: A character value
-  │ ├─category: A character value
-  │ ├─published: A character value
-  │ └─updated: (Optional) A character value
-  └─keywords: <list>
-    └─[Each element]: <list>
-      ├─id: A numeric value
-      ├─custom_emoji_id: A numeric value
-      └─keyword: A character value
+`-custom_emoji: <list>
+  |-custom_emoji: <list>
+  | |-id: A numeric value
+  | |-local_site_id: A numeric value
+  | |-shortcode: A character value
+  | |-image_url: A character value
+  | |-alt_text: A character value
+  | |-category: A character value
+  | |-published: A character value
+  | `-updated: (Optional) A character value
+  `-keywords: <list>
+    `-[Each element]: <list>
+      |-id: A numeric value
+      |-custom_emoji_id: A numeric value
+      `-keyword: A character value
 }
 }
 \description{

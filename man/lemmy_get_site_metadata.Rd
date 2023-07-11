@@ -19,11 +19,11 @@ A \code{list} of length 1:
 
 \preformatted{
 <list>
-└─metadata: <list>
-  ├─title: (Optional) A character value
-  ├─description: (Optional) A character value
-  ├─image: (Optional) A character value
-  └─embed_video_url: (Optional) A character value
+`-metadata: <list>
+  |-title: (Optional) A character value
+  |-description: (Optional) A character value
+  |-image: (Optional) A character value
+  `-embed_video_url: (Optional) A character value
 }
 }
 \description{

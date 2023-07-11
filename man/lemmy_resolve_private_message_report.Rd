@@ -25,85 +25,85 @@ A \code{list} of length 1:
 
 \preformatted{
 <list>
-└─private_message_report_view: <list>
-  ├─private_message_report: <list>
-  │ ├─id: A numeric value
-  │ ├─creator_id: A numeric value
-  │ ├─private_message_id: A numeric value
-  │ ├─original_pm_text: A character value
-  │ ├─reason: A character value
-  │ ├─resolved: A logical value
-  │ ├─resolver_id: (Optional) A numeric value
-  │ ├─published: A character value
-  │ └─updated: (Optional) A character value
-  ├─private_message: <list>
-  │ ├─id: A numeric value
-  │ ├─creator_id: A numeric value
-  │ ├─recipient_id: A numeric value
-  │ ├─content: A character value
-  │ ├─deleted: A logical value
-  │ ├─read: A logical value
-  │ ├─published: A character value
-  │ ├─updated: (Optional) A character value
-  │ ├─ap_id: A character value
-  │ └─local: A logical value
-  ├─private_message_creator: <list>
-  │ ├─id: A numeric value
-  │ ├─name: A character value
-  │ ├─display_name: (Optional) A character value
-  │ ├─avatar: (Optional) A character value
-  │ ├─banned: A logical value
-  │ ├─published: A character value
-  │ ├─updated: (Optional) A character value
-  │ ├─actor_id: A character value
-  │ ├─bio: (Optional) A character value
-  │ ├─local: A logical value
-  │ ├─banner: (Optional) A character value
-  │ ├─deleted: A logical value
-  │ ├─inbox_url: A character value
-  │ ├─matrix_user_id: (Optional) A character value
-  │ ├─admin: A logical value
-  │ ├─bot_account: A logical value
-  │ ├─ban_expires: (Optional) A character value
-  │ └─instance_id: A numeric value
-  ├─creator: <list>
-  │ ├─id: A numeric value
-  │ ├─name: A character value
-  │ ├─display_name: (Optional) A character value
-  │ ├─avatar: (Optional) A character value
-  │ ├─banned: A logical value
-  │ ├─published: A character value
-  │ ├─updated: (Optional) A character value
-  │ ├─actor_id: A character value
-  │ ├─bio: (Optional) A character value
-  │ ├─local: A logical value
-  │ ├─banner: (Optional) A character value
-  │ ├─deleted: A logical value
-  │ ├─inbox_url: A character value
-  │ ├─matrix_user_id: (Optional) A character value
-  │ ├─admin: A logical value
-  │ ├─bot_account: A logical value
-  │ ├─ban_expires: (Optional) A character value
-  │ └─instance_id: A numeric value
-  └─resolver: <list>
-    ├─id: A numeric value
-    ├─name: A character value
-    ├─display_name: (Optional) A character value
-    ├─avatar: (Optional) A character value
-    ├─banned: A logical value
-    ├─published: A character value
-    ├─updated: (Optional) A character value
-    ├─actor_id: A character value
-    ├─bio: (Optional) A character value
-    ├─local: A logical value
-    ├─banner: (Optional) A character value
-    ├─deleted: A logical value
-    ├─inbox_url: A character value
-    ├─matrix_user_id: (Optional) A character value
-    ├─admin: A logical value
-    ├─bot_account: A logical value
-    ├─ban_expires: (Optional) A character value
-    └─instance_id: A numeric value
+`-private_message_report_view: <list>
+  |-private_message_report: <list>
+  | |-id: A numeric value
+  | |-creator_id: A numeric value
+  | |-private_message_id: A numeric value
+  | |-original_pm_text: A character value
+  | |-reason: A character value
+  | |-resolved: A logical value
+  | |-resolver_id: (Optional) A numeric value
+  | |-published: A character value
+  | `-updated: (Optional) A character value
+  |-private_message: <list>
+  | |-id: A numeric value
+  | |-creator_id: A numeric value
+  | |-recipient_id: A numeric value
+  | |-content: A character value
+  | |-deleted: A logical value
+  | |-read: A logical value
+  | |-published: A character value
+  | |-updated: (Optional) A character value
+  | |-ap_id: A character value
+  | `-local: A logical value
+  |-private_message_creator: <list>
+  | |-id: A numeric value
+  | |-name: A character value
+  | |-display_name: (Optional) A character value
+  | |-avatar: (Optional) A character value
+  | |-banned: A logical value
+  | |-published: A character value
+  | |-updated: (Optional) A character value
+  | |-actor_id: A character value
+  | |-bio: (Optional) A character value
+  | |-local: A logical value
+  | |-banner: (Optional) A character value
+  | |-deleted: A logical value
+  | |-inbox_url: A character value
+  | |-matrix_user_id: (Optional) A character value
+  | |-admin: A logical value
+  | |-bot_account: A logical value
+  | |-ban_expires: (Optional) A character value
+  | `-instance_id: A numeric value
+  |-creator: <list>
+  | |-id: A numeric value
+  | |-name: A character value
+  | |-display_name: (Optional) A character value
+  | |-avatar: (Optional) A character value
+  | |-banned: A logical value
+  | |-published: A character value
+  | |-updated: (Optional) A character value
+  | |-actor_id: A character value
+  | |-bio: (Optional) A character value
+  | |-local: A logical value
+  | |-banner: (Optional) A character value
+  | |-deleted: A logical value
+  | |-inbox_url: A character value
+  | |-matrix_user_id: (Optional) A character value
+  | |-admin: A logical value
+  | |-bot_account: A logical value
+  | |-ban_expires: (Optional) A character value
+  | `-instance_id: A numeric value
+  `-resolver: <list>
+    |-id: A numeric value
+    |-name: A character value
+    |-display_name: (Optional) A character value
+    |-avatar: (Optional) A character value
+    |-banned: A logical value
+    |-published: A character value
+    |-updated: (Optional) A character value
+    |-actor_id: A character value
+    |-bio: (Optional) A character value
+    |-local: A logical value
+    |-banner: (Optional) A character value
+    |-deleted: A logical value
+    |-inbox_url: A character value
+    |-matrix_user_id: (Optional) A character value
+    |-admin: A logical value
+    |-bot_account: A logical value
+    |-ban_expires: (Optional) A character value
+    `-instance_id: A numeric value
 }
 }
 \description{

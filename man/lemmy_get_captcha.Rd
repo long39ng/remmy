@@ -19,10 +19,10 @@ A \code{list} of length 1:
 
 \preformatted{
 <list>
-└─ok: <list>
-  ├─png: A character value
-  ├─wav: A character value
-  └─uuid: A character value
+`-ok: <list>
+  |-png: A character value
+  |-wav: A character value
+  `-uuid: A character value
 }
 }
 \description{

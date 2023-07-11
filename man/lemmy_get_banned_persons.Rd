@@ -19,34 +19,34 @@ A \code{list} of length 1:
 
 \preformatted{
 <list>
-└─banned: <list>
-  └─[Each element]: <list>
-    ├─person: <list>
-    │ ├─id: A numeric value
-    │ ├─name: A character value
-    │ ├─display_name: (Optional) A character value
-    │ ├─avatar: (Optional) A character value
-    │ ├─banned: A logical value
-    │ ├─published: A character value
-    │ ├─updated: (Optional) A character value
-    │ ├─actor_id: A character value
-    │ ├─bio: (Optional) A character value
-    │ ├─local: A logical value
-    │ ├─banner: (Optional) A character value
-    │ ├─deleted: A logical value
-    │ ├─inbox_url: A character value
-    │ ├─matrix_user_id: (Optional) A character value
-    │ ├─admin: A logical value
-    │ ├─bot_account: A logical value
-    │ ├─ban_expires: (Optional) A character value
-    │ └─instance_id: A numeric value
-    └─counts: <list>
-      ├─id: A numeric value
-      ├─person_id: A numeric value
-      ├─post_count: A numeric value
-      ├─post_score: A numeric value
-      ├─comment_count: A numeric value
-      └─comment_score: A numeric value
+`-banned: <list>
+  `-[Each element]: <list>
+    |-person: <list>
+    | |-id: A numeric value
+    | |-name: A character value
+    | |-display_name: (Optional) A character value
+    | |-avatar: (Optional) A character value
+    | |-banned: A logical value
+    | |-published: A character value
+    | |-updated: (Optional) A character value
+    | |-actor_id: A character value
+    | |-bio: (Optional) A character value
+    | |-local: A logical value
+    | |-banner: (Optional) A character value
+    | |-deleted: A logical value
+    | |-inbox_url: A character value
+    | |-matrix_user_id: (Optional) A character value
+    | |-admin: A logical value
+    | |-bot_account: A logical value
+    | |-ban_expires: (Optional) A character value
+    | `-instance_id: A numeric value
+    `-counts: <list>
+      |-id: A numeric value
+      |-person_id: A numeric value
+      |-post_count: A numeric value
+      |-post_score: A numeric value
+      |-comment_count: A numeric value
+      `-comment_score: A numeric value
 }
 }
 \description{

@@ -22,8 +22,8 @@ A \code{list} of length 2:
 
 \preformatted{
 <list>
-├─id: A numeric value
-└─success: A logical value
+|-id: A numeric value
+`-success: A logical value
 }
 }
 \description{

@@ -28,72 +28,72 @@ A \code{list} of length 1:
 
 \preformatted{
 <list>
-└─registration_application: <list>
-  ├─registration_application: <list>
-  │ ├─id: A numeric value
-  │ ├─local_user_id: A numeric value
-  │ ├─answer: A character value
-  │ ├─admin_id: (Optional) A numeric value
-  │ ├─deny_reason: (Optional) A character value
-  │ └─published: A character value
-  ├─creator_local_user: <list>
-  │ ├─id: A numeric value
-  │ ├─person_id: A numeric value
-  │ ├─email: (Optional) A character value
-  │ ├─show_nsfw: A logical value
-  │ ├─theme: A character value
-  │ ├─default_sort_type: One of "Active", "Hot", "New", "...
-  │ ├─default_listing_type: One of "All", "Local", or "Subsc...
-  │ ├─interface_language: A character value
-  │ ├─show_avatars: A logical value
-  │ ├─send_notifications_to_email: A logical value
-  │ ├─validator_time: A character value
-  │ ├─show_scores: A logical value
-  │ ├─show_bot_accounts: A logical value
-  │ ├─show_read_posts: A logical value
-  │ ├─show_new_post_notifs: A logical value
-  │ ├─email_verified: A logical value
-  │ ├─accepted_application: A logical value
-  │ ├─totp_2fa_url: (Optional) A character value
-  │ └─open_links_in_new_tab: A logical value
-  ├─creator: <list>
-  │ ├─id: A numeric value
-  │ ├─name: A character value
-  │ ├─display_name: (Optional) A character value
-  │ ├─avatar: (Optional) A character value
-  │ ├─banned: A logical value
-  │ ├─published: A character value
-  │ ├─updated: (Optional) A character value
-  │ ├─actor_id: A character value
-  │ ├─bio: (Optional) A character value
-  │ ├─local: A logical value
-  │ ├─banner: (Optional) A character value
-  │ ├─deleted: A logical value
-  │ ├─inbox_url: A character value
-  │ ├─matrix_user_id: (Optional) A character value
-  │ ├─admin: A logical value
-  │ ├─bot_account: A logical value
-  │ ├─ban_expires: (Optional) A character value
-  │ └─instance_id: A numeric value
-  └─admin: <list>
-    ├─id: A numeric value
-    ├─name: A character value
-    ├─display_name: (Optional) A character value
-    ├─avatar: (Optional) A character value
-    ├─banned: A logical value
-    ├─published: A character value
-    ├─updated: (Optional) A character value
-    ├─actor_id: A character value
-    ├─bio: (Optional) A character value
-    ├─local: A logical value
-    ├─banner: (Optional) A character value
-    ├─deleted: A logical value
-    ├─inbox_url: A character value
-    ├─matrix_user_id: (Optional) A character value
-    ├─admin: A logical value
-    ├─bot_account: A logical value
-    ├─ban_expires: (Optional) A character value
-    └─instance_id: A numeric value
+`-registration_application: <list>
+  |-registration_application: <list>
+  | |-id: A numeric value
+  | |-local_user_id: A numeric value
+  | |-answer: A character value
+  | |-admin_id: (Optional) A numeric value
+  | |-deny_reason: (Optional) A character value
+  | `-published: A character value
+  |-creator_local_user: <list>
+  | |-id: A numeric value
+  | |-person_id: A numeric value
+  | |-email: (Optional) A character value
+  | |-show_nsfw: A logical value
+  | |-theme: A character value
+  | |-default_sort_type: One of "Active", "Hot", "New", "...
+  | |-default_listing_type: One of "All", "Local", or "Subsc...
+  | |-interface_language: A character value
+  | |-show_avatars: A logical value
+  | |-send_notifications_to_email: A logical value
+  | |-validator_time: A character value
+  | |-show_scores: A logical value
+  | |-show_bot_accounts: A logical value
+  | |-show_read_posts: A logical value
+  | |-show_new_post_notifs: A logical value
+  | |-email_verified: A logical value
+  | |-accepted_application: A logical value
+  | |-totp_2fa_url: (Optional) A character value
+  | `-open_links_in_new_tab: A logical value
+  |-creator: <list>
+  | |-id: A numeric value
+  | |-name: A character value
+  | |-display_name: (Optional) A character value
+  | |-avatar: (Optional) A character value
+  | |-banned: A logical value
+  | |-published: A character value
+  | |-updated: (Optional) A character value
+  | |-actor_id: A character value
+  | |-bio: (Optional) A character value
+  | |-local: A logical value
+  | |-banner: (Optional) A character value
+  | |-deleted: A logical value
+  | |-inbox_url: A character value
+  | |-matrix_user_id: (Optional) A character value
+  | |-admin: A logical value
+  | |-bot_account: A logical value
+  | |-ban_expires: (Optional) A character value
+  | `-instance_id: A numeric value
+  `-admin: <list>
+    |-id: A numeric value
+    |-name: A character value
+    |-display_name: (Optional) A character value
+    |-avatar: (Optional) A character value
+    |-banned: A logical value
+    |-published: A character value
+    |-updated: (Optional) A character value
+    |-actor_id: A character value
+    |-bio: (Optional) A character value
+    |-local: A logical value
+    |-banner: (Optional) A character value
+    |-deleted: A logical value
+    |-inbox_url: A character value
+    |-matrix_user_id: (Optional) A character value
+    |-admin: A logical value
+    |-bot_account: A logical value
+    |-ban_expires: (Optional) A character value
+    `-instance_id: A numeric value
 }
 }
 \description{

@@ -19,7 +19,7 @@ A \code{list} of length 1:
 
 \preformatted{
 <list>
-└─registration_applications: A numeric value
+`-registration_applications: A numeric value
 }
 }
 \description{

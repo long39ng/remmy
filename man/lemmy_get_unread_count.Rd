@@ -19,9 +19,9 @@ A \code{list} of length 3:
 
 \preformatted{
 <list>
-├─replies: A numeric value
-├─mentions: A numeric value
-└─private_messages: A numeric value
+|-replies: A numeric value
+|-mentions: A numeric value
+`-private_messages: A numeric value
 }
 }
 \description{

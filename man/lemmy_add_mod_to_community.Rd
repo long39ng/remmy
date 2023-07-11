@@ -28,46 +28,46 @@ A \code{list} of length 1:
 
 \preformatted{
 <list>
-└─moderators: <list>
-  └─[Each element]: <list>
-    ├─community: <list>
-    │ ├─id: A numeric value
-    │ ├─name: A character value
-    │ ├─title: A character value
-    │ ├─description: (Optional) A character value
-    │ ├─removed: A logical value
-    │ ├─published: A character value
-    │ ├─updated: (Optional) A character value
-    │ ├─deleted: A logical value
-    │ ├─nsfw: A logical value
-    │ ├─actor_id: A character value
-    │ ├─local: A logical value
-    │ ├─icon: (Optional) A character value
-    │ ├─banner: (Optional) A character value
-    │ ├─followers_url: A character value
-    │ ├─inbox_url: A character value
-    │ ├─hidden: A logical value
-    │ ├─posting_restricted_to_mods: A logical value
-    │ └─instance_id: A numeric value
-    └─moderator: <list>
-      ├─id: A numeric value
-      ├─name: A character value
-      ├─display_name: (Optional) A character value
-      ├─avatar: (Optional) A character value
-      ├─banned: A logical value
-      ├─published: A character value
-      ├─updated: (Optional) A character value
-      ├─actor_id: A character value
-      ├─bio: (Optional) A character value
-      ├─local: A logical value
-      ├─banner: (Optional) A character value
-      ├─deleted: A logical value
-      ├─inbox_url: A character value
-      ├─matrix_user_id: (Optional) A character value
-      ├─admin: A logical value
-      ├─bot_account: A logical value
-      ├─ban_expires: (Optional) A character value
-      └─instance_id: A numeric value
+`-moderators: <list>
+  `-[Each element]: <list>
+    |-community: <list>
+    | |-id: A numeric value
+    | |-name: A character value
+    | |-title: A character value
+    | |-description: (Optional) A character value
+    | |-removed: A logical value
+    | |-published: A character value
+    | |-updated: (Optional) A character value
+    | |-deleted: A logical value
+    | |-nsfw: A logical value
+    | |-actor_id: A character value
+    | |-local: A logical value
+    | |-icon: (Optional) A character value
+    | |-banner: (Optional) A character value
+    | |-followers_url: A character value
+    | |-inbox_url: A character value
+    | |-hidden: A logical value
+    | |-posting_restricted_to_mods: A logical value
+    | `-instance_id: A numeric value
+    `-moderator: <list>
+      |-id: A numeric value
+      |-name: A character value
+      |-display_name: (Optional) A character value
+      |-avatar: (Optional) A character value
+      |-banned: A logical value
+      |-published: A character value
+      |-updated: (Optional) A character value
+      |-actor_id: A character value
+      |-bio: (Optional) A character value
+      |-local: A logical value
+      |-banner: (Optional) A character value
+      |-deleted: A logical value
+      |-inbox_url: A character value
+      |-matrix_user_id: (Optional) A character value
+      |-admin: A logical value
+      |-bot_account: A logical value
+      |-ban_expires: (Optional) A character value
+      `-instance_id: A numeric value
 }
 }
 \description{

@@ -23,7 +23,10 @@ doc_params <- function(method) {
 doc_returns <- function(method) {
   props_doc <- method$resp |>
     map(doc_property, recursive = TRUE) |>
-    lobstr::tree(val_printer = \(x) gsub("^\"|\"$", "", x, perl = TRUE)) |>
+    lobstr::tree(
+      val_printer = \(x) gsub("^\"|\"$", "", x, perl = TRUE),
+      tree_chars = list(h = "-", hd = "-", v = "|", vd = "|", l = "`", j = "|", n = "o")
+    ) |>
     capture.output() |>
     map_chr(\(line) paste("#'", line)) |>
     paste(collapse = "\n")

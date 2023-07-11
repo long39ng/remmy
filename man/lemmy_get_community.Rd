@@ -25,96 +25,96 @@ A \code{list} of length 4:
 
 \preformatted{
 <list>
-├─community_view: <list>
-│ ├─community: <list>
-│ │ ├─id: A numeric value
-│ │ ├─name: A character value
-│ │ ├─title: A character value
-│ │ ├─description: (Optional) A character value
-│ │ ├─removed: A logical value
-│ │ ├─published: A character value
-│ │ ├─updated: (Optional) A character value
-│ │ ├─deleted: A logical value
-│ │ ├─nsfw: A logical value
-│ │ ├─actor_id: A character value
-│ │ ├─local: A logical value
-│ │ ├─icon: (Optional) A character value
-│ │ ├─banner: (Optional) A character value
-│ │ ├─followers_url: A character value
-│ │ ├─inbox_url: A character value
-│ │ ├─hidden: A logical value
-│ │ ├─posting_restricted_to_mods: A logical value
-│ │ └─instance_id: A numeric value
-│ ├─subscribed: One of "Subscribed", "NotSubscri...
-│ ├─blocked: A logical value
-│ └─counts: <list>
-│   ├─id: A numeric value
-│   ├─community_id: A numeric value
-│   ├─subscribers: A numeric value
-│   ├─posts: A numeric value
-│   ├─comments: A numeric value
-│   ├─published: A character value
-│   ├─users_active_day: A numeric value
-│   ├─users_active_week: A numeric value
-│   ├─users_active_month: A numeric value
-│   ├─users_active_half_year: A numeric value
-│   └─hot_rank: A numeric value
-├─site: <list>
-│ ├─id: A numeric value
-│ ├─name: A character value
-│ ├─sidebar: (Optional) A character value
-│ ├─published: A character value
-│ ├─updated: (Optional) A character value
-│ ├─icon: (Optional) A character value
-│ ├─banner: (Optional) A character value
-│ ├─description: (Optional) A character value
-│ ├─actor_id: A character value
-│ ├─last_refreshed_at: A character value
-│ ├─inbox_url: A character value
-│ ├─private_key: (Optional) A character value
-│ ├─public_key: A character value
-│ └─instance_id: A numeric value
-├─moderators: <list>
-│ └─[Each element]: <list>
-│   ├─community: <list>
-│   │ ├─id: A numeric value
-│   │ ├─name: A character value
-│   │ ├─title: A character value
-│   │ ├─description: (Optional) A character value
-│   │ ├─removed: A logical value
-│   │ ├─published: A character value
-│   │ ├─updated: (Optional) A character value
-│   │ ├─deleted: A logical value
-│   │ ├─nsfw: A logical value
-│   │ ├─actor_id: A character value
-│   │ ├─local: A logical value
-│   │ ├─icon: (Optional) A character value
-│   │ ├─banner: (Optional) A character value
-│   │ ├─followers_url: A character value
-│   │ ├─inbox_url: A character value
-│   │ ├─hidden: A logical value
-│   │ ├─posting_restricted_to_mods: A logical value
-│   │ └─instance_id: A numeric value
-│   └─moderator: <list>
-│     ├─id: A numeric value
-│     ├─name: A character value
-│     ├─display_name: (Optional) A character value
-│     ├─avatar: (Optional) A character value
-│     ├─banned: A logical value
-│     ├─published: A character value
-│     ├─updated: (Optional) A character value
-│     ├─actor_id: A character value
-│     ├─bio: (Optional) A character value
-│     ├─local: A logical value
-│     ├─banner: (Optional) A character value
-│     ├─deleted: A logical value
-│     ├─inbox_url: A character value
-│     ├─matrix_user_id: (Optional) A character value
-│     ├─admin: A logical value
-│     ├─bot_account: A logical value
-│     ├─ban_expires: (Optional) A character value
-│     └─instance_id: A numeric value
-└─discussion_languages: A numeric vector
+|-community_view: <list>
+| |-community: <list>
+| | |-id: A numeric value
+| | |-name: A character value
+| | |-title: A character value
+| | |-description: (Optional) A character value
+| | |-removed: A logical value
+| | |-published: A character value
+| | |-updated: (Optional) A character value
+| | |-deleted: A logical value
+| | |-nsfw: A logical value
+| | |-actor_id: A character value
+| | |-local: A logical value
+| | |-icon: (Optional) A character value
+| | |-banner: (Optional) A character value
+| | |-followers_url: A character value
+| | |-inbox_url: A character value
+| | |-hidden: A logical value
+| | |-posting_restricted_to_mods: A logical value
+| | `-instance_id: A numeric value
+| |-subscribed: One of "Subscribed", "NotSubscri...
+| |-blocked: A logical value
+| `-counts: <list>
+|   |-id: A numeric value
+|   |-community_id: A numeric value
+|   |-subscribers: A numeric value
+|   |-posts: A numeric value
+|   |-comments: A numeric value
+|   |-published: A character value
+|   |-users_active_day: A numeric value
+|   |-users_active_week: A numeric value
+|   |-users_active_month: A numeric value
+|   |-users_active_half_year: A numeric value
+|   `-hot_rank: A numeric value
+|-site: <list>
+| |-id: A numeric value
+| |-name: A character value
+| |-sidebar: (Optional) A character value
+| |-published: A character value
+| |-updated: (Optional) A character value
+| |-icon: (Optional) A character value
+| |-banner: (Optional) A character value
+| |-description: (Optional) A character value
+| |-actor_id: A character value
+| |-last_refreshed_at: A character value
+| |-inbox_url: A character value
+| |-private_key: (Optional) A character value
+| |-public_key: A character value
+| `-instance_id: A numeric value
+|-moderators: <list>
+| `-[Each element]: <list>
+|   |-community: <list>
+|   | |-id: A numeric value
+|   | |-name: A character value
+|   | |-title: A character value
+|   | |-description: (Optional) A character value
+|   | |-removed: A logical value
+|   | |-published: A character value
+|   | |-updated: (Optional) A character value
+|   | |-deleted: A logical value
+|   | |-nsfw: A logical value
+|   | |-actor_id: A character value
+|   | |-local: A logical value
+|   | |-icon: (Optional) A character value
+|   | |-banner: (Optional) A character value
+|   | |-followers_url: A character value
+|   | |-inbox_url: A character value
+|   | |-hidden: A logical value
+|   | |-posting_restricted_to_mods: A logical value
+|   | `-instance_id: A numeric value
+|   `-moderator: <list>
+|     |-id: A numeric value
+|     |-name: A character value
+|     |-display_name: (Optional) A character value
+|     |-avatar: (Optional) A character value
+|     |-banned: A logical value
+|     |-published: A character value
+|     |-updated: (Optional) A character value
+|     |-actor_id: A character value
+|     |-bio: (Optional) A character value
+|     |-local: A logical value
+|     |-banner: (Optional) A character value
+|     |-deleted: A logical value
+|     |-inbox_url: A character value
+|     |-matrix_user_id: (Optional) A character value
+|     |-admin: A logical value
+|     |-bot_account: A logical value
+|     |-ban_expires: (Optional) A character value
+|     `-instance_id: A numeric value
+`-discussion_languages: A numeric vector
 }
 }
 \description{

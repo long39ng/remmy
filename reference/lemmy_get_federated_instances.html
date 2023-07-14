@@ -21,6 +21,9 @@
       <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">Changelog</a>
+</li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
@@ -68,11 +71,7 @@
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p>A <code>list</code> of length 1:</p>
-
-
-<div class="sourceCode"><pre><code>
-&lt;list&gt;
+<p>A <code>list</code> of length 1:</p><div class="sourceCode"><pre><code>&lt;list&gt;
 `-federated_instances: &lt;list&gt;
   |-linked: &lt;list&gt;
   | `-[Each element]: &lt;list&gt;
@@ -103,6 +102,22 @@
 
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">instances</span> <span class="op">&lt;-</span> <span class="fu">lemmy_get_federated_instances</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">instances</span><span class="op">$</span><span class="va">federated_instances</span><span class="op">$</span><span class="va">linked</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3859</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">some_instance</span> <span class="op">&lt;-</span> <span class="va">instances</span><span class="op">$</span><span class="va">federated_instances</span><span class="op">$</span><span class="va">linked</span><span class="op">[[</span><span class="fl">732</span><span class="op">]</span><span class="op">]</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">some_instance</span><span class="op">$</span><span class="va">domain</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "quasar.network"</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">some_instance</span><span class="op">$</span><span class="va">published</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-07-03T19:07:56.882263"</span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>
 

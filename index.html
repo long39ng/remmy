@@ -44,6 +44,9 @@
 <li class="nav-item">
   <a class="nav-link" href="reference/index.html">Reference</a>
 </li>
+<li class="nav-item">
+  <a class="nav-link" href="news/index.html">Changelog</a>
+</li>
       </ul>
 <form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="search.json" id="search-input" placeholder="Search for" autocomplete="off">
@@ -90,7 +93,9 @@
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/long39ng/remmy" class="external-link">remmy</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="reference/lemmy_get_comment.html">lemmy_get_comment</a></span><span class="op">(</span><span class="fl">546564</span><span class="op">)</span><span class="op">$</span><span class="va">comment_view</span><span class="op">$</span><span class="va">comment</span><span class="op">$</span><span class="va">content</span></span>
+<span><span class="va">example_comment</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/lemmy_get_comment.html">lemmy_get_comment</a></span><span class="op">(</span><span class="fl">546564</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">example_comment</span><span class="op">$</span><span class="va">comment_view</span><span class="op">$</span><span class="va">comment</span><span class="op">$</span><span class="va">content</span></span>
 <span><span class="co">#&gt; [1] "I am not by nature a sentimental person regarding software but I will truly miss RiF."</span></span></code></pre></div>
 </div>
 <div class="section level2">

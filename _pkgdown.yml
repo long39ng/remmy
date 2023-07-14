@@ -2,7 +2,8 @@ url: https://long39ng.github.io/remmy/
 template:
   bootstrap: 5
 reference:
-- contents:
+- title: Site
+  contents:
   - lemmy_get_site
   - lemmy_create_site
   - lemmy_edit_site
@@ -10,6 +11,8 @@ reference:
   - lemmy_get_modlog
   - lemmy_search
   - lemmy_resolve_object
+- title: Communities
+  contents:
   - lemmy_create_community
   - lemmy_get_community
   - lemmy_edit_community
@@ -21,6 +24,8 @@ reference:
   - lemmy_transfer_community
   - lemmy_ban_from_community
   - lemmy_add_mod_to_community
+- title: Posts
+  contents:
   - lemmy_create_post
   - lemmy_get_post
   - lemmy_edit_post
@@ -36,6 +41,8 @@ reference:
   - lemmy_resolve_post_report
   - lemmy_list_post_reports
   - lemmy_get_site_metadata
+- title: Comments
+  contents:
   - lemmy_create_comment
   - lemmy_edit_comment
   - lemmy_delete_comment
@@ -49,6 +56,8 @@ reference:
   - lemmy_create_comment_report
   - lemmy_resolve_comment_report
   - lemmy_list_comment_reports
+- title: Private messages
+  contents:
   - lemmy_get_private_messages
   - lemmy_create_private_message
   - lemmy_edit_private_message
@@ -57,6 +66,8 @@ reference:
   - lemmy_create_private_message_report
   - lemmy_resolve_private_message_report
   - lemmy_list_private_message_reports
+- title: Account & Users
+  contents:
   - lemmy_register
   - lemmy_login
   - lemmy_get_person_details
@@ -76,6 +87,8 @@ reference:
   - lemmy_get_report_count
   - lemmy_get_unread_count
   - lemmy_verify_email
+- title: Admin
+  contents:
   - lemmy_add_admin
   - lemmy_get_unread_registration_application_count
   - lemmy_list_registration_applications

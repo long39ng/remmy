@@ -35,13 +35,26 @@ styler::style_file("../R/http-methods.R")
 
 devtools::document(roclets = c("rd", "collate", "namespace"))
 
+pkgdown_reference <- http_methods |>
+  names() |>
+  fun_name() |>
+  set_names() |>
+  map(\(x) paste("  -", x)) |>
+  modify_at(1, \(x) c("- title: Site", "  contents:", x)) |>
+  modify_at("lemmy_create_community", \(x) c("- title: Communities", "  contents:", x)) |>
+  modify_at("lemmy_create_post", \(x) c("- title: Posts", "  contents:", x)) |>
+  modify_at("lemmy_create_comment", \(x) c("- title: Comments", "  contents:", x)) |>
+  modify_at("lemmy_get_private_messages", \(x) c("- title: Private messages", "  contents:", x)) |>
+  modify_at("lemmy_register", \(x) c("- title: Account & Users", "  contents:", x)) |>
+  modify_at("lemmy_add_admin", \(x) c("- title: Admin", "  contents:", x)) |>
+  list_c()
+
 cat(
   "url: https://long39ng.github.io/remmy/",
   "template:",
   "  bootstrap: 5",
   "reference:",
-  "- contents:",
-  paste("  -", fun_name(names(http_methods))),
+  pkgdown_reference,
   sep = "\n",
   file = "../_pkgdown.yml"
 )

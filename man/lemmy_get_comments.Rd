@@ -46,9 +46,7 @@ lemmy_get_comments(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-comments: <list>
   `-[Each element]: <list>
     |-comment: <list>
@@ -143,4 +141,15 @@ A \code{list} of length 1:
 }
 \description{
 \code{HTTP.GET /comment/list}
+}
+\examples{
+\dontshow{if (remmy:::is_lemmy_world()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+comment_list <- lemmy_get_comments(limit = 1, sort = "Top")
+
+comment_list$comments[[1]]$community$name
+
+comment_list$comments[[1]]$post$name
+
+comment_list$comments[[1]]$comment$content
+\dontshow{\}) # examplesIf}
 }

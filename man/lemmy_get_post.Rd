@@ -22,9 +22,7 @@ lemmy_get_post(
 }
 \value{
 A \code{list} of length 4:
-
-\preformatted{
-<list>
+\preformatted{<list>
 |-post_view: <list>
 | |-post: <list>
 | | |-id: A numeric value
@@ -268,4 +266,13 @@ A \code{list} of length 4:
 }
 \description{
 \code{HTTP.GET /post}
+}
+\examples{
+\dontshow{if (remmy:::is_lemmy_world()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+post_data <- lemmy_get_post(1397803)
+
+post_data$community_view$community$name
+
+post_data$post_view$post$name
+\dontshow{\}) # examplesIf}
 }

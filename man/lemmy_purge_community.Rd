@@ -22,9 +22,7 @@ lemmy_purge_community(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-success: A logical value
 }
 }

@@ -22,9 +22,7 @@ lemmy_block_community(
 }
 \value{
 A \code{list} of length 2:
-
-\preformatted{
-<list>
+\preformatted{<list>
 |-community_view: <list>
 | |-community: <list>
 | | |-id: A numeric value

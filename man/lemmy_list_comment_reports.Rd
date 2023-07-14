@@ -28,9 +28,7 @@ lemmy_list_comment_reports(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-comment_reports: <list>
   `-[Each element]: <list>
     |-comment_report: <list>

@@ -22,9 +22,7 @@ lemmy_add_admin(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-admins: <list>
   `-[Each element]: <list>
     |-person: <list>

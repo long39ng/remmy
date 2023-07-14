@@ -28,9 +28,7 @@ lemmy_get_person_mentions(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-mentions: <list>
   `-[Each element]: <list>
     |-person_mention: <list>

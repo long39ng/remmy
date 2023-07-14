@@ -22,9 +22,7 @@ lemmy_get_community(
 }
 \value{
 A \code{list} of length 4:
-
-\preformatted{
-<list>
+\preformatted{<list>
 |-community_view: <list>
 | |-community: <list>
 | | |-id: A numeric value
@@ -119,4 +117,11 @@ A \code{list} of length 4:
 }
 \description{
 \code{HTTP.GET /community}
+}
+\examples{
+\dontshow{if (remmy:::is_lemmy_world()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+community_data <- lemmy_get_community(name = "redditwasfun")
+
+community_data$community_view$community$description
+\dontshow{\}) # examplesIf}
 }

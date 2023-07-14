@@ -23,7 +23,7 @@ cat(
 
 iwalk(http_methods, \(method, name) {
   cat(
-    doc_function(method),
+    doc_function(method, name),
     fun_definition(method, name),
     sep = "\n",
     file = "../R/http-methods.R",
@@ -34,3 +34,14 @@ iwalk(http_methods, \(method, name) {
 styler::style_file("../R/http-methods.R")
 
 devtools::document(roclets = c("rd", "collate", "namespace"))
+
+cat(
+  "url: https://long39ng.github.io/remmy/",
+  "template:",
+  "  bootstrap: 5",
+  "reference:",
+  "- contents:",
+  paste("  -", fun_name(names(http_methods))),
+  sep = "\n",
+  file = "../_pkgdown.yml"
+)

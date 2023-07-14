@@ -16,9 +16,7 @@ lemmy_leave_admin(
 }
 \value{
 A \code{list} of length 8:
-
-\preformatted{
-<list>
+\preformatted{<list>
 |-site_view: <list>
 | |-site: <list>
 | | |-id: A numeric value

@@ -16,9 +16,7 @@ lemmy_get_unread_registration_application_count(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-registration_applications: A numeric value
 }
 }

@@ -136,9 +136,7 @@ lemmy_edit_site(
 }
 \value{
 A \code{list} of length 2:
-
-\preformatted{
-<list>
+\preformatted{<list>
 |-site_view: <list>
 | |-site: <list>
 | | |-id: A numeric value

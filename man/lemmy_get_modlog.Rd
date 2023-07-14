@@ -34,9 +34,7 @@ lemmy_get_modlog(
 }
 \value{
 A \code{list} of length 15:
-
-\preformatted{
-<list>
+\preformatted{<list>
 |-removed_posts: <list>
 | `-[Each element]: <list>
 |   |-mod_remove_post: <list>

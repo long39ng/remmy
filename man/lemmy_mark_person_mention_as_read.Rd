@@ -22,9 +22,7 @@ lemmy_mark_person_mention_as_read(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-person_mention_view: <list>
   |-person_mention: <list>
   | |-id: A numeric value

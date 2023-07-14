@@ -34,9 +34,7 @@ lemmy_ban_from_community(
 }
 \value{
 A \code{list} of length 2:
-
-\preformatted{
-<list>
+\preformatted{<list>
 |-person_view: <list>
 | |-person: <list>
 | | |-id: A numeric value

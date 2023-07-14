@@ -25,9 +25,7 @@ lemmy_list_registration_applications(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-registration_applications: <list>
   `-[Each element]: <list>
     |-registration_application: <list>

@@ -40,9 +40,7 @@ lemmy_register(
 }
 \value{
 A \code{list} of length 3:
-
-\preformatted{
-<list>
+\preformatted{<list>
 |-jwt: (Optional) A character value
 |-registration_created: A logical value
 `-verify_email_sent: A logical value

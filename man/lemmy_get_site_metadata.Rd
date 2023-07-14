@@ -16,9 +16,7 @@ lemmy_get_site_metadata(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-metadata: <list>
   |-title: (Optional) A character value
   |-description: (Optional) A character value
@@ -28,4 +26,11 @@ A \code{list} of length 1:
 }
 \description{
 \code{HTTP.GET /post/site_metadata}
+}
+\examples{
+\dontshow{if (remmy:::is_lemmy_world()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+site_metadata <- lemmy_get_site_metadata("https://feddit.de")
+
+site_metadata$metadata$title
+\dontshow{\}) # examplesIf}
 }

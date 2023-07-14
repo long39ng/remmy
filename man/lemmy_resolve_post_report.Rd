@@ -22,9 +22,7 @@ lemmy_resolve_post_report(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-post_report_view: <list>
   |-post_report: <list>
   | |-id: A numeric value

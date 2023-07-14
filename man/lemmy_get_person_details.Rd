@@ -37,9 +37,7 @@ lemmy_get_person_details(
 }
 \value{
 A \code{list} of length 4:
-
-\preformatted{
-<list>
+\preformatted{<list>
 |-person_view: <list>
 | |-person: <list>
 | | |-id: A numeric value
@@ -284,4 +282,13 @@ A \code{list} of length 4:
 }
 \description{
 \code{HTTP.GET /user}
+}
+\examples{
+\dontshow{if (remmy:::is_lemmy_world()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+person_data <- lemmy_get_person_details(username = "ruud")
+
+person_data$person_view$person$bio
+
+sapply(person_data$moderates, function(x) x$community$name)
+\dontshow{\}) # examplesIf}
 }

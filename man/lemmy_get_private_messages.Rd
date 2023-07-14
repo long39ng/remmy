@@ -25,9 +25,7 @@ lemmy_get_private_messages(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-private_messages: <list>
   `-[Each element]: <list>
     |-private_message: <list>

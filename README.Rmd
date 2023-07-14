@@ -49,7 +49,9 @@ devtools::install_github("long39ng/remmy")
 ``` r
 library(remmy)
 
-lemmy_get_comment(546564)$comment_view$comment$content
+example_comment <- lemmy_get_comment(546564)
+
+example_comment$comment_view$comment$content
 #> [1] "I am not by nature a sentimental person regarding software but I will truly miss RiF."
 ```
 

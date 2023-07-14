@@ -8,9 +8,7 @@
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 8:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-site_view: <list>
 #' | |-site: <list>
 #' | | |-id: A numeric value
@@ -348,6 +346,13 @@
 #'         `-keyword: A character value
 #' }
 #'
+#' @examplesIf remmy:::is_lemmy_world()
+#' site_data <- lemmy_get_site()
+#'
+#' site_data$site_view$site$name
+#'
+#' site_data$site_view$counts$users
+#'
 #' @export
 lemmy_get_site <- function(auth = NULL, .lemmy_instance = getOption(
                              "lemmy_instance",
@@ -407,9 +412,7 @@ lemmy_get_site <- function(auth = NULL, .lemmy_instance = getOption(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 2:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-site_view: <list>
 #' | |-site: <list>
 #' | | |-id: A numeric value
@@ -658,9 +661,7 @@ lemmy_create_site <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 2:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-site_view: <list>
 #' | |-site: <list>
 #' | | |-id: A numeric value
@@ -869,9 +870,7 @@ lemmy_edit_site <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 8:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-site_view: <list>
 #' | |-site: <list>
 #' | | |-id: A numeric value
@@ -1235,9 +1234,7 @@ lemmy_leave_admin <- function(auth, .lemmy_instance = getOption(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 15:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-removed_posts: <list>
 #' | `-[Each element]: <list>
 #' |   |-mod_remove_post: <list>
@@ -2132,9 +2129,7 @@ lemmy_get_modlog <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 5:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-type_: One of "All", "Comments", "Posts...
 #' |-comments: <list>
 #' | `-[Each element]: <list>
@@ -2374,6 +2369,13 @@ lemmy_get_modlog <- function(
 #'       `-comment_score: A numeric value
 #' }
 #'
+#' @examplesIf remmy:::is_lemmy_world()
+#' search_results <- lemmy_search("Liverpool", type_ = "Posts", sort = "TopAll", limit = 1)
+#'
+#' search_results$posts[[1]]$community$name
+#'
+#' search_results$posts[[1]]$post$name
+#'
 #' @export
 lemmy_search <- function(
     q, community_id = NULL, community_name = NULL, creator_id = NULL,
@@ -2430,9 +2432,7 @@ lemmy_search <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 4:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-comment: <list>
 #' | |-comment: <list>
 #' | | |-id: A numeric value
@@ -2697,9 +2697,7 @@ lemmy_resolve_object <- function(q, auth, .lemmy_instance = getOption(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 2:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-community_view: <list>
 #' | |-community: <list>
 #' | | |-id: A numeric value
@@ -2776,9 +2774,7 @@ lemmy_create_community <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 4:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-community_view: <list>
 #' | |-community: <list>
 #' | | |-id: A numeric value
@@ -2871,6 +2867,11 @@ lemmy_create_community <- function(
 #' `-discussion_languages: A numeric vector
 #' }
 #'
+#' @examplesIf remmy:::is_lemmy_world()
+#' community_data <- lemmy_get_community(name = "redditwasfun")
+#'
+#' community_data$community_view$community$description
+#'
 #' @export
 lemmy_get_community <- function(id = NULL, name = NULL, auth = NULL, .lemmy_instance = getOption(
                                   "lemmy_instance",
@@ -2903,9 +2904,7 @@ lemmy_get_community <- function(id = NULL, name = NULL, auth = NULL, .lemmy_inst
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 2:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-community_view: <list>
 #' | |-community: <list>
 #' | | |-id: A numeric value
@@ -2988,9 +2987,7 @@ lemmy_edit_community <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-communities: <list>
 #'   `-[Each element]: <list>
 #'     |-community: <list>
@@ -3027,6 +3024,11 @@ lemmy_edit_community <- function(
 #'       |-users_active_half_year: A numeric value
 #'       `-hot_rank: A numeric value
 #' }
+#'
+#' @examplesIf remmy:::is_lemmy_world()
+#' community_list <- lemmy_list_communities(sort = "TopMonth", limit = 1)
+#'
+#' community_list$communities[[1]]$community$name
 #'
 #' @export
 lemmy_list_communities <- function(
@@ -3071,9 +3073,7 @@ lemmy_list_communities <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 2:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-community_view: <list>
 #' | |-community: <list>
 #' | | |-id: A numeric value
@@ -3137,9 +3137,7 @@ lemmy_follow_community <- function(community_id, follow, auth, .lemmy_instance =
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 2:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-community_view: <list>
 #' | |-community: <list>
 #' | | |-id: A numeric value
@@ -3203,9 +3201,7 @@ lemmy_block_community <- function(community_id, block, auth, .lemmy_instance = g
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 2:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-community_view: <list>
 #' | |-community: <list>
 #' | | |-id: A numeric value
@@ -3271,9 +3267,7 @@ lemmy_delete_community <- function(community_id, deleted, auth, .lemmy_instance 
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 2:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-community_view: <list>
 #' | |-community: <list>
 #' | | |-id: A numeric value
@@ -3341,9 +3335,7 @@ lemmy_remove_community <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 4:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-community_view: <list>
 #' | |-community: <list>
 #' | | |-id: A numeric value
@@ -3466,9 +3458,7 @@ lemmy_transfer_community <- function(community_id, person_id, auth, .lemmy_insta
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 2:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-person_view: <list>
 #' | |-person: <list>
 #' | | |-id: A numeric value
@@ -3538,9 +3528,7 @@ lemmy_ban_from_community <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-moderators: <list>
 #'   `-[Each element]: <list>
 #'     |-community: <list>
@@ -3617,9 +3605,7 @@ lemmy_add_mod_to_community <- function(community_id, person_id, added, auth, .le
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-post_view: <list>
 #'   |-post: <list>
 #'   | |-id: A numeric value
@@ -3744,9 +3730,7 @@ lemmy_create_post <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 4:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-post_view: <list>
 #' | |-post: <list>
 #' | | |-id: A numeric value
@@ -3988,6 +3972,13 @@ lemmy_create_post <- function(
 #'     `-unread_comments: A numeric value
 #' }
 #'
+#' @examplesIf remmy:::is_lemmy_world()
+#' post_data <- lemmy_get_post(1397803)
+#'
+#' post_data$community_view$community$name
+#'
+#' post_data$post_view$post$name
+#'
 #' @export
 lemmy_get_post <- function(id = NULL, comment_id = NULL, auth = NULL, .lemmy_instance = getOption(
                              "lemmy_instance",
@@ -4018,9 +4009,7 @@ lemmy_get_post <- function(id = NULL, comment_id = NULL, auth = NULL, .lemmy_ins
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-post_view: <list>
 #'   |-post: <list>
 #'   | |-id: A numeric value
@@ -4142,9 +4131,7 @@ lemmy_edit_post <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-post_view: <list>
 #'   |-post: <list>
 #'   | |-id: A numeric value
@@ -4256,9 +4243,7 @@ lemmy_delete_post <- function(post_id, deleted, auth, .lemmy_instance = getOptio
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-post_view: <list>
 #'   |-post: <list>
 #'   | |-id: A numeric value
@@ -4372,9 +4357,7 @@ lemmy_remove_post <- function(post_id, removed, reason = NULL, auth, .lemmy_inst
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-post_view: <list>
 #'   |-post: <list>
 #'   | |-id: A numeric value
@@ -4485,9 +4468,7 @@ lemmy_mark_post_as_read <- function(post_id, read, auth, .lemmy_instance = getOp
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-post_view: <list>
 #'   |-post: <list>
 #'   | |-id: A numeric value
@@ -4599,9 +4580,7 @@ lemmy_lock_post <- function(post_id, locked, auth, .lemmy_instance = getOption(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-post_view: <list>
 #'   |-post: <list>
 #'   | |-id: A numeric value
@@ -4720,9 +4699,7 @@ lemmy_feature_post <- function(post_id, featured, feature_type, auth, .lemmy_ins
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-posts: <list>
 #'   `-[Each element]: <list>
 #'     |-post: <list>
@@ -4808,6 +4785,11 @@ lemmy_feature_post <- function(post_id, featured, feature_type, auth, .lemmy_ins
 #'     `-unread_comments: A numeric value
 #' }
 #'
+#' @examplesIf remmy:::is_lemmy_world()
+#' post_list <- lemmy_get_posts(community_name = "showerthoughts", sort = "TopAll", limit = 1)
+#'
+#' post_list$posts[[1]]$post$name
+#'
 #' @export
 lemmy_get_posts <- function(
     type_ = NULL, sort = NULL, page = NULL, limit = NULL,
@@ -4857,9 +4839,7 @@ lemmy_get_posts <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-post_view: <list>
 #'   |-post: <list>
 #'   | |-id: A numeric value
@@ -4970,9 +4950,7 @@ lemmy_like_post <- function(post_id, score, auth, .lemmy_instance = getOption(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-post_view: <list>
 #'   |-post: <list>
 #'   | |-id: A numeric value
@@ -5083,9 +5061,7 @@ lemmy_save_post <- function(post_id, save, auth, .lemmy_instance = getOption(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-post_report_view: <list>
 #'   |-post_report: <list>
 #'   | |-id: A numeric value
@@ -5241,9 +5217,7 @@ lemmy_create_post_report <- function(post_id, reason, auth, .lemmy_instance = ge
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-post_report_view: <list>
 #'   |-post_report: <list>
 #'   | |-id: A numeric value
@@ -5401,9 +5375,7 @@ lemmy_resolve_post_report <- function(report_id, resolved, auth, .lemmy_instance
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-post_reports: <list>
 #'   `-[Each element]: <list>
 #'     |-post_report: <list>
@@ -5565,15 +5537,18 @@ lemmy_list_post_reports <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-metadata: <list>
 #'   |-title: (Optional) A character value
 #'   |-description: (Optional) A character value
 #'   |-image: (Optional) A character value
 #'   `-embed_video_url: (Optional) A character value
 #' }
+#'
+#' @examplesIf remmy:::is_lemmy_world()
+#' site_metadata <- lemmy_get_site_metadata("https://feddit.de")
+#'
+#' site_metadata$metadata$title
 #'
 #' @export
 lemmy_get_site_metadata <- function(url, .lemmy_instance = getOption(
@@ -5600,9 +5575,7 @@ lemmy_get_site_metadata <- function(url, .lemmy_instance = getOption(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 3:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-comment_view: <list>
 #' | |-comment: <list>
 #' | | |-id: A numeric value
@@ -5733,9 +5706,7 @@ lemmy_create_comment <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 3:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-comment_view: <list>
 #' | |-comment: <list>
 #' | | |-id: A numeric value
@@ -5859,9 +5830,7 @@ lemmy_edit_comment <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 3:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-comment_view: <list>
 #' | |-comment: <list>
 #' | | |-id: A numeric value
@@ -5982,9 +5951,7 @@ lemmy_delete_comment <- function(comment_id, deleted, auth, .lemmy_instance = ge
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 3:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-comment_view: <list>
 #' | |-comment: <list>
 #' | | |-id: A numeric value
@@ -6107,9 +6074,7 @@ lemmy_remove_comment <- function(comment_id, removed, reason = NULL, auth, .lemm
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-comment_reply_view: <list>
 #'   |-comment_reply: <list>
 #'   | |-id: A numeric value
@@ -6252,9 +6217,7 @@ lemmy_mark_comment_reply_as_read <- function(comment_reply_id, read, auth, .lemm
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 3:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-comment_view: <list>
 #' | |-comment: <list>
 #' | | |-id: A numeric value
@@ -6374,9 +6337,7 @@ lemmy_like_comment <- function(comment_id, score, auth, .lemmy_instance = getOpt
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 3:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-comment_view: <list>
 #' | |-comment: <list>
 #' | | |-id: A numeric value
@@ -6496,9 +6457,7 @@ lemmy_save_comment <- function(comment_id, save, auth, .lemmy_instance = getOpti
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 3:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-comment_view: <list>
 #' | |-comment: <list>
 #' | | |-id: A numeric value
@@ -6627,9 +6586,7 @@ lemmy_distinguish_comment <- function(comment_id, distinguished, auth, .lemmy_in
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-comments: <list>
 #'   `-[Each element]: <list>
 #'     |-comment: <list>
@@ -6722,6 +6679,15 @@ lemmy_distinguish_comment <- function(comment_id, distinguished, auth, .lemmy_in
 #'     `-my_vote: (Optional) A numeric value
 #' }
 #'
+#' @examplesIf remmy:::is_lemmy_world()
+#' comment_list <- lemmy_get_comments(limit = 1, sort = "Top")
+#'
+#' comment_list$comments[[1]]$community$name
+#'
+#' comment_list$comments[[1]]$post$name
+#'
+#' comment_list$comments[[1]]$comment$content
+#'
 #' @export
 lemmy_get_comments <- function(
     type_ = NULL, sort = NULL, max_depth = NULL, page = NULL,
@@ -6773,9 +6739,7 @@ lemmy_get_comments <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 3:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-comment_view: <list>
 #' | |-comment: <list>
 #' | | |-id: A numeric value
@@ -6869,6 +6833,13 @@ lemmy_get_comments <- function(
 #' `-form_id: (Optional) A character value
 #' }
 #'
+#' @examplesIf remmy:::is_lemmy_world()
+#' comment_data <- lemmy_get_comment(546564)
+#'
+#' comment_data$comment_view$comment$content
+#'
+#' comment_data$comment_view$counts$score
+#'
 #' @export
 lemmy_get_comment <- function(id, auth = NULL, .lemmy_instance = getOption(
                                 "lemmy_instance",
@@ -6893,9 +6864,7 @@ lemmy_get_comment <- function(id, auth = NULL, .lemmy_instance = getOption(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-comment_report_view: <list>
 #'   |-comment_report: <list>
 #'   | |-id: A numeric value
@@ -7058,9 +7027,7 @@ lemmy_create_comment_report <- function(comment_id, reason, auth, .lemmy_instanc
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-comment_report_view: <list>
 #'   |-comment_report: <list>
 #'   | |-id: A numeric value
@@ -7225,9 +7192,7 @@ lemmy_resolve_comment_report <- function(report_id, resolved, auth, .lemmy_insta
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-comment_reports: <list>
 #'   `-[Each element]: <list>
 #'     |-comment_report: <list>
@@ -7399,9 +7364,7 @@ lemmy_list_comment_reports <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-private_messages: <list>
 #'   `-[Each element]: <list>
 #'     |-private_message: <list>
@@ -7483,9 +7446,7 @@ lemmy_get_private_messages <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-private_message_view: <list>
 #'   |-private_message: <list>
 #'   | |-id: A numeric value
@@ -7564,9 +7525,7 @@ lemmy_create_private_message <- function(content, recipient_id, auth, .lemmy_ins
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-private_message_view: <list>
 #'   |-private_message: <list>
 #'   | |-id: A numeric value
@@ -7646,9 +7605,7 @@ lemmy_edit_private_message <- function(private_message_id, content, auth, .lemmy
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-private_message_view: <list>
 #'   |-private_message: <list>
 #'   | |-id: A numeric value
@@ -7728,9 +7685,7 @@ lemmy_delete_private_message <- function(private_message_id, deleted, auth, .lem
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-private_message_view: <list>
 #'   |-private_message: <list>
 #'   | |-id: A numeric value
@@ -7810,9 +7765,7 @@ lemmy_mark_private_message_as_read <- function(private_message_id, read, auth, .
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-private_message_report_view: <list>
 #'   |-private_message_report: <list>
 #'   | |-id: A numeric value
@@ -7921,9 +7874,7 @@ lemmy_create_private_message_report <- function(private_message_id, reason, auth
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-private_message_report_view: <list>
 #'   |-private_message_report: <list>
 #'   | |-id: A numeric value
@@ -8032,9 +7983,7 @@ lemmy_resolve_private_message_report <- function(report_id, resolved, auth, .lem
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-private_message_reports: <list>
 #'   `-[Each element]: <list>
 #'     |-private_message_report: <list>
@@ -8151,9 +8100,7 @@ lemmy_list_private_message_reports <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 3:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-jwt: (Optional) A character value
 #' |-registration_created: A logical value
 #' `-verify_email_sent: A logical value
@@ -8203,9 +8150,7 @@ lemmy_register <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 3:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-jwt: (Optional) A character value
 #' |-registration_created: A logical value
 #' `-verify_email_sent: A logical value
@@ -8242,9 +8187,7 @@ lemmy_login <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 4:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-person_view: <list>
 #' | |-person: <list>
 #' | | |-id: A numeric value
@@ -8487,6 +8430,13 @@ lemmy_login <- function(
 #'       `-instance_id: A numeric value
 #' }
 #'
+#' @examplesIf remmy:::is_lemmy_world()
+#' person_data <- lemmy_get_person_details(username = "ruud")
+#'
+#' person_data$person_view$person$bio
+#'
+#' sapply(person_data$moderates, function(x) x$community$name)
+#'
 #' @export
 lemmy_get_person_details <- function(
     person_id = NULL, username = NULL, sort = NULL, page = NULL,
@@ -8532,9 +8482,7 @@ lemmy_get_person_details <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-mentions: <list>
 #'   `-[Each element]: <list>
 #'     |-person_mention: <list>
@@ -8685,9 +8633,7 @@ lemmy_get_person_mentions <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-person_mention_view: <list>
 #'   |-person_mention: <list>
 #'   | |-id: A numeric value
@@ -8832,9 +8778,7 @@ lemmy_mark_person_mention_as_read <- function(person_mention_id, read, auth, .le
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-replies: <list>
 #'   `-[Each element]: <list>
 #'     |-comment_reply: <list>
@@ -8988,9 +8932,7 @@ lemmy_get_replies <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 2:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-person_view: <list>
 #' | |-person: <list>
 #' | | |-id: A numeric value
@@ -9054,9 +8996,7 @@ lemmy_ban_person <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-banned: <list>
 #'   `-[Each element]: <list>
 #'     |-person: <list>
@@ -9109,9 +9049,7 @@ lemmy_get_banned_persons <- function(auth, .lemmy_instance = getOption(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 2:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-person_view: <list>
 #' | |-person: <list>
 #' | | |-id: A numeric value
@@ -9166,9 +9104,7 @@ lemmy_block_person <- function(person_id, block, auth, .lemmy_instance = getOpti
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-ok: <list>
 #'   |-png: A character value
 #'   |-wav: A character value
@@ -9196,9 +9132,8 @@ lemmy_get_captcha <- function(auth = NULL, .lemmy_instance = getOption(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 0:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
+
 #' }
 #'
 #' @export
@@ -9223,9 +9158,8 @@ lemmy_delete_account <- function(password, auth, .lemmy_instance = getOption(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 0:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
+
 #' }
 #'
 #' @export
@@ -9250,9 +9184,7 @@ lemmy_password_reset <- function(email, .lemmy_instance = getOption(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 3:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-jwt: (Optional) A character value
 #' |-registration_created: A logical value
 #' `-verify_email_sent: A logical value
@@ -9282,9 +9214,7 @@ lemmy_password_change_after_reset <- function(token, password, password_verify, 
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-replies: <list>
 #'   `-[Each element]: <list>
 #'     |-comment_reply: <list>
@@ -9443,9 +9373,7 @@ lemmy_mark_all_as_read <- function(auth, .lemmy_instance = getOption(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 3:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-jwt: (Optional) A character value
 #' |-registration_created: A logical value
 #' `-verify_email_sent: A logical value
@@ -9536,9 +9464,7 @@ lemmy_save_user_settings <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 3:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-jwt: (Optional) A character value
 #' |-registration_created: A logical value
 #' `-verify_email_sent: A logical value
@@ -9571,9 +9497,7 @@ lemmy_change_password <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 4:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-community_id: (Optional) A numeric value
 #' |-comment_reports: A numeric value
 #' |-post_reports: A numeric value
@@ -9602,9 +9526,7 @@ lemmy_get_report_count <- function(community_id = NULL, auth, .lemmy_instance = 
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 3:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-replies: A numeric value
 #' |-mentions: A numeric value
 #' `-private_messages: A numeric value
@@ -9630,9 +9552,8 @@ lemmy_get_unread_count <- function(auth, .lemmy_instance = getOption(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 0:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
+
 #' }
 #'
 #' @export
@@ -9657,9 +9578,7 @@ lemmy_verify_email <- function(token, .lemmy_instance = getOption(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-admins: <list>
 #'   `-[Each element]: <list>
 #'     |-person: <list>
@@ -9714,9 +9633,7 @@ lemmy_add_admin <- function(person_id, added, auth, .lemmy_instance = getOption(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-registration_applications: A numeric value
 #' }
 #'
@@ -9743,9 +9660,7 @@ lemmy_get_unread_registration_application_count <- function(auth, .lemmy_instanc
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-registration_applications: <list>
 #'   `-[Each element]: <list>
 #'     |-registration_application: <list>
@@ -9844,9 +9759,7 @@ lemmy_list_registration_applications <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-registration_application: <list>
 #'   |-registration_application: <list>
 #'   | |-id: A numeric value
@@ -9944,9 +9857,7 @@ lemmy_approve_registration_application <- function(id, approve, deny_reason = NU
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-success: A logical value
 #' }
 #'
@@ -9976,9 +9887,7 @@ lemmy_purge_person <- function(person_id, reason = NULL, auth, .lemmy_instance =
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-success: A logical value
 #' }
 #'
@@ -10008,9 +9917,7 @@ lemmy_purge_community <- function(community_id, reason = NULL, auth, .lemmy_inst
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-success: A logical value
 #' }
 #'
@@ -10040,9 +9947,7 @@ lemmy_purge_post <- function(post_id, reason = NULL, auth, .lemmy_instance = get
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-success: A logical value
 #' }
 #'
@@ -10075,9 +9980,7 @@ lemmy_purge_comment <- function(comment_id, reason = NULL, auth, .lemmy_instance
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-custom_emoji: <list>
 #'   |-custom_emoji: <list>
 #'   | |-id: A numeric value
@@ -10129,9 +10032,7 @@ lemmy_create_custom_emoji <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-custom_emoji: <list>
 #'   |-custom_emoji: <list>
 #'   | |-id: A numeric value
@@ -10179,9 +10080,7 @@ lemmy_edit_custom_emoji <- function(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 2:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' |-id: A numeric value
 #' `-success: A logical value
 #' }
@@ -10208,9 +10107,7 @@ lemmy_delete_custom_emoji <- function(id, auth, .lemmy_instance = getOption(
 #' @param .lemmy_instance Default: "https://lemmy.world". Change the default instance by setting the `lemmy_instance` [options()].
 #'
 #' @returns A `list` of length 1:
-#'
-#' \preformatted{
-#' <list>
+#' \preformatted{<list>
 #' `-federated_instances: <list>
 #'   |-linked: <list>
 #'   | `-[Each element]: <list>
@@ -10237,6 +10134,17 @@ lemmy_delete_custom_emoji <- function(id, auth, .lemmy_instance = getOption(
 #'       |-software: (Optional) A character value
 #'       `-version: (Optional) A character value
 #' }
+#'
+#' @examplesIf remmy:::is_lemmy_world()
+#' instances <- lemmy_get_federated_instances()
+#'
+#' length(instances$federated_instances$linked)
+#'
+#' some_instance <- instances$federated_instances$linked[[732]]
+#'
+#' some_instance$domain
+#'
+#' some_instance$published
 #'
 #' @export
 lemmy_get_federated_instances <- function(auth = NULL, .lemmy_instance = getOption(

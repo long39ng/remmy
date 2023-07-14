@@ -16,9 +16,7 @@ lemmy_get_banned_persons(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-banned: <list>
   `-[Each element]: <list>
     |-person: <list>

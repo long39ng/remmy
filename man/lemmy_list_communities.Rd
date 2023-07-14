@@ -31,9 +31,7 @@ lemmy_list_communities(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-communities: <list>
   `-[Each element]: <list>
     |-community: <list>
@@ -73,4 +71,11 @@ A \code{list} of length 1:
 }
 \description{
 \code{HTTP.GET /community/list}
+}
+\examples{
+\dontshow{if (remmy:::is_lemmy_world()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+community_list <- lemmy_list_communities(sort = "TopMonth", limit = 1)
+
+community_list$communities[[1]]$community$name
+\dontshow{\}) # examplesIf}
 }

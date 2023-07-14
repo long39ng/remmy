@@ -22,9 +22,7 @@ lemmy_mark_comment_reply_as_read(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-comment_reply_view: <list>
   |-comment_reply: <list>
   | |-id: A numeric value

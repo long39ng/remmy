@@ -22,9 +22,7 @@ lemmy_create_comment_report(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-comment_report_view: <list>
   |-comment_report: <list>
   | |-id: A numeric value

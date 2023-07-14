@@ -25,9 +25,7 @@ lemmy_list_private_message_reports(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-private_message_reports: <list>
   `-[Each element]: <list>
     |-private_message_report: <list>

@@ -25,9 +25,7 @@ lemmy_approve_registration_application(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-registration_application: <list>
   |-registration_application: <list>
   | |-id: A numeric value

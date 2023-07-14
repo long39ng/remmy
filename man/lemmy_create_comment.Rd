@@ -31,9 +31,7 @@ lemmy_create_comment(
 }
 \value{
 A \code{list} of length 3:
-
-\preformatted{
-<list>
+\preformatted{<list>
 |-comment_view: <list>
 | |-comment: <list>
 | | |-id: A numeric value

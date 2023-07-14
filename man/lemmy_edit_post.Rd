@@ -34,9 +34,7 @@ lemmy_edit_post(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-post_view: <list>
   |-post: <list>
   | |-id: A numeric value

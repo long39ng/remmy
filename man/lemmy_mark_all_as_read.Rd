@@ -16,9 +16,7 @@ lemmy_mark_all_as_read(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-replies: <list>
   `-[Each element]: <list>
     |-comment_reply: <list>

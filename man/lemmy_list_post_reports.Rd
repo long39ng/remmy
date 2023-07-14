@@ -28,9 +28,7 @@ lemmy_list_post_reports(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-post_reports: <list>
   `-[Each element]: <list>
     |-post_report: <list>

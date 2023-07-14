@@ -16,9 +16,7 @@ lemmy_get_site(
 }
 \value{
 A \code{list} of length 8:
-
-\preformatted{
-<list>
+\preformatted{<list>
 |-site_view: <list>
 | |-site: <list>
 | | |-id: A numeric value
@@ -358,4 +356,13 @@ A \code{list} of length 8:
 }
 \description{
 \code{HTTP.GET /site}
+}
+\examples{
+\dontshow{if (remmy:::is_lemmy_world()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+site_data <- lemmy_get_site()
+
+site_data$site_view$site$name
+
+site_data$site_view$counts$users
+\dontshow{\}) # examplesIf}
 }

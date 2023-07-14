@@ -22,9 +22,7 @@ lemmy_create_private_message_report(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-private_message_report_view: <list>
   |-private_message_report: <list>
   | |-id: A numeric value

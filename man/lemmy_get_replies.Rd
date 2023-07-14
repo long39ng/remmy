@@ -28,9 +28,7 @@ lemmy_get_replies(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-replies: <list>
   `-[Each element]: <list>
     |-comment_reply: <list>

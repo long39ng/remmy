@@ -19,9 +19,7 @@ lemmy_resolve_object(
 }
 \value{
 A \code{list} of length 4:
-
-\preformatted{
-<list>
+\preformatted{<list>
 |-comment: <list>
 | |-comment: <list>
 | | |-id: A numeric value

@@ -19,9 +19,7 @@ lemmy_delete_account(
 }
 \value{
 A \code{list} of length 0:
-
-\preformatted{
-<list>
+\preformatted{<list>
 }
 }
 \description{

@@ -25,9 +25,7 @@ lemmy_add_mod_to_community(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-moderators: <list>
   `-[Each element]: <list>
     |-community: <list>

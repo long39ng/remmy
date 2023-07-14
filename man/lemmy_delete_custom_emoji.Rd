@@ -19,9 +19,7 @@ lemmy_delete_custom_emoji(
 }
 \value{
 A \code{list} of length 2:
-
-\preformatted{
-<list>
+\preformatted{<list>
 |-id: A numeric value
 `-success: A logical value
 }

@@ -22,9 +22,7 @@ lemmy_edit_private_message(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-private_message_view: <list>
   |-private_message: <list>
   | |-id: A numeric value

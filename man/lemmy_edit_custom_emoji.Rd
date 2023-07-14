@@ -31,9 +31,7 @@ lemmy_edit_custom_emoji(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-custom_emoji: <list>
   |-custom_emoji: <list>
   | |-id: A numeric value

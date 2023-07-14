@@ -19,9 +19,7 @@ lemmy_get_comment(
 }
 \value{
 A \code{list} of length 3:
-
-\preformatted{
-<list>
+\preformatted{<list>
 |-comment_view: <list>
 | |-comment: <list>
 | | |-id: A numeric value
@@ -117,4 +115,13 @@ A \code{list} of length 3:
 }
 \description{
 \code{HTTP.GET /comment}
+}
+\examples{
+\dontshow{if (remmy:::is_lemmy_world()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+comment_data <- lemmy_get_comment(546564)
+
+comment_data$comment_view$comment$content
+
+comment_data$comment_view$counts$score
+\dontshow{\}) # examplesIf}
 }

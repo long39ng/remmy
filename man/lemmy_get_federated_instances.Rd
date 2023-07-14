@@ -16,9 +16,7 @@ lemmy_get_federated_instances(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-federated_instances: <list>
   |-linked: <list>
   | `-[Each element]: <list>
@@ -48,4 +46,17 @@ A \code{list} of length 1:
 }
 \description{
 \code{HTTP.Get /federated_instances}
+}
+\examples{
+\dontshow{if (remmy:::is_lemmy_world()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+instances <- lemmy_get_federated_instances()
+
+length(instances$federated_instances$linked)
+
+some_instance <- instances$federated_instances$linked[[732]]
+
+some_instance$domain
+
+some_instance$published
+\dontshow{\}) # examplesIf}
 }

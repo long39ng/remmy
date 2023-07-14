@@ -37,9 +37,7 @@ lemmy_get_posts(
 }
 \value{
 A \code{list} of length 1:
-
-\preformatted{
-<list>
+\preformatted{<list>
 `-posts: <list>
   `-[Each element]: <list>
     |-post: <list>
@@ -127,4 +125,11 @@ A \code{list} of length 1:
 }
 \description{
 \code{HTTP.GET /post/list}
+}
+\examples{
+\dontshow{if (remmy:::is_lemmy_world()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+post_list <- lemmy_get_posts(community_name = "showerthoughts", sort = "TopAll", limit = 1)
+
+post_list$posts[[1]]$post$name
+\dontshow{\}) # examplesIf}
 }

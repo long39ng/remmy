@@ -14,6 +14,7 @@ BugReports: https://github.com/long39ng/remmy/issues
 Imports: 
     httr2
 Suggests: 
+    curl,
     testthat (>= 3.0.0),
     withr
 Config/testthat/edition: 3

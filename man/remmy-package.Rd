@@ -4,9 +4,9 @@
 \name{remmy-package}
 \alias{remmy}
 \alias{remmy-package}
-\title{remmy: API Client for Lemmy}
+\title{remmy: API Client for 'Lemmy'}
 \description{
-An HTTP API client for Lemmy (\url{https://github.com/LemmyNet/lemmy}) in R. Code and documentation are generated from the official JavaScript client source (\url{https://github.com/LemmyNet/lemmy-js-client}).
+An HTTP API client for 'Lemmy' (\url{https://github.com/LemmyNet/lemmy}) in R. Code and documentation are generated from the official 'JavaScript' client source (\url{https://github.com/LemmyNet/lemmy-js-client}).
 }
 \seealso{
 Useful links:

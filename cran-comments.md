@@ -1,18 +1,25 @@
-## Resubmission
+## Resubmission #2
 
-> Please always write package names, software names and API (application programming interface) names in single quotes in title and description. e.g: --> 'Lemmy', 'JavaScript'
+### Comment #1
 
-My reason for not putting these names in quotation marks is as follows:
+> We would highly appreciate if you could put at least 'JavaScript' into quotation marks, please.
 
-- Lemmy: While it is the [software name](https://en.wikipedia.org/wiki/Lemmy_(software)), "Lemmy" is also used to refer to the [social platform](https://join-lemmy.org/) -- similar to Reddit, for which Lemmy can be considered an alternative. Since social platform names like [Reddit](https://cran.r-project.org/package=RedditExtractoR) and [Twitter](https://cran.r-project.org/package=rtweet) are not quoted in in the title and description of their respective API packages on CRAN, I decided not to put "Lemmy" in quotes.
+I have put both 'JavaScript' and 'Lemmy' into quotes for consistency.
 
-- JavaScript: I've seen programming language names such as R, [JavaScript](https://cran.r-project.org/package=V8), [Rust](https://cran.r-project.org/package=rextendr) and [C++](https://cran.r-project.org/package=Rcpp) written without quotes in CRAN package titles and descriptions.
+### Comment #2
 
-However, if it's required to put these names in quotation marks, I'd be happy to do so.
+> "Using foo:::f instead of foo::f allows access to unexported objects. This is generally not recommended, as the semantics of unexported objects may be changed by the package author in routine maintenance."
+> Please omit one colon.
+> Used ::: in documentation:
+>      man/lemmy_get_comment.Rd:
+>         if (remmy:::is_lemmy_world()) (if (getRversion() >= "3.4") withAutoprint else force)({
+> })
 
-> Please add small executable examples in your Rd-files to illustrate the use of the exported function but also enable automatic testing.
+The `is_lemmy_world()` function (implemented id "R/test-helpers.R") is a helper to determine whether the Lemmy server is reachable and thus whether the examples should be run as part of `R CMD check`.
 
-Examples have been added to the documentation for all functions that do not require authentication.
+`is_lemmy_world()` is not exported, as it is not intended to be used by users, and the `:::` is therefore necessary. However, users would not be able to see it in the documentation anyway, as the condition in `@examplesIf` is placed inside a [`\dontshow{}` block in the rendered .Rd files](https://roxygen2.r-lib.org/articles/rd.html#cb3), so I do not think it is a problem.
+
+The same approach of using internal helper functions for conditional execution of examples is used by several CRAN packages such as [dm](https://github.com/cynkra/dm/blob/main/R/dm_get_con.R#L18), [tune](https://github.com/tidymodels/tune/blob/main/R/plots.R#L57), and [stacks](https://github.com/tidymodels/stacks/blob/main/R/predict.R#L18).
 
 ## R CMD check results
 

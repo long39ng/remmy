@@ -30,14 +30,13 @@ Lemmy version: [0.18.1](https://github.com/LemmyNet/lemmy/releases/tag/0.18.1)
 
 ## Installation
 
-<!-- You can install the released version of remmy from CRAN: -->
+You can install the released version of remmy from CRAN:
 
-<!-- ``` r -->
-<!-- install.packages("remmy") -->
-<!-- ``` -->
+``` r
+install.packages("remmy")
+```
 
-<!-- Or install the development version of remmy from GitHub with: -->
-You can install the development version of remmy from GitHub with:
+Or install the development version of remmy from GitHub with:
 
 ``` r
 # install.packages("devtools")

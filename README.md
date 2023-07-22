@@ -27,13 +27,13 @@ Lemmy version:
 
 ## Installation
 
-<!-- You can install the released version of remmy from CRAN: -->
-<!-- ``` r -->
-<!-- install.packages("remmy") -->
-<!-- ``` -->
-<!-- Or install the development version of remmy from GitHub with: -->
+You can install the released version of remmy from CRAN:
 
-You can install the development version of remmy from GitHub with:
+``` r
+install.packages("remmy")
+```
+
+Or install the development version of remmy from GitHub with:
 
 ``` r
 # install.packages("devtools")
